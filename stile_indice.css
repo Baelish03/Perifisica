@@ -32,6 +32,7 @@
   padding-left: 0.5rem;
   margin-top: 0rem;
   padding-top: 1rem;
+  text-decoration: dotted;
 }
 
 .sidebar h3 {
@@ -58,6 +59,6 @@
 }
 
 .sidebar a:hover {
-  color: var(--link);
+  color: var(--primary);
   text-decoration-line: underline;
 }
