@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Meccanica classica",
+    "url": "./meccanica.html",
+    "content": "La meccanica classica studia il moto dei corpi mediante le leggi di Newton. Il concetto di forza, energia e quantità di moto è fondamentale..."
+  },
+  {
+    "title": "Elettromagnetismo",
+    "url": "./elettromagnetismo.html",
+    "content": "Il campo elettrico e il campo magnetico sono descritti dalle equazioni di Maxwell..."
+  }
+]
