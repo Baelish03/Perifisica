@@ -9,6 +9,7 @@ const results = document.getElementById("searchResults");
 
 input.addEventListener("input", () => {
   const query = input.value.toLowerCase();
+  console.log(query)
   results.innerHTML = "";
 
   if (query.length < 2) {
