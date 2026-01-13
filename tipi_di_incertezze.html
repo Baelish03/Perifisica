@@ -2,14 +2,15 @@
 <html lang="it">
 
 <head>
+     <div w3-include-html="./meta.html"></div>
+
      <link rel="stylesheet" href="./style.css">
      <link rel="stylesheet" href="/colonna_sinistra_indice/stile_indice.css">
      <link rel="stylesheet" href="/colonna_destra/colonna_destra.css">
      <link rel="stylesheet" href="/barra_ricerca/barra_ricerca.css">
 
      <script src="/include_html.js"></script>
-
-     <div w3-include-html="./meta.html"></div>
+     <script src="/index.js"></script>
 
 </head>
 
@@ -23,6 +24,8 @@
      </header>
 
      <form class="topbar input">
+          <!--<div w3-include-html="/barra_ricerca/barra_ricerca.html"></div>-->
+
           <div id="search-box">
                <input type="search" id="searchInput" placeholder="Cerca un argomento…">
                <div id="searchResults"></div>
@@ -288,6 +291,7 @@
 
      <script>
           includeHTML();
+          boh();
      </script>
 </body>
 
