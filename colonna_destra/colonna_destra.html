@@ -1,23 +1,24 @@
 <!DOCTYPE html>
+
 <head>
-     <link rel="stylesheet" href="/colonna_sinistra_indice/stile_indice.css">
+     <!--<link rel="stylesheet" href="/colonna_sinistra_indice/stile_indice.css">-->
      <link rel="stylesheet" href="/colonna_destra/colonna_destra.css">
+
+     <script src="/colonna_destra/pulsanti.js"></script>
 </head>
 
 <body>
      <aside class="sidebar right">
           <h1>Accessibilità</h1>
           <h2>Font</h2>
-          <div id="font">
-               <label class="container"> OpenDyslexya
-                    <input type="radio" name="font">
-                    <span class="checkmark"></span>
-               </label>
-               <label class="container">Standard
-                    <input type="radio" checked="checked" name="font">
-                    <span class="checkmark"></span>
-               </label>
-          </div>
+          <label class="container"> OpenDyslexic
+               <input type="radio" name="font" onclick="OpenDyslexicFunc()">
+               <span class="checkmark" id="OpenDyslexic"></span>
+          </label>
+          <label class="container">Standard
+               <input type="radio" checked="checked" name="font" onclick="StandardFont()">
+               <span class="checkmark" id="StandardFont" onclick="StandardFont()"></span>
+          </label>
 
           <h2>Contrasto</h2>
           <label class="container">Elevato
@@ -38,12 +39,5 @@
                <input type="radio" checked="checked" name="dimensione">
                <span class="checkmark"></span>
           </label>
-
-          <!--
-          <h1>Pubblicità</h1>
-          <div class="ad-box">Ad</div>
-          -->
      </aside>
 </body>
-
-<script src="/colonna_destra/pulsanti.js"></script>
