@@ -1,8 +1,17 @@
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function OpenMenu() {
-  document.getElementById("dropdown-content").classList.toggle("show");
+function OpenTeoria() {
+  document.getElementById("teoria").classList.toggle("show");
 }
+
+function OpenEsperimenti() {
+  document.getElementById("esperimenti").classList.toggle("show");
+}
+
+function OpenLatex() {
+  document.getElementById("latex").classList.toggle("show");
+}
+
 
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
