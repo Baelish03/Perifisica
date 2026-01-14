@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* =========================
-   VARIABILI
-   ========================= */
 :root {
   --bg: #f3f3f5;
   --text: #1f1f1f;
@@ -32,8 +29,8 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: "Libertinus Serif", "Crimson Pro", serif;
-  line-height: 2;
+  line-height: 1.5;
+  text-align: justify;
 }
 
 /* =========================
@@ -77,6 +74,7 @@ body {
 
 .middle {
   width: 60%;
+  padding: 1rem;
 }
 
 .right {
@@ -147,12 +145,13 @@ p {
 }
 
 a {
-  color: var(--primary);
+  color: var(--link);
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--primary);
 }
 
 /* =========================
