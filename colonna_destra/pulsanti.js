@@ -24,5 +24,24 @@ function StandardFont() {
   document.querySelectorAll('h3').style.fontFamily = 'Inter, sans-serif';
   document.querySelectorAll('h4').style.fontFamily = 'Inter, sans-serif';*/
 
-  
+function HighContrast(){
+  document.querySelector(':root').style.setProperty('--text', '#ffffff');
+  document.querySelector(':root').style.setProperty('--primary', '#00ffff');
+  document.querySelector(':root').style.setProperty('--link', '#ffff00');
+  document.querySelector(':root').style.setProperty('--background', '#000000');
+}
 
+function StandardContrast(){
+  document.querySelector(':root').style.setProperty('--text', '#1f1f1f');
+  document.querySelector(':root').style.setProperty('--primary', '#70193D');
+  document.querySelector(':root').style.setProperty('--link', '#191970');
+  document.querySelector(':root').style.setProperty('--background', '#1919704F');
+}
+
+function BigText(){
+  document.querySelector('body').style.fontSize = "16pt";
+}
+
+function NormalText(){
+  document.querySelector('body').style.fontSize = "13pt";
+}
