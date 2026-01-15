@@ -1,18 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* =========================
-   VARIABILI
-   ========================= */
 :root {
-  --bg: #f3f3f5;
-  --text: #1f1f1f;
-  --muted: #6b6b6b;
   --primary: #70193D; /* Mulberry */
   --border: #dddddd;
   --link: #191970; /* Midnight Blue */
 }
 
-#search-box {
+.search-box {
   font-family: Inter, sans-serif;
   align-items: center;
   justify-content: center;
@@ -35,17 +29,19 @@
   height: 25pt;
   display: flex;
   padding-left: .8rem;
+  color: var(--text);
 }
 
 #searchInput[type=search]:focus {
   width: 50%;
   align-items: center;
   justify-content: center;
+  display: block;
 }
 
-/* I RISULTATI SI ACCAVALLANO ALLA BARRA DI RICERCA*/
 #searchResults {
   position: absolute;
+  display: none;
   width: 45%;
   background: white;
   max-height: auto;
@@ -53,17 +49,18 @@
   overflow-y: auto;
   z-index: 1000;
   border-radius: 5pt;
-  top: 17.3rem;
+  top: 16.9rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,1);
 }
 
 .result {
   padding: 8px;
   cursor: pointer;
-  border: 1px solid var(--border);
+  border: none; /*1px solid var(--border);*/
 }
 
 .result:hover {
-  background: #f5f5f5;
+  background: #00000018;
 }
 
 mark {

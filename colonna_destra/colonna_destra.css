@@ -1,14 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('/opendyslexic/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-:root {
-  --bg: #f3f3f5;
-  --text: #1f1f1f;
-  --muted: #6b6b6b;
-  --primary: #70193D;
-  /* Mulberry */
-  --border: #dddddd;
-  --link: #191970;
-  /* Midnight Blue */
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('/opendyslexic/OpenDyslexic-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('/opendyslexic/OpenDyslexic-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('/opendyslexic/OpenDyslexic-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+:root{
+  --button-background: #000000;
 }
 
 /* Customize the label (the container) */
@@ -53,7 +73,7 @@
 
 /* On mouse-over, add a grey background color */
 .container:hover input~.checkmark {
-  background-color: #000000;
+  background-color: var(--button-background);
 }
 
 /* When the radio button is checked, add a blue background */
@@ -75,8 +95,8 @@
 
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
-  top: 9px;
-  left: 9px;
+  top: 8.5px;
+  left: 8.5px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
