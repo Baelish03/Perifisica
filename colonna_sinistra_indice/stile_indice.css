@@ -34,6 +34,8 @@
   margin-top: -0.2rem;
 }
 
+/* ========== MENÙ A CASCATA ================= */
+
 .dropbutton {
   background-color: transparent;
   border: none;
@@ -82,4 +84,14 @@
 
 .show {
   display: block;
+}
+
+/* ========== MOVIMENTO CHEVRON ==============*/
+.chevron {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: xx-large;
+  top: -.9rem;
 }
