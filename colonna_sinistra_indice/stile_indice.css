@@ -72,6 +72,15 @@
   color: var(--primary);
 }
 
+.attivo {
+  box-shadow: inset 3px 0 0 var(--primary);
+  background: linear-gradient(
+    90deg,
+    oklch(from var(--primary) l c h / 0.6),
+    oklch(from var(--primary) l c h / 0.4)
+  );
+}
+
 .show {
   /*display: block;*/
   max-height: 20rem;

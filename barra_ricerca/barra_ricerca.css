@@ -25,7 +25,7 @@
   align-items: center;
   justify-content: center;
   width: 30%;
-  transition: width 0.4s ease-in-out;
+  transition: width 0.5s ease-in-out;
   height: 25pt;
   display: flex;
   padding-left: .8rem;
@@ -44,9 +44,11 @@
   display: none;
   width: 45%;
   background: white;
-  max-height: auto;
+  /*max-height: auto;
   height: auto;
-  overflow-y: auto;
+  overflow-y: auto;*/
+  max-height: 20rem;
+  overflow: none;
   z-index: 1000;
   border-radius: 5pt;
   top: 16.9rem;
