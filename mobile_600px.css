@@ -86,6 +86,43 @@
     line-height: 1.1;
   }
 
+  /* =================== BOTTONI MOBILE =============== */
+  #bottoni_mobile {
+    visibility: visible;
+    display: flex;
+    height: 20pt;
+  }
+
+  #apri-indice-mobile {
+    position: absolute;
+    width: 50%;
+    height: 20pt;
+    background-color: var(--search-background);
+    color: var(--text);
+    border-top: 0px;
+    border-left: 0px;
+    border-bottom: 1px solid var(--border);
+    border-right: .5px solid var(--border);
+  }
+
+  #apri-accessibilità-mobile {
+    position: absolute;
+    left: 50%;
+    width: 50%;
+    height: 20pt;
+    background-color: var(--search-background);
+    color: var(--text);
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 1px solid var(--border);
+    border-left: .5px solid var(--border);
+  }
+
+  .titolo-bottone-mobile {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
   /* ======================= COLONNA SINISTRA ===========*/
   .dropdown {
     display: grid;
@@ -96,7 +133,7 @@
   /* ======================= COLONNA DESTRA ===========*/
   .sidebar_right {
     display: grid;
-    visibility: collapse;
+    visibility: visible;
     width: 0;
   }
 

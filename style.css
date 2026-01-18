@@ -146,3 +146,9 @@ a {
 a:hover {
   color: var(--primary);
 }
+
+#bottoni_mobile{
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
