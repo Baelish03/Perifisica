@@ -18,10 +18,10 @@ function HighContrast(){
 
 function StandardContrast(){
   document.querySelector(':root').style.setProperty('--text', '#1f1f1f');
-  document.querySelector(':root').style.setProperty('--primary', '#70193D');
-  document.querySelector(':root').style.setProperty('--link', '#191970');
-  document.querySelector(':root').style.setProperty('--background', '#1919704F');
-  document.querySelector(':root').style.setProperty('--button-background', '#000000');
+  document.querySelector(':root').style.setProperty('--primary', '#a82596');
+  document.querySelector(':root').style.setProperty('--link', '#06608f');
+  document.querySelector(':root').style.setProperty('--background', '#065f8f4f');
+  document.querySelector(':root').style.setProperty('--button-background', '#1f1f1f');
   document.querySelector(':root').style.setProperty('--search-background', '#ffffff');
 
 }
