@@ -14,14 +14,14 @@ function Chevron(contentId, chevronId) {
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
-function OpenTeoria() {
-  document.getElementById("teoria-content").classList.toggle("show");
-  Chevron("teoria-content", "teoria-chevron");
+function Open1() {
+  document.getElementById("content1").classList.toggle("show");
+  Chevron("content1", "chevron1");
 }
 
-function OpenEsperimenti() {
-  document.getElementById("esperimenti-content").classList.toggle("show");
-  Chevron("esperimenti-content", "esperimenti-chevron");
+function Open2() {
+  document.getElementById("content2").classList.toggle("show");
+  Chevron("content2", "chevron2");
 }
 
 function OpenLatex() {
@@ -34,6 +34,7 @@ function ColoraElementoAttuale() {
 
   document.querySelectorAll(".dropdown-content a").forEach(link => {
     const href = link.getAttribute("href").split("/").pop();
+    console.log(href)
     if (href === paginaCorrente) {
       link.classList.add("attivo");
     }
@@ -43,11 +44,11 @@ function ColoraElementoAttuale() {
 export function init(root) {
   ColoraElementoAttuale();
 
-  const teoria = root.querySelector("#teoria-button");
-  teoria?.addEventListener("click", OpenTeoria);
+  const pulsante1 = root.querySelector("#button1");
+  pulsante1?.addEventListener("click", Open1);
 
-  const esperimenti = root.querySelector("#esperimenti-button");
-  esperimenti?.addEventListener("click", OpenEsperimenti);
+  const pulsante2 = root.querySelector("#button2");
+  pulsante2?.addEventListener("click", Open2);
 
   const latex = root.querySelector("#latex-button");
   latex?.addEventListener("click", OpenLatex);
