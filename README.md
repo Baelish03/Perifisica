@@ -21,10 +21,8 @@ Su questo link c'è la repo base:
 
 https://github.com/Baelish03/Perifisica
 
-In altro a destra c'è "Fork", che la copia sul vostro account, voi tramite l'app clonate la vostra copia, modificate quella e poi inviate, tramite github le modifiche alla repo base. (Se volete cercare su internet questa pratica si chiama Commit).
-
 Una volta scaricata la cartella usate visual studio code e installate l'estensione "Live server" che vi aprirà l'html completo.
-Questo perché se aprirete conil browser direttamente il file html, non viene caricato il javascript e la pagina esce senza indice e barra destra.
+Questo perché se aprirete con il browser direttamente il file html, non viene caricato il javascript e la pagina esce senza indice e barra destra.
 
 ## Struttura attuale della repository
 
@@ -69,8 +67,17 @@ Questo perché se aprirete conil browser direttamente il file html, non viene ca
 
     - il resto è del latex per scrivere il logo
 
+- mobile 
+    - mobile.js fa funzionare i pulsanti che ci sono nella versione mobile: la barra destra e sinistra nella versione mobile sono apribili mediane dei pulsantini laterali
+
+    - gli altri file definiscono lo stile della pagina per diversi tipi di dispositivi
+
 
 - opendyslexic contiene il file del font (non è protetto da copyright)
+
+
+- pages
+    - sono le pagine vere e prorpie su cui scriveremo le informazioni
 
 
 - readme.md è questo file. È scritto in markdown, è un altro linguaggio di markup come latex o html
@@ -103,6 +110,8 @@ Questa è di youmath: https://www.youmath.it/ .
 
 Ho letteralmente cercato: come fare 3 colonne in css ed ho trovato tutto pronto su internet senza nemmeno usare chatgpt, quindi se pensate: "Sarebbe proprio carina questa cosa messa qui, fatelo liberamente". Io sto sistemando secondo il mio senso estetico.
 
+Attiualmente mi sono fermato con questa part perché è abbastanza carino, ma sono sempre aperto a nuovi consigli
+
 ### Scrittura
 
 Come detto in precedenza, ho solo copiato e incollato dalle dispense di Doro. Mani che scrivono sono sempre gradite. 
@@ -115,4 +124,9 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 ### Altri compiti
 
-Attualmente non ci sono altri compiti da svolgere
+Andreabbero fatti due script python: 
+
+- sincronizare tutti i file .html con index nella forma.
+Faccio un esempio: se sposto un file come la foto del logo, dovrei modificare a mano tutti i singoli html per mettere il percorso corretto, mentre con questo script python modifico solo index.html, eseguo il programma e la modifica viene implementata su tutti i file
+
+- indexing di tutti gli html per la ricerca come si vede in search-index.json
