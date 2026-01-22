@@ -65,7 +65,6 @@ if __name__ == "__main__":
     HTMLS_PATH = r"./pages/"
     INDEX_HTML, PAGES, PAGES_NAME = read_html_files(HTMLS_PATH)
     CLEAN_INDEX = extract_html_base(INDEX_HTML)
-    CLEAN_PAGES = []
     for iterator , page in enumerate(PAGES):
         #print(PAGES_NAME[iterator], "\n")
         CLEAN_PAGE = extract_middle_column(page)

@@ -1,85 +1,73 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
 
-
 <head>
-     <meta charset="UTF-8">
+     <meta charset="utf-8" />
      <title>Perifisica</title>
-
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+     <meta content="width=device-width, initial-scale=1" name="viewport" />
+     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
      <!-- =========================
          SEO METADATA
     ========================== -->
-     <meta name="description" content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
+     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="description" />
      <!-- la descrizione deve essere più lunga -->
-     <meta name="keywords" content="fisica, scuola, università">
-     <meta name="author" content="Perifisica">
-     <meta name="robots" content="index, follow">
-
+     <meta content="fisica, scuola, università" name="keywords" />
+     <meta content="Perifisica" name="author" />
+     <meta content="index, follow" name="robots" />
      <!-- =========================
          OPEN GRAPH (FACEBOOK, LINKEDIN)
     ========================== -->
-     <meta property="og:title" content="Perifisica">
-     <meta property="og:description"
-          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta property="og:type" content="website">
-     <meta property="og:url" content="https://www.example.com/">
-     <meta property="og:image" content="../logo/logo_completo.png">
+     <meta content="Perifisica" property="og:title" />
+     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università."
+          property="og:description" />
+     <meta content="website" property="og:type" />
+     <meta content="https://www.example.com/" property="og:url" />
+     <meta content="../logo/logo_completo.png" property="og:image" />
      <!--"https://www.example.com/preview.jpg"> -->
-
      <!-- =========================
          TWITTER CARD
     ========================== -->
-     <meta name="twitter:card" content="./">
-     <meta name="twitter:title" content="Perifisica">
-     <meta name="twitter:description"
-          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta name="twitter:image" content="../logo/logo_completo.png">
-
+     <meta content="./" name="twitter:card" />
+     <meta content="Perifisica" name="twitter:title" />
+     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università."
+          name="twitter:description" />
+     <meta content="../logo/logo_completo.png" name="twitter:image" />
      <!-- =========================
          FAVICONS
     ========================== -->
-     <link rel="icon" href="../logo/favicon.ico">
-     <link rel="apple-touch-icon" sizes="180x180" href="../logo/logo_completo.png">
-     <link rel="icon" sizes="32x32" href="../logo/favicon.ico">
-     <link rel="icon" sizes="16x16" href="../logo/favicon.ico">
-
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-     <link rel="stylesheet" href="../style.css">
+     <link href="../logo/favicon.ico" rel="icon" />
+     <link href="../logo/logo_completo.png" rel="apple-touch-icon" sizes="180x180" />
+     <link href="../logo/favicon.ico" rel="icon" sizes="32x32" />
+     <link href="../logo/favicon.ico" rel="icon" sizes="16x16" />
+     <link href="https://fonts.googleapis.com" rel="preconnect" />
+     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+     <link href="../style.css" rel="stylesheet" />
 </head>
 
 <body>
      <header class="topbar">
           <div class="logo">
                <a href="./index.html" id="logo_link">
-                    <img id="foto_logo" src="../logo/logo_completo.svg" alt="Logo Perifisica" width="600pt">
+                    <img alt="Logo Perifisica" id="foto_logo" src="../logo/logo_completo.svg" width="600pt" />
                </a>
           </div>
      </header>
-
      <form class="topbar input">
           <div w3-include-html="../barra_ricerca/barra_ricerca.html"></div>
      </form>
-
      <div id="bottoni_mobile">
           <div w3-include-html="../mobile/mobile.html"></div>
      </div>
-
      <main>
           <div class="row">
                <div class="column left">
                     <div w3-include-html="../colonna_sinistra_indice/indice.html"></div>
                </div>
-
                <div class="column middle">
                     <article>
                          <h1>Incertezza ed errore nella misura</h1>
-
                          <p> Quando si riporta una misura di una grandezza
                               fisica si parla sia di incertezza sia di errore. Nel
                               linguaggio parlato incertezza e’ un concetto
@@ -98,14 +86,13 @@
                               incertezza ed errore spesso erroneamente
                               in maniera intercambiabile.
                          </p>
-
                          <p>
                               Ecco le definizione del VIM:
-                              <br>
+                              <br />
                               Errore di misurazione (Measurement Error)
                               VIM 2.16 Risultato di una misurazione meno
                               il valore di riferimento
-                              <br>
+                              <br />
                               Incertezza di misurazione (Measurement
                               uncertainties) VIM 2.26 Parametro, associato
                               al risultato di una misurazione, che
@@ -113,7 +100,6 @@
                               potrebbero ragionevolmente essere attribuiti
                               al misurando
                          </p>
-
                          <p>
                               Cominciamo dal concetto di incertezza.
                               La definizione ci dice che in generale,
@@ -121,7 +107,7 @@
                               sufficiente sensibilità), non otterremo
                               sempre lo stesso valore, ma valori diversi
                               dispersi attorno ad un valore di riferimento.
-                              <br>
+                              <br />
                               Ad esempio, se misuriamo il periodo di
                               oscillazione del pendolo semplice fatto in
                               casa, se misuriamo con un cronometro con
@@ -131,7 +117,7 @@
                               tutti (come vedremo) distribuiti attorno ad un
                               valore centrale, ad esempio 1.91, 1.97, 1.94,
                               1.97, 1.89 . . . [s]
-                              <br>
+                              <br />
                               Prima di passare allo studio delle incertezze,
                               consideriamo anche che molto raramente si
                               fanno esclusivamente misure dirette di certe
@@ -139,15 +125,15 @@
                               misurando e’ ottenuto in maniera indiretta da
                               diverse quantità, a partire da un modello
                               matematico o una relazione funzionale.
-                              <br>
+                              <br />
                               Esempio:
                               Ad esempio, una differenza potenziale / viene
                               applicata ai capi di una resistenza R. La potenza
                               misurata (il misurando) P e’ descritto dal seguente
                               modello matematico:
-                              <br>
+                              <br />
                               P = P (V, R0, α, T ) = V 2 = R0(1 + α(T − T0))
-                              <br>
+                              <br />
                               In questo caso, V, R sono misure di input, T e’
                               un fattore influenzate, α e’ un parametro (esterno
                               o misurato) e P e il misurando di output.
@@ -161,42 +147,41 @@
                               Inoltre, f può essere determinato sperimentalmente
                               o esiste solo come algoritmo che deve essere valutato numericamente.
                          </p>
-
                          <h2> Sorgenti di incertezza della misura </h2>
 
                          Ci sono diversi sorgenti di incertezza della misura che il
                          GUM (3.3.2) elenca cosi:
-                         <br>
+                         <br />
                          1. Variazioni in osservazioni ripetute sotto le stesse condizioni. Questi, di cui parleremo
                          in dettaglio, sono le proprie incertezze casuali.
-                         <br>
+                         <br />
                          2. Definizione incompleta del misurando. Per esempio, la definizione di accelerazione locale di
                          gravità come visto sopra senza ulteriori specifiche.
-                         <br>
+                         <br />
                          3. Imperfetta realizzazione della definizione del misurando. Per esempio, la misura di g con un
                          pendolo semplice ideale trascura il fatto che il pendolo reale che costruiamo non sara’ mai
                          perfettamente ideale.
-                         <br>
+                         <br />
                          4. Campione non rappresentativo. Qui l’esempio del pendolo vale meno ma il concetto e’ facile.
                          Se
                          si vuole sapere se la popolazione italiana ama i Måneskin non si puo’ fare un sondaggio solo su
                          un gruppo di persone tra i 10 e i 20 anni e poi estrapolarlo alla popolazione.
-                         <br>
+                         <br />
                          5. Conoscenza inadeguata dell’effetto dei fenomeni ambientali sul misurando. Ad esempio, se il
                          pendolo fosse sostenuto da un filo metallico, questo potrebbe allungarsi o accorciarsi con la
                          temperatura.
-                         <br>
+                         <br />
                          6. Valori inesatti dei campioni e dei i materiali di riferimento.
-                         <br>
+                         <br />
                          7. Valori inesatti di costanti e parametri che intervengono nell’analisi dati.
-                         <br>
+                         <br />
                          8. Approssimazioni e assunzioni nel metodo e nella procedura. Ad esempio, non considerando lo
                          smorzamento dovuto all’attrito sul perno.
-                         <br>
+                         <br />
                          9. Errori umani nel leggere strumenti analogici. Ad esempio, se leggete il pendolo con un
                          orologio
                          a muro molto di sbieco, potreste sovrastimare o sottostimare la misura facilmente.
-                         <br>
+                         <br />
                          10. Risoluzione finita dello strumento o soglia di discriminazione. Supponete che il periodo
                          del
                          pendolo sia 2.05 s esatti e il vostro cronometor abbia solo 0.1 s come risoluzione, allora
@@ -219,7 +204,7 @@
                          strumento
                          con
                          sufficiente precisione, possano essere apprezzate.
-                         <br>
+                         <br />
                          Esse faranno ’oscillare’ la misura attorno ad un valore
                          centrale. Queste viste sopra sono incertezze di tipo casuale che fanno oscillare la misura
                          attorno
@@ -246,7 +231,7 @@
                          stata misurata in maniera sbagliata, ad esempio non partendo dallo zero? Tutte le misure
                          saranno si-
                          stematicamente in eccesso o in difetto (della stessa quantità).
-                         <br>
+                         <br />
                          Cosa succede se il filo si allunga durante
                          le misure? Ci sara’ un effetto sistematico di deriva delle misure. In linea generale, se le
                          incertezze
@@ -309,12 +294,12 @@
                          di probabilità, quantifica attraverso una grandezza detta deviazione standard allora sono di un
                          tipo,
                          altrimenti di un altro. Ecco le definizioni del VIM:
-                         <br>
+                         <br />
                          Valutazione della incertezza metodo A VIM 2.28 Incertezza valutabile con metodi stati-
                          stici (e quantificabile attraverso una deviazione standard).
                          Valutazione della incertezza metodo B VIM 2.29 Incertezza della misurazione non di tipo
                          A.
-                         <br>
+                         <br />
                          Incertezza standard VIM 2.30 Incertezza della misura stimabile attraverso la deviazione
                          standard
                          Fanno parte della prima categoria tutte quelle fonte di incertezza di cui conosciamo la
@@ -346,18 +331,15 @@
                          Un errore sistematico costituisce sempre una incertezza di tipo B?
                     </article>
                </div>
-
                <div class="column right">
                     <div w3-include-html="../colonna_destra/colonna_destra.html"></div>
                </div>
           </div>
      </main>
-
-     <script type="module" src="../main.js"></script>
-     <link rel="stylesheet" href="../mobile/mobile_1500px-992px.css">
-     <link rel="stylesheet" href="../mobile/mobile_992px-600px.css">
-     <link rel="stylesheet" href="../mobile/mobile_600px.css">
-
+     <script src="../main.js" type="module"></script>
+     <link href="../mobile/mobile_1500px-992px.css" rel="stylesheet" />
+     <link href="../mobile/mobile_992px-600px.css" rel="stylesheet" />
+     <link href="../mobile/mobile_600px.css" rel="stylesheet" />
 </body>
 
 </html>
