@@ -129,4 +129,8 @@ Andreabbero fatti due script python:
 - sincronizare tutti i file .html con index nella forma.
 Faccio un esempio: se sposto un file come la foto del logo, dovrei modificare a mano tutti i singoli html per mettere il percorso corretto, mentre con questo script python modifico solo index.html, eseguo il programma e la modifica viene implementata su tutti i file
 
+```
+L'ho appena fatto e poi ho mandato il risultato chatgpt per vedere se ci fossero migliorie possibili e scopro che c'è una libreria che lo fa in automatico, ho salvato il codice di chat, ma ora non ho tempo per studiarmelo
+```
+
 - indexing di tutti gli html per la ricerca come si vede in search-index.json
