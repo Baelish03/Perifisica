@@ -1,11 +1,6 @@
 [
   {
     "title": "Perifisica",
-    "url": "../pages/prova.html",
-    "content": "" 
-  },
-  {
-    "title": "Perifisica",
     "url": "../pages/tipi_di_incertezze.html",
     "content": "Quando si riporta una misura di una grandezza fisica si parla sia di incertezza sia di errore. Nel linguaggio parlato incertezza e’ un concetto piu’ vago mentre la parola errore e’ piu forte e sembra sottintendere di aver sbagliato"
   }
