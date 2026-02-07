@@ -33,9 +33,15 @@ function ColoraElementoAttuale() {
   const paginaCorrente = location.pathname.split("/").pop() || "index.html";
 
   document.querySelectorAll(".dropdown-content a").forEach(link => {
-    const href = link.getAttribute("href").split("/").pop();
-    if (href === paginaCorrente) {
-      link.classList.add("attivo");
+    const href = link.getAttribute("href");
+    if (href === null){
+      return;
+    }
+    else{
+      href.split("/").pop();
+      if (href === paginaCorrente) {
+        link.classList.add("attivo");
+      }
     }
   });
 }
