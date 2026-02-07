@@ -5,24 +5,28 @@ from bs4.formatter import HTMLFormatter
 
 
 HTMLS_PATH = Path("./pages")
+MAIN_PATH = Path("./")
 FORMATTER = HTMLFormatter(indent=2)
 
-
-
 def load_soup(path: Path) -> BeautifulSoup:
-    return BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
+    return BeautifulSoup(
+        path.read_text(encoding="utf-8"),
+        "html5lib"
+    )
+
+
+#def load_soup(path: Path) -> BeautifulSoup:
+#    return BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
 
 
 def sync_pages():
-    index_path = HTMLS_PATH / "index.html"
+    index_path = MAIN_PATH / "index.html"
     index_html = index_path.read_text(encoding="utf-8")
 
-    index_soup = BeautifulSoup(index_html, "html.parser") # è tutto index_html
+    #index_soup = BeautifulSoup(index_html, "html.parser") # è tutto index_html
+    index_soup = BeautifulSoup(index_html, "html5lib")
 
-    for page in HTMLS_PATH.glob("*.html"):
-        if page.name == "index.html":
-            continue
-
+    for page in HTMLS_PATH.rglob("*.html"):
         if os.path.getsize(page) == 0:
             page.write_text(str(index_soup)) #se la pagina è vuota, mettici index.html
 
@@ -33,7 +37,9 @@ def sync_pages():
         new_article = page_soup.article.decode_contents()
 
         # copia del template
-        merged = BeautifulSoup(index_html, "html.parser") # è tutto index_html
+        #merged = BeautifulSoup(index_html, "html.parser") # è tutto index_html
+        merged = BeautifulSoup(index_html, "html5lib")
+
 
         merged.title.string = new_title # imposta il titolo di index ad essere quelo di page
         merged.article.clear() # svuota article di index
