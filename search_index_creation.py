@@ -38,7 +38,7 @@ def extract_page_data(page: Path) -> dict | None:
 def read_pages() -> list[dict]:
     pages_data = []
 
-    for page in HTMLS_PATH.glob("*.html"):
+    for page in HTMLS_PATH.rglob("*.html"):
         data = extract_page_data(page)
         if data:
             pages_data.append(data)

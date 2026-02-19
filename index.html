@@ -6,8 +6,7 @@
 <head>
      <meta charset="UTF-8">
      <title>Perifisica</title>
-
-     <!--<base href="../"> SARÀ UTILE QUANDO AVREMO UN DOMINIO -->
+     <base href="/Perifisica/">
 
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +14,7 @@
      <!-- =========================
          SEO METADATA
     ========================== -->
+
      <meta name="description" content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
      <!-- la descrizione deve essere più lunga -->
      <meta name="keywords" content="fisica, scuola, università">
@@ -29,8 +29,9 @@
           content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
      <meta property="og:type" content="website">
      <meta property="og:url" content="https://www.example.com/">
-     <meta property="og:image" content="../logo/logo_completo.png">
-     <!--"https://www.example.com/preview.jpg"> -->
+     <meta property="og:image" content="/logo/logo_completo.png">
+
+     <!-- "https://www.example.com/preview.jpg"> -->
 
      <!-- =========================
          TWITTER CARD
@@ -39,56 +40,114 @@
      <meta name="twitter:title" content="Perifisica">
      <meta name="twitter:description"
           content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta name="twitter:image" content="../logo/logo_completo.png">
+     <meta name="twitter:image" content="/logo/logo_completo.png">
 
      <!-- =========================
          FAVICONS
     ========================== -->
-     <link rel="icon" href="../logo/favicon.ico">
-     <link rel="apple-touch-icon" sizes="180x180" href="../logo/logo_completo.png">
-     <link rel="icon" sizes="32x32" href="../logo/favicon.ico">
-     <link rel="icon" sizes="16x16" href="../logo/favicon.ico">
+     <link rel="icon" href="/logo/favicon.webp">
+     <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo_completo.png">
+     <link rel="icon" sizes="32x32" href="/logo/favicon.webp">
+     <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
 
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
      <header class="topbar">
           <div class="logo">
-               <a href="./pages/index.html" title="Torna all'indice" id="logo_link">
-                    <img id="foto_logo" src="../logo/logo_completo.svg" alt="Logo Perifisica" width="600pt">
+               <a href="/index.html" title="Torna all'indice" id="logo_link">
+                    <picture>
+                         <img id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp"
+                              alt="Logo Perifisica" width="600pt" height="167.4pt">
+                    </picture>
                </a>
           </div>
      </header>
 
      <form class="topbar input">
-          <div w3-include-html="../barra_ricerca/barra_ricerca.html"></div>
+          <div w3-include-html="/barra_ricerca/barra_ricerca.html"></div>
      </form>
 
      <div id="bottoni_mobile">
-          <div w3-include-html="../mobile/mobile.html"></div>
+          <div w3-include-html="/mobile/mobile.html"></div>
      </div>
 
      <main>
           <div class="row">
                <nav class="column left">
-                    <div w3-include-html="../colonna_sinistra_indice/indice.html"></div>
+                    <div w3-include-html="/colonna_sinistra_indice/indice.html">
+
+                    </div>
                </nav>
 
                <div class="column middle">
+
                     <article>
+
+                         <h1>
+                              <center>Benvenuti!</center>
+                         </h1>
+
+                         <p>
+                              <center><q><em>
+                                             O dèi, stornate dalla mia lingua follia di argomenti,
+                                             e da sante labbra fate sgorgare una limpida sorgente.
+                                             E a te, musa agognata, o vergine dalle candide braccia,
+                                             io mi rivolgo: ciò che spetta agli effimeri ascoltare,
+                                             tu porta, guidando avanti il carro ben governato dell'amore devoto.
+                                             Ma non ti turbi il cogliere fiori di nobile gloria
+                                             fra i mortali con un discorso, ricolmo di santità,
+                                             che sia ardimentoso; e allora tu giunga leggera alla vetta della saggezza.
+                                        </em></q></center>
+                         </p>
+
+                         <p>
+                              Così Empedocle di Agrigento nel V secolo a.C. apriva il suo "Peri Physeos" ovvero "Sulla
+                              Natura" ma anche "Sulla realtà di tutte le cose",
+                              ed è da qui che abbiamo voluto partire alla scoperta delle conoscenze sulla natura.
+                              Un'arte che persegue se stessa come puro interesse,
+                              andando dritti alla ricerca del principio primo. Che cos'è la fisica alla fine se non un
+                              fantastico tentativo descrittivo, razionale di spiegare
+                              come funziona la natura delle cose che ci circondano? Non sta forse la sua genesi nella
+                              meraviglia? In questo cammino cercheremo di farci tante
+                              domande e vedere di discorrere sulle loro risposte, fornendo al possibile un'organica
+                              guida alla disciplina e a quelle strettamente correlate perchè
+                              la fisica non sono solo conti e particelle, c'è un forte e contrastato, a volte
+                              travagliato, pensiero dietro, per quanto poi sia algida alla resa dei conti appunto.
+                              Nell'intento di essere chiari e guidare il lettore alla comprensione (o rivelazione
+                              chissà) di alcuni dei più noti o reconditi fatti fisici, con annessi
+                              e connessi, nonché alla disciplina della fisica e della matematica propedeutica: ecco a
+                              voi un pratico manuale online alla scienza fisica di livello
+                              universitario che parta dal metodo, passi per l'esperimento e l'analisi dell'esperienza e
+                              giunga alla legge fisica. Questo è solo l'inizio. A bordo Signori!
+                         </p>
+
+                         <p>
+                              L'iniziativa nasce nell'autunno 2025 da un gruppo eterogeneo di studenti universitari
+                              presso la facoltà di Fisica dell'Università di Padova.
+                         </p>
+
+                         <p>
+                              Per navigare nel sito vi invitiamo ad andare sull'Indice.
+                         </p>
+
+                         <p>
+                              <center><q><em>
+                                             Altro non è l'esser ignorante, che il non si quietar nel vero.
+                                        </em></q></center>
+                         </p>
+                         [Galileo Galilei]
 
                     </article>
                </div>
 
                <div class="column right">
-                    <div w3-include-html="../colonna_destra/colonna_destra.html"></div>
+                    <div w3-include-html="/colonna_destra/colonna_destra.html"></div>
                </div>
-          </div>
      </main>
+
 
      <!--ROBA UTILE PER DOPO-->
      <footer>
@@ -97,11 +156,11 @@
           </address>
      </footer>
 
-     <script type="module" src="../main.js"></script>
-     <link rel="stylesheet" href="../mobile/mobile_1500px-992px.css">
-     <link rel="stylesheet" href="../mobile/mobile_992px-600px.css">
-     <link rel="stylesheet" href="../mobile/mobile_600px.css">
-
+     <script type="module" src="/main.js" defer></script>
+     <link rel="stylesheet" href="/style.css">
+     <link rel="stylesheet" href="/mobile/mobile_1500px-992px.css">
+     <link rel="stylesheet" href="/mobile/mobile_992px-600px.css">
+     <link rel="stylesheet" href="/mobile/mobile_600px.css">
 </body>
 
 </html>

@@ -1,28 +1,17 @@
 # Perifisica
 
 ## Collaborare su github
-Mi dispiace aggiungere roba alle cose da imparare, ma l'inizio per collaborare è saper usare github.
-date un'occhiata a questo:
-https://www.aranzulla.it/come-usare-github-1519806.html
-
-Quello che vi interessa è "Come creare un account" e "Come usare github desktop" per poter aggiungere le modifiche che fate sul vostro pc e caricarle online.
-
-In particolare:
-
-``` 
 Per iniziare a lavorare su un progetto esistente, puoi clonare un repository dal tuo account GitHub utilizzando GitHub Desktop. 
 Per farlo, fai clic sul pulsante Clone a Repository nella parte superiore dell'applicazione. 
 Successivamente, verrà visualizzato un elenco dei tuoi repository GitHub. 
 Seleziona il repository che desideri clonare e specifica la posizione in cui vuoi salvarlo sul tuo computer.
-``` 
 
-La repository da clonare è la vostra copia di Perifisica. 
-Su questo link c'è la repo base:
+Questo è il link:
 
 https://github.com/Baelish03/Perifisica
 
 Una volta scaricata la cartella usate visual studio code e installate l'estensione "Live server" che vi aprirà l'html completo.
-Questo perché se aprirete con il browser direttamente il file html, non viene caricato il javascript e la pagina esce senza indice e barra destra.
+Questo perché se aprirete con il browser direttamente il file html, non viene caricato il javascript e la pagina esce senza indice, barra destra e barra di ricerca.
 
 ## Struttura attuale della repository
 
@@ -37,9 +26,6 @@ Questo perché se aprirete con il browser direttamente il file html, non viene c
     - highlight.js evidenzia durante la ricerca la porzione di testo corrispondente alla ricerca
 
     - search-index.json è un database, come se fosse un excel (per intenderci) e associa titolo, collegamento locale della pagina html e contenuto. search.js cerca nel contenuto ese clicchi sul risultato il collegamento locale ti spedisce sulla nuova pagina.
-
-    Attualmente ci sono elettromagnetismo.html e meccanica.html come file segnaposto per provare il corretto funzionamento. Quando riempiremo il sito bisognerà fare uno script python per indicizzare tutte le pagine.
-
 
 - colonna destra
 
@@ -56,10 +42,13 @@ Questo perché se aprirete con il browser direttamente il file html, non viene c
 
     - indice.js contiene le animazioni di apertura e chiusura delle tendine dell'indice e la colorazione automatica nell'indice del titoletto della pagina che si sta visitando 
 
+- Inter è il font sans-serif per il testo, l'unico file indispensabile per il sito è il woff2 che contiene il font compresso
+
+- Libre-Baskerville come prima, ma in questo caso è il serif per i titoli.
 
 - logo ha il logo in tutti i formati utili 
     
-    - favicon.ico è l'icon piccolina prima del nome della scheda in alto
+    - favicon.webp è l'icon piccolina prima del nome della scheda in alto
 
     - svg è il vettoriale in inkscape
 
@@ -88,49 +77,33 @@ Questo è stato fatto perché l'indice a sinistra va messo in tutte le pagine qu
 Stessa cosa è stata fatta per la colonna di destra e la barra di ricerca
 
 
-- main.js: javascript parallelizza i comandi per risparmiare tempo, questo comporta che, ad esempio, il programma che fa funzionare i pulsanti a destra venga caricato prima che i pulsanti stessi siano aggiiunti con include_html.js. main.js previene questo con await(), le altre funzioni invece vengono solo inizializzate e possono tranquillamente andare in parallelo.
+- main.js: javascript parallelizza i comandi per risparmiare tempo, questo comporta che, ad esempio, il programma che fa funzionare i pulsanti a destra venga caricato prima che i pulsanti stessi siano aggiunti con include_html.js. main.js previene questo con await(), le altre funzioni invece vengono solo inizializzate e possono tranquillamente andare in parallelo.
 
 
 - style.css è lo stile generale. Attualmente contiene font, le tre colonne, lo sfondo.
 
  
-- index.html è il file della pagina principale. Il nome index è obligatorio ed è la pagina iniziale del sito. 
-Questa è di youmath: https://www.youmath.it/ .  
-    La mia attualmente è solo un segnaposto per il collegamento del logo. Il logo in tipi_di_incertezze.html è un link cliccabile a index.html
+- index.html è il file della pagina principale. Il nome index è obligatorio ed è la pagina iniziale del sito.
 
-- tipi_di_incertezze.html è il file su cui sto lavorando attualmente: lo scritto è un copia-incolla degli appunti di Doro.
+- index_sync.py sincronizza tutte le pagine html rendendole uguali a index.html. Ovviamente questo non vale per article e title
+
+- search-index-creation.py aggiorna il file search-index.json
 
 ## Compiti attuali
 
 ### Stile 
 
-È una fase di sperimentazione, soprattutto con lo stile. Sto cercando di rendere le cose carine.
+Lo stile del sito è semidefinitivo: è carino, ma sono sempre ben accette migliorie, sia come codice che come idee da implementare.
 
 `IL LIMITE SONO LE IDEE`
 
-Ho letteralmente cercato: come fare 3 colonne in css ed ho trovato tutto pronto su internet senza nemmeno usare chatgpt, quindi se pensate: "Sarebbe proprio carina questa cosa messa qui, fatelo liberamente". Io sto sistemando secondo il mio senso estetico.
+Quindi non pensate: "non lo dico perché è troppo difficile", qualsiasi cosa può essere fatta perché CSS non è per nulla difficile
 
-Attiualmente mi sono fermato con questa part perché è abbastanza carino, ma sono sempre aperto a nuovi consigli
 
 ### Scrittura
-
-Come detto in precedenza, ho solo copiato e incollato dalle dispense di Doro. Mani che scrivono sono sempre gradite. 
 
 `QUESTO È IL COMPITO PIÙ SEMPLICE DAL PUNTO DI VISTA DELLA PROGRAMMAZIONE`
 
 Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola colorata, ogni tanto qualche immagine carina (che posso fare io)
 
 `non prendete da internet che c'è il copyright`
-
-### Altri compiti
-
-Andreabbero fatti due script python: 
-
-- sincronizare tutti i file .html con index nella forma.
-Faccio un esempio: se sposto un file come la foto del logo, dovrei modificare a mano tutti i singoli html per mettere il percorso corretto, mentre con questo script python modifico solo index.html, eseguo il programma e la modifica viene implementata su tutti i file.
-LO script c'è, ma non gestisce tutte le sottocartelle di pages, poi lo implemento
-
-- indexing di tutti gli html per la ricerca come si vede in search-index.json
-Anche questo c'è, può essere migliorato, ma vorrei prima iniziare a scrivere
-
-

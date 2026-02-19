@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
   --search-background: white;
 }
@@ -59,7 +57,7 @@
 }
 
 #searchResults.open {
-  max-height: 20rem;
+  max-height: 30rem;
   opacity: 1;
   pointer-events: auto;
 }

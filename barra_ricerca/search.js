@@ -29,7 +29,8 @@ export function Search() {
       results.classList.remove("open"); return;
     }
 
-    matches.slice(0, 8).forEach(p => {
+    /*in matches.slice(0, 10) il 10 indica il numero massimo di risultati che escono */
+    matches.slice(0, 10).forEach(p => {
       const div = document.createElement("div");
       div.className = "result";
       div.innerHTML = `
