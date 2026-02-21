@@ -1,4 +1,4 @@
-@font-face {
+/*@font-face {
   font-family: 'Inter';
   src: url('./Inter/Inter-VariableFont_opsz\,wght.woff2') format('woff2');
   font-display: optional;
@@ -9,7 +9,7 @@
   src: url('./Libre_Baskerville/LibreBaskerville-VariableFont_wght.woff2') format('woff2');
   font-display: optional;
 }
-
+*/
 :root {
   --text: #1f1f1f;
   --muted: #6b6b6b;
