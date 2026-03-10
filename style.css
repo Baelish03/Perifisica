@@ -108,7 +108,7 @@ h4 {
   font-family: "Libre Baskerville", serif;
   font-weight: 600;
   line-height: 1;
-  text-align: left;
+  text-align: center;
 }
 
 h1 {
@@ -148,6 +148,15 @@ strong {
   color: var(--primary);
 }
 
+.box-attenzione {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--primary);
+  border-radius: 10px;
+  margin: 0 20px;
+  padding: 5px 20px;
+}
+
 /* ======================= FIGURE GENERALE =========== */
 
 .image {
@@ -178,3 +187,4 @@ strong {
   height: 0;
   width: 0;
 }
+
