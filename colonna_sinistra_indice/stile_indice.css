@@ -1,3 +1,7 @@
+.h1_indice, .h2_indice, .h3_indice, .h4_indice {
+  text-align: left;
+}
+
 .h1_indice {
   color: var(--primary);
 }
