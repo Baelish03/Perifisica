@@ -80,7 +80,8 @@
             Cosa è il LaTeX?
           </h1>
           <p>
-            $\TeX$ (pronunciato "tek") è un linguaggio di programmazione per la composizione <strong>tipografica</strong> progettato da
+            $\TeX$ (pronunciato "tek") è un linguaggio di programmazione per la composizione
+            <strong>tipografica</strong> progettato da
             Donald Knuth e pubblicato per la prima volta nel 1978. Il sistema fu sviluppato con due obiettivi
             principali:
           <ol>
@@ -102,20 +103,30 @@
           <p>
             Su TeX si basa $\LaTeX$, un sistema software per la composizione di documenti che ne semplifica l'utilizzo.
             In
-            questo contesto, TeX si occupa principalmente dell'impaginazione e del <strong>layout</strong> del documento, mentre LaTeX
-            permette all'autore di concentrarsi sul <strong>contenuto</strong>, fornendo comandi più intuitivi per la formattazione.
+            questo contesto, TeX si occupa principalmente dell'impaginazione e del <strong>layout</strong> del
+            documento, mentre LaTeX
+            permette all'autore di concentrarsi sul <strong>contenuto</strong>, fornendo comandi più intuitivi per la
+            formattazione.
             Poiché i comandi di formattazione di TeX sono piuttosto basilari, LaTeX mette a disposizione strumenti già
             pronti
             per gestire elementi comuni dei documenti, come titoli di capitoli, note a piè di pagina, riferimenti
             incrociati
             e bibliografie.
           </p>
+          <figure class="figure">
+            <img alt="Logo LaTeX" class="image" height="288px" width="288px" loading="lazy"
+              src="./cosa-e-latex/latex-project-logo_288x288.svg">
+            <figcaption class="figcaption">
+              Logo del progetto $\LaTeX$
+            </figcaption>
+          </figure>
           <p>
             Il sistema TeX conosce con precisione le dimensioni di tutti i caratteri e dei simboli tipografici. Grazie a
             queste informazioni è in grado di calcolare automaticamente la disposizione ottimale delle lettere nelle
             righe e delle righe nella pagina, ottenendo un risultato tipograficamente molto accurato.
             Il processo di compilazione produce tradizionalmente un file DVI (DeVice Independent), che contiene le
-            posizioni finali di tutti i caratteri nel documento. Oggi, tuttavia, è molto diffuso l'uso di <em>pdfTeX</em>, che
+            posizioni finali di tutti i caratteri nel documento. Oggi, tuttavia, è molto diffuso l'uso di
+            <em>pdfTeX</em>, che
             genera direttamente un file PDF senza passare attraverso il formato DVI.
           </p>
           <p>
@@ -124,7 +135,8 @@
             viene fornita attraverso i cosiddetti file di formato.
             Il formato più diffuso è proprio LaTeX, sviluppato originariamente da Leslie Lamport. Esso include diversi
             stili di documento (come libri, articoli, lettere o presentazioni) e introduce funzionalità avanzate come la
-            <strong>numerazione automatica</strong> di sezioni ed equazioni, oltre alla gestione dei riferimenti all'interno del testo.
+            <strong>numerazione automatica</strong> di sezioni ed equazioni, oltre alla gestione dei riferimenti
+            all'interno del testo.
           </p>
           <h2>
             Perché usarlo?
@@ -139,19 +151,25 @@
             Questo approccio favorisce la separazione tra contenuto e layout del documento, pur lasciando comunque la
             possibilità di intervenire manualmente sulla composizione tipografica quando necessario.
             Grazie alla sua struttura e alle numerose funzionalità disponibili, LaTeX rappresenta uno strumento
-            particolarmente adatto alla produzione di documenti tecnici e <strong>scientifici</strong>, dove chiarezza, precisione e
+            particolarmente adatto alla produzione di documenti tecnici e <strong>scientifici</strong>, dove chiarezza,
+            precisione e
             coerenza grafica sono aspetti fondamentali.
           </p>
           <p>
             Di seguito sono riportati alcuni motivi per cui scegliere LaTeX per la scrittura dei propri documenti.
           <ol>
             <li>
-              Mette a disposizione una vasta gamma di simboli e ambienti matematici, permettendo di scrivere <strong>formule complesse</strong>
-              in modo preciso e veloce.
+              Mette a disposizione una vasta gamma di simboli e ambienti matematici, permettendo di scrivere
+              <strong>formule complesse</strong> in modo preciso e veloce.
             </li>
+            <video autoplay muted loop playsinline width="427px" height="240px">
+              <source src="./cosa-e-latex/formula-word.webm" type="video/webm" />
+              <source src="./cosa-e-latex/formula-word.mp4" type="video/mp4" />
+            </video>
             <li>
               Può essere utilizzato su diversi sistemi operativi, tra cui Linux, Windows e macOS. I documenti prodotti
-              mantengono sempre lo <strong>stesso risultato</strong> finale, indipendentemente dal computer utilizzato. Questo evita
+              mantengono sempre lo <strong>stesso risultato</strong> finale, indipendentemente dal computer utilizzato.
+              Questo evita
               problemi comuni con altri programmi, ad esempio quando si apre una presentazione creata su Windows in
               macOS e la
               formattazione viene messa a soqquadro.
@@ -173,7 +191,8 @@
               I file LaTeX sono semplici file di testo e possono quindi essere facilmente condivisi e gestiti tramite
               sistemi di controllo di versione, come <em>GitHub</em>, permettendo a più persone di lavorare sullo stesso
               documento.
-              Per un approccio più basilare si può usare <em>Overleaf</em> che permette di <strong>collaborare online</strong> in tempo reale.
+              Per un approccio più basilare si può usare <em>Overleaf</em> che permette di <strong>collaborare
+                online</strong> in tempo reale.
             </li>
             <li>
               Oltre alla produzione di documenti PDF, LaTeX può essere utilizzato anche per generare altri tipi di
@@ -201,47 +220,55 @@
           </p>
           <p>
             Un'altra differenza riguarda il modo in cui i documenti vengono elaborati. In LaTeX ogni modifica richiede
-            una <strong>compilazione</strong> del documento, operazione che può richiedere alcuni secondi ma permette l'utilizzo di algoritmi
+            una <strong>compilazione</strong> del documento, operazione che può richiedere alcuni secondi ma permette
+            l'utilizzo di algoritmi
             tipografici più sofisticati, con una sillabazione più accurata e un risultato tipografico generalmente molto
-            professionale. Word, invece, aggiorna il documento <strong>in tempo reale</strong> mentre si scrive, privilegiando la
-            velocità di modifica, rendendo necessario aggiornare manualmente alcuni elementi come il sommario e l'indice. Viene
+            professionale. Word, invece, aggiorna il documento <strong>in tempo reale</strong> mentre si scrive,
+            privilegiando la
+            velocità di modifica, rendendo necessario aggiornare manualmente alcuni elementi come il sommario e
+            l'indice. Viene
             da sè che in presenza di pochi paragrafi questo sia gestibile, ma in un intero libro diventi insostenibile
             modificare l'indice manualmente.
           </p>
           <p>
             Se il documento contiene immagini, l'elaborazione dei file Word può diventare molto lenta o il programma
-            potrebbe persino bloccarsi. Perché succede? Durante la modifica, tutte le immagini devono essere memorizzate.
+            potrebbe persino bloccarsi. Perché succede? Durante la modifica, tutte le immagini devono essere
+            memorizzate.
             Quando si modificano documenti LaTeX, le immagini nell'editor sono visibili
             solo tramite il loro riferimento testuale e solo in un secondo momento vengono compilate, una per una, in un
             PDF.
           </p>
           <p>
             LaTeX consente inoltre di modificare facilmente lo stile dell'intero documento intervenendo su poche righe
-            di codice, mentre in Word operazioni simili richiedono diversi passaggi manuali. Anche la gestione di documenti
+            di codice, mentre in Word operazioni simili richiedono diversi passaggi manuali. Anche la gestione di
+            documenti
             molto lunghi o complessi può risultare più semplice in LaTeX, poiché il testo può essere suddiviso in
             file diversi e organizzato in modo modulare.
           </p>
-            METTI ESEMPIO
-            \input{main/aboutdogs}
-            \input{main/aboutcats}
-            Per spostare la discussione sui gatti all'inizio � sufficiente cambiare la posizione nel file principale:
-            \input{main/aboutcats}
-            \input{main/aboutdogs}
+          METTI ESEMPIO
+          \input{main/aboutdogs}
+          \input{main/aboutcats}
+          Per spostare la discussione sui gatti all'inizio � sufficiente cambiare la posizione nel file principale:
+          \input{main/aboutcats}
+          \input{main/aboutdogs}
 
 
           <h3>
             Quando preferire Word?
           </h3>
           <p>
-            Uno dei principali vantaggi di Word è il <strong>controllo grammaticale</strong> automatico, che aiuta a individuare errori
+            Uno dei principali vantaggi di Word è il <strong>controllo grammaticale</strong> automatico, che aiuta a
+            individuare errori
             durante la scrittura. Alcune piattaforme online per LaTeX, come Overleaf, offrono strumenti di controllo
             ortografico, ma generalmente non includono un sistema di correzione grammaticale completo integrato
             nell'editor.
           </p>
           <p>
-            Word risulta spesso più pratico per documenti <strong>brevi</strong> o <strong>semplici</strong>, dove la rapidità di scrittura
+            Word risulta spesso più pratico per documenti <strong>brevi</strong> o <strong>semplici</strong>, dove la
+            rapidità di scrittura
             e l'interfaccia grafica immediata permettono di lavorare senza dover conoscere una sintassi specifica.
-            Inoltre, quando si lavora con testi che richiedono frequenti revisioni linguistiche o correzioni grammaticali, gli
+            Inoltre, quando si lavora con testi che richiedono frequenti revisioni linguistiche o correzioni
+            grammaticali, gli
             strumenti integrati di Word possono risultare particolarmente utili.
           </p>
           <div class="box-attenzione">
