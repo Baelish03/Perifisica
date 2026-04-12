@@ -114,3 +114,7 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 Vorrei che l'indice non superasse mai il corpo centrale. Ho trovato un metodo, ma per come è costruito l'indice ogni sezione ha una lunghezza indipendente. Questa cosa va risolta.
 
 Nella versione mobile, l'indice non scrolla bene.
+
+Non funziona nemmeno l'evidenziazione nell'indice.
+
+Bisogna cambiare i title dei vari html.

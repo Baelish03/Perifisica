@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    Perifisica
+  </title>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <!-- =========================
+         SEO METADATA
+    ========================== -->
+  <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="description" />
+  <!-- la descrizione deve essere più lunga -->
+  <meta content="fisica, scuola, università" name="keywords" />
+  <meta content="Perifisica" name="author" />
+  <meta content="index, follow" name="robots" />
+  <!-- =========================
+         OPEN GRAPH (FACEBOOK, LINKEDIN)
+    ========================== -->
+  <meta content="Perifisica" property="og:title" />
+  <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università."
+    property="og:description" />
+  <meta content="website" property="og:type" />
+  <meta content="https://www.example.com/" property="og:url" />
+  <meta content="/logo/logo_completo.png" property="og:image" />
+  <!-- "https://www.example.com/preview.jpg"> -->
+  <!-- =========================
+         TWITTER CARD
+    ========================== -->
+  <meta content="./" name="twitter:card" />
+  <meta content="Perifisica" name="twitter:title" />
+  <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università."
+    name="twitter:description" />
+  <meta content="/logo/logo_completo.png" name="twitter:image" />
+  <!-- =========================
+         FAVICONS
+    ========================== -->
+  <link href="/logo/favicon.webp" rel="icon" />
+  <link href="/logo/logo_completo.png" rel="apple-touch-icon" sizes="180x180" />
+  <link href="/logo/favicon.webp" rel="icon" sizes="32x32" />
+  <link href="/logo/favicon.webp" rel="icon" sizes="16x16" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="/style.css" rel="stylesheet" />
+  <link href="/mobile/mobile_1500px-992px.css" rel="stylesheet" />
+  <link href="/mobile/mobile_992px-600px.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <a href="/index.html" id="logo_link" title="Torna all'indice">
+        <picture>
+          <img alt="Logo Perifisica" height="167.4pt" id="foto_logo" src="/logo/logo_completo.png"
+            srcset="/logo/logo_completo.webp" width="600pt" />
+        </picture>
+      </a>
+    </div>
+  </header>
+  <form class="topbar input">
+    <div w3-include-html="/barra_ricerca/barra_ricerca.html">
+    </div>
+  </form>
+  <div id="bottoni_mobile">
+    <div w3-include-html="/mobile/mobile.html">
+    </div>
+  </div>
+  <main>
+    <div class="row">
+      <nav class="column left">
+        <div w3-include-html="/colonna_sinistra_indice/indice.html">
+        </div>
+      </nav>
+      <div class="column middle">
+        <article>
+          
+        </article>
+      </div>
+      <div class="column right">
+        <div w3-include-html="/colonna_destra/colonna_destra.html">
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--ROBA UTILE PER DOPO-->
+  <footer>
+    <address>
+    </address>
+  </footer>
+  <link href="/font.css" rel="stylesheet" />
+  <script defer src="/main.js" type="module">
+  </script>
+</body>
+
+</html>
