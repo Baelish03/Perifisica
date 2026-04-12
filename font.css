@@ -22,26 +22,26 @@
 @font-face {
   font-family: 'Libre Baskerville';
   src: url('/font/LibreBaskerville-Regular.woff2') format('woff2');
-  font-display: optional;
+  font-display: auto;
 }
 
 
 @font-face {
     font-family: 'OpenDyslexic';
     src: url('/font/OpenDyslexic-Regular.woff2') format('woff2');
-    font-display: optional;
+    font-display: auto;
 }
 
 @font-face {
     font-family: 'OpenDyslexic';
     src: url('/font/OpenDyslexic-Bold.woff2') format('woff2');
     font-weight: bold;
-    font-display: optional;
+    font-display: auto;
   }
 
 @font-face {
     font-family: 'OpenDyslexic';
     src: url('/font/OpenDyslexic-Italic.woff2') format('woff2');
     font-style: italic;
-    font-display: optional;
+    font-display: auto;
 }
