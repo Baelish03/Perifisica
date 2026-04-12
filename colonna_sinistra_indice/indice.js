@@ -2,12 +2,31 @@ function Chevron(contentId, chevronId) {
   const content = document.getElementById(contentId);
   const chevron = document.getElementById(chevronId);
 
+  //var body = document.body,
+  //html = document.documentElement;
+
+  //var height = Math.max( body.scrollHeight, body.offsetHeight, 
+  //                     html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+  var middle = document.getElementsByClassName("middle")[0]
+  //var height = middle.scrollHeight
+  var rect = middle.getBoundingClientRect();
+  var max = rect.bottom;
+
+  var rect2 = content.getBoundingClientRect();
+  var min = rect2.top;
+  console.log(min)
+
+  var height = max - min;
+
+
+
   const isOpen = content.style.maxHeight;
   if (isOpen) {
     content.style.maxHeight = null;
     chevron.style.transform = "rotate(0deg) translate(0rem, 0px)";
   } else {
-    content.style.maxHeight = content.scrollHeight + "px";
+    content.style.maxHeight = height + "px"; //content.scrollHeight + "px";
     chevron.style.transform = "rotate(90deg) translate(+.4rem, 0px)";
   }
 }

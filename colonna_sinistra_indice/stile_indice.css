@@ -44,7 +44,7 @@
   opacity: 0;
   /*position: relative;*/
   background-color: transparent;
-  overflow: hidden;
+  overflow:scroll;
   min-width: 160px;
   z-index: 1;
   transition: max-height  .5s ease,
@@ -74,7 +74,7 @@
 
 .show {
   /*display: block;*/
-  max-height: 20rem;
+  max-height: 20rem; /*questo viene sistemato in automatico nel js*/ 
   opacity: 1;
 }
 

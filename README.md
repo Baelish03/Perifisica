@@ -107,3 +107,10 @@ Quindi non pensate: "non lo dico perché è troppo difficile", qualsiasi cosa pu
 Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola colorata, ogni tanto qualche immagine carina (che posso fare io)
 
 `non prendete da internet che c'è il copyright`
+
+
+### Errori da correggere
+
+Vorrei che l'indice non superasse mai il corpo centrale. Ho trovato un metodo, ma per come è costruito l'indice ogni sezione ha una lunghezza indipendente. Questa cosa va risolta.
+
+Nella versione mobile, l'indice non scrolla bene.
