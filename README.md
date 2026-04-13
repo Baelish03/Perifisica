@@ -111,10 +111,13 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 ### Errori da correggere
 
-Vorrei che l'indice non superasse mai il corpo centrale. Ho trovato un metodo, ma per come è costruito l'indice ogni sezione ha una lunghezza indipendente. Questa cosa va risolta.
 
-Nella versione mobile, l'indice non scrolla bene.
-
-Non funziona nemmeno l'evidenziazione nell'indice.
+Nella versione mobile, l'indice non scrolla bene e rimane aperto fisso.
 
 Bisogna cambiare i title dei vari html.
+
+Usare unità di misura vw per la barra di ricerca.
+
+Vorrei che le barre laterali seguissero il corpo mentre si scorre.
+
+L'indice dovrebbe rimanere aperto nel capito della pagina dove si è attualmente.

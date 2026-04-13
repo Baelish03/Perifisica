@@ -2,31 +2,12 @@ function Chevron(contentId, chevronId) {
   const content = document.getElementById(contentId);
   const chevron = document.getElementById(chevronId);
 
-  //var body = document.body,
-  //html = document.documentElement;
-
-  //var height = Math.max( body.scrollHeight, body.offsetHeight, 
-  //                     html.clientHeight, html.scrollHeight, html.offsetHeight );
-
-  var middle = document.getElementsByClassName("middle")[0]
-  //var height = middle.scrollHeight
-  var rect = middle.getBoundingClientRect();
-  var max = rect.bottom;
-
-  var rect2 = content.getBoundingClientRect();
-  var min = rect2.top;
-  console.log(min)
-
-  var height = max - min;
-
-
-
   const isOpen = content.style.maxHeight;
   if (isOpen) {
     content.style.maxHeight = null;
     chevron.style.transform = "rotate(0deg) translate(0rem, 0px)";
   } else {
-    content.style.maxHeight = height + "px"; //content.scrollHeight + "px";
+    content.style.maxHeight = content.scrollHeight + "px";
     chevron.style.transform = "rotate(90deg) translate(+.4rem, 0px)";
   }
 }
@@ -48,16 +29,31 @@ function OpenLatex() {
   Chevron("latex-content", "latex-chevron");
 }
 
+/*
+Rende l'indice della stessa lunghezza del corpo centrale della pagina
+*/
+function LunghezzaIndice() {
+  const middle = document.getElementsByClassName("middle")[0];
+  const middle_bottom = middle.getBoundingClientRect().bottom;
+
+  const dropdown = document.getElementById("dropdown");
+  const dropdown_top = dropdown.getBoundingClientRect().top;
+
+  const height = middle_bottom - dropdown_top;
+  dropdown.style.maxHeight = height + "px";
+}
+
 function ColoraElementoAttuale() {
   const paginaCorrente = location.pathname.split("/").pop() || "index.html";
+  //console.log(paginaCorrente);
 
   document.querySelectorAll(".dropdown-content a").forEach(link => {
-    const href = link.getAttribute("href");
-    if (href === null){
+    var href = link.getAttribute("href");
+    if (href === null) {
       return;
     }
-    else{
-      href.split("/").pop();
+    else {
+      href = href.split("/").pop();
       if (href === paginaCorrente) {
         link.classList.add("attivo");
       }
@@ -67,6 +63,7 @@ function ColoraElementoAttuale() {
 
 export function init(root) {
   ColoraElementoAttuale();
+  LunghezzaIndice();
 
   const pulsante1 = root.querySelector("#button1");
   pulsante1?.addEventListener("click", Open1);
