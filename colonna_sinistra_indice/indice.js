@@ -30,16 +30,22 @@ function OpenLatex() {
 }
 
 /*
-Rende l'indice della stessa lunghezza del corpo centrale della pagina
+Rende l'indice della stessa lunghezza del corpo centrale della pagina.
+Se il corpo è più corto della colonna destra, l'indice si uniforma alla 
+  colonna destra.
 */
 function LunghezzaIndice() {
   const middle = document.getElementsByClassName("middle")[0];
   const middle_bottom = middle.getBoundingClientRect().bottom;
 
+  const right = document.getElementsByClassName("right")[0];
+  const right_bottom = right.getBoundingClientRect().bottom;
+
   const dropdown = document.getElementById("dropdown");
   const dropdown_top = dropdown.getBoundingClientRect().top;
 
-  const height = middle_bottom - dropdown_top;
+  const bottom = Math.max(middle_bottom, right_bottom)
+  const height = bottom - dropdown_top;
   dropdown.style.maxHeight = height + "px";
 }
 
