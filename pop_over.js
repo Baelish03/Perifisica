@@ -41,7 +41,15 @@ function PopOver() {
       if (span.style.display === "none") {
         span.style.cssText = text_css; // apri: applica gli stili del popover
         currentOpen = span;
-      } else {
+
+        // controlla se il popover esce a sinistra e correggi
+        const rect = span.getBoundingClientRect();
+        if (rect.left < 5) {
+          span.style.right = "auto";
+          span.style.left = "0";
+        }
+      }
+      else {
         span.style.display = "none"; // chiudi: toggle
         currentOpen = null;
       }
