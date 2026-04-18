@@ -114,8 +114,6 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 Bisogna cambiare i title dei vari html.
 
-Usare unità di misura vw per la barra di ricerca.
-
 Vorrei che le barre laterali seguissero il corpo mentre si scorre.
 
 L'indice dovrebbe rimanere aperto nel capito della pagina dove si è attualmente.
