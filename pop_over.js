@@ -4,6 +4,7 @@ function PopOver() {
       width : max-content;
       font-size : 12px;
       max-width : 25vw;
+      min-width : 15rem; 
       display: inline-block;
       position: absolute;
       z-index: 1;
@@ -11,10 +12,8 @@ function PopOver() {
       border: 2px solid var(--primary);
       border-radius: 10px;
       box-sizing: border-box;
+      box-shadow: 0px 8px 16px 0px var(--text);
       background-color: var(--search-background);
-      align-items: center;
-      justify-content: center;
-      transition: width 0.5s ease-in-out;
       color: var(--text);
       bottom: 0;
       right: 0;
@@ -23,6 +22,7 @@ function PopOver() {
       `;
 
   let currentOpen = null; // span del popover attualmente visibile
+  let supOpen = null; // sup del popover attualmente colorato
 
   document.querySelectorAll(".sidenote").forEach(sup => {
     sup.style.cssText =
@@ -36,22 +36,35 @@ function PopOver() {
       // se c'è un altro popover aperto, chiudilo
       if (currentOpen && currentOpen !== span) {
         currentOpen.style.display = "none"; // chiudi il precedente
+        supOpen.style.color = "var(--text)"; // decolora il sup
       }
 
       if (span.style.display === "none") {
         span.style.cssText = text_css; // apri: applica gli stili del popover
+        sup.style.color = "var(--primary)"; // colora il sup aperto attualmente 
         currentOpen = span;
+        supOpen = sup;
 
         // controlla se il popover esce a sinistra e correggi
-        const rect = span.getBoundingClientRect();
+        var rect = span.getBoundingClientRect();
         if (rect.left < 5) {
           span.style.right = "auto";
           span.style.left = "0";
         }
+
+        // controlla se il popover esce a destra dopo la correzione e mettilo al centro
+        rect = span.getBoundingClientRect(); // aggiorna il rettangolo
+        if (rect.right > window.innerWidth - 5) {
+          span.style.right = "auto";
+          span.style.left = "-7rem";
+        }
+
       }
       else {
         span.style.display = "none"; // chiudi: toggle
+        sup.style.color = "var(--text)"; // decolora il sup chiuso 
         currentOpen = null;
+        supOpen = null;
       }
     });
 
@@ -59,7 +72,11 @@ function PopOver() {
     document.addEventListener("click", e => {
       if (!span.contains(e.target) && !e.target.closest(".sidenote")) {
         span.style.display = "none";
-        if (currentOpen === span) currentOpen = null;
+        sup.style.color = "var(--text)"; // decolora il sup chiuso 
+        if (currentOpen === span) {
+          currentOpen = null;
+          supOpen = null;
+        }
       }
     });
 
@@ -67,7 +84,11 @@ function PopOver() {
     document.addEventListener("keydown", e => {
       if (e.key === "Escape") {
         span.style.display = "none";
-        if (currentOpen === span) currentOpen = null;
+        sup.style.color = "var(--text)"; // decolora il sup chiuso 
+        if (currentOpen === span) {
+          currentOpen = null;
+          supOpen = null;
+        }
       }
     });
   });

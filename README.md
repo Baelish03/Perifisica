@@ -123,5 +123,3 @@ Vorrei che le barre laterali seguissero il corpo mentre si scorre.
 L'indice dovrebbe rimanere aperto nel capito della pagina dove si è attualmente.
 
 Il testo mathjax va sopra l'indice.
-
-Il popover esce fuori dalla pagina, su mobile è troppo stretto quindi va messa un alarghezza minima
