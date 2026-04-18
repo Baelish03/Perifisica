@@ -69,7 +69,13 @@ function ColoraElementoAttuale() {
 
 export function init(root) {
   ColoraElementoAttuale();
-  LunghezzaIndice();
+  if (window.screen.width > 992) {
+    LunghezzaIndice();
+  }
+  else {
+    const dropdown = document.getElementById("dropdown");
+    dropdown.style.maxHeight = "unset";
+  }
 
   const pulsante1 = root.querySelector("#button1");
   pulsante1?.addEventListener("click", Open1);

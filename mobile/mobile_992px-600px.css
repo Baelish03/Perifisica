@@ -27,7 +27,7 @@
     padding-bottom: 2rem;
   }
 
-    /* ==================== MARGIN INDICE =========================== */
+  /* ==================== MARGIN INDICE =========================== */
   .h3_indice {
     margin-left: 3rem;
   }
@@ -78,24 +78,38 @@
   }
 
   /* ======================= COLONNA SINISTRA ===========*/
-  .dropdown {
-    max-height: 0;
-    width: 50vw;
-    overflow: hidden;
-    transition: max-height 0.25s linear, padding 0.25s linear;
+  .indice {
+    position: absolute;
+    width: 0;
+    opacity: 0;
+    transition: width 0.25s ease-out, padding 0.25s ease-out, opacity 0.25s ease-out;
 
     background-color: var(--search-background);
     box-shadow: 0px 8px 16px 0px var(--text);
     border-radius: 0px 10px 10px 0px;
+    padding: 0;
+    z-index: 1;
+  }
+
+  .dropdown {
+    width: 0;
+    background-color: transparent;
+    overflow: scroll;
   }
 
   .indice_aperto {
-    max-height: 50rem;
     width: 50vw;
+    min-height: 100vh;
     padding-top: 1rem;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
+    opacity: 1;
+  }
+
+  .dropdown_aperto{
+    width: calc(50vw - 15px); /* -15 per il padding*/
+    min-height: calc(100vh - 1rem - 15px);
   }
 
   /* ======================= COLONNA DESTRA ===========*/
@@ -103,20 +117,21 @@
     position: absolute;
     right: 0;
     top: 0;
-    max-height: 0;
-    width: 50vw;
+    min-height: 100vh;
+    width: 0;
+    opacity: 0;
     overflow: hidden;
-    transition: max-height 0.25s linear, padding 0.25s linear;
+    transition: width 0.25s ease-out, padding 0.25s ease-out, opacity 0.25s ease-out;
 
     background-color: var(--search-background);
     box-shadow: 0px 8px 16px 0px var(--text);
     border-radius: 10px 0px 0px 10px;
-    padding-left: 30px; /* serve per dare un effetto trapuntato all'animazione*/
+    padding: 0;
   }
 
   .right_aperta {
-    max-height: 50rem;
     width: 50vw;
+    opacity: 1;
     padding-top: 1rem;
     padding-left: 15px;
     padding-right: 15px;
@@ -125,20 +140,17 @@
 }
 
 @media screen and (max-width: 600px) {
-  /* ======================= COLONNA SINISTRA ===========*/
-  .dropdown {
-    width: 75vw;
-  }
 
+  /* ======================= COLONNA SINISTRA ===========*/
   .indice_aperto {
     width: 75vw;
   }
 
-  /* ======================= COLONNA DESTRA ===========*/
-  .sidebar_right {
-    width: 75vw;
+  .dropdown_aperto {
+    width: calc(75vw - 15px);
   }
 
+  /* ======================= COLONNA DESTRA ===========*/
   .right_aperta {
     width: 75vw;
   }

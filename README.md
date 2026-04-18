@@ -112,8 +112,6 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 ### Errori da correggere
 
 
-Nella versione mobile, l'indice non scrolla bene e rimane aperto fisso.
-
 Bisogna cambiare i title dei vari html.
 
 Usare unità di misura vw per la barra di ricerca.
@@ -121,5 +119,3 @@ Usare unità di misura vw per la barra di ricerca.
 Vorrei che le barre laterali seguissero il corpo mentre si scorre.
 
 L'indice dovrebbe rimanere aperto nel capito della pagina dove si è attualmente.
-
-Il testo mathjax va sopra l'indice.

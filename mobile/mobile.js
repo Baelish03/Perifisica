@@ -1,16 +1,21 @@
 function ApriIndice() {
+  const indice = document.getElementById("indice");
+  indice.classList.toggle("indice_aperto");
+
   const dropdown = document.getElementById("dropdown");
-  dropdown.classList.toggle("indice_aperto");
+  dropdown.classList.toggle("dropdown_aperto");
 
   document.addEventListener("click", e => {
-    if (!e.target.closest("#dropdown") && !e.target.closest("#apri-indice-mobile")) {
-      dropdown.classList.remove("indice_aperto");
+    if (!e.target.closest("#indice") && !e.target.closest("#apri-indice-mobile")) {
+      indice.classList.remove("indice_aperto");
+      dropdown.classList.remove("dropdown_aperto");
     }
   });
 
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") {
-      dropdown.classList.remove("indice_aperto");
+      indice.classList.remove("indice_aperto");
+      dropdown.classList.remove("dropdown_aperto");
     }
   });
 }
