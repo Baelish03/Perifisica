@@ -80,7 +80,7 @@
   /* ======================= COLONNA SINISTRA ===========*/
   .dropdown {
     max-height: 0;
-    width: 200%;
+    width: 50vw;
     overflow: hidden;
     transition: max-height 0.25s linear, padding 0.25s linear;
 
@@ -91,7 +91,7 @@
 
   .indice_aperto {
     max-height: 50rem;
-    width: 200%;
+    width: 50vw;
     padding-top: 1rem;
     padding-left: 15px;
     padding-right: 15px;
@@ -104,7 +104,7 @@
     right: 0;
     top: 0;
     max-height: 0;
-    width: 200%;
+    width: 50vw;
     overflow: hidden;
     transition: max-height 0.25s linear, padding 0.25s linear;
 
@@ -116,7 +116,7 @@
 
   .right_aperta {
     max-height: 50rem;
-    width: 200%;
+    width: 50vw;
     padding-top: 1rem;
     padding-left: 15px;
     padding-right: 15px;
@@ -127,19 +127,19 @@
 @media screen and (max-width: 600px) {
   /* ======================= COLONNA SINISTRA ===========*/
   .dropdown {
-    width: 300%;
+    width: 75vw;
   }
 
   .indice_aperto {
-    width: 300%;
+    width: 75vw;
   }
 
   /* ======================= COLONNA DESTRA ===========*/
   .sidebar_right {
-    width: 300%;
+    width: 75vw;
   }
 
   .right_aperta {
-    width: 300%;
+    width: 75vw;
   }
 }
