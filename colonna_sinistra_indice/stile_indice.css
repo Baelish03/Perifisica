@@ -33,7 +33,6 @@
 }
 
 .dropdown {
-  position: absolute;
   display: inline-block;
   overflow: scroll;
   /*max-height: 10rem;*/
