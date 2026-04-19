@@ -114,6 +114,10 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 Bisogna cambiare i title dei vari html.
 
-Vorrei che le barre laterali seguissero il corpo mentre si scorre.
+Vorrei che le barre laterali seguissero il corpo mentre si scorre. (fatto nella versione desktop, in quella mobile con width < 600 si rompe)
 
 L'indice dovrebbe rimanere aperto nel capito della pagina dove si è attualmente.
+
+colore barra destra diverso da sinistra in versione mobile
+
+FAI PULIZIA SUL PROGETTO, STA DIVENTANDO INCOMPRENSIBILE

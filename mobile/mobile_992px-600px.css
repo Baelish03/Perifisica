@@ -2,9 +2,18 @@
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 992px) {
+  /*.row {
+    display: unset;
+    align-items: unset;
+  }*/
+
   .left {
     margin: 0;
     padding: 0;
+
+    /*position: absolute;*/
+    overflow: unset;
+    top: 0;
   }
 
   .middle {
@@ -15,8 +24,10 @@
   .right {
     margin: 0;
     padding: 0;
-    position: absolute;
+    /*position: absolute;*/
     right: 0;
+    overflow: unset;
+    top: 0;
   }
 
   main {
@@ -82,6 +93,7 @@
     position: absolute;
     width: 0;
     opacity: 0;
+    /*height: 100vh; */
     transition: width 0.25s ease-out, padding 0.25s ease-out, opacity 0.25s ease-out;
 
     background-color: var(--search-background);
@@ -95,24 +107,30 @@
     width: 0;
     background-color: transparent;
     overflow: scroll;
+    height: 100vh;
   }
 
   .indice_aperto {
     width: 50vw;
-    min-height: 100vh;
     padding-top: 1rem;
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 15px;
     opacity: 1;
+    overflow: hidden;
   }
 
-  .dropdown_aperto{
-    width: calc(50vw - 15px); /* -15 per il padding*/
-    min-height: calc(100vh - 1rem - 15px);
+  .h1_indice {
+    position: sticky;
+  }
+
+  .dropdown_aperto {
+    width: calc(50vw - 15px);
+    height: inherit;
   }
 
   /* ======================= COLONNA DESTRA ===========*/
+
   .sidebar_right {
     position: absolute;
     right: 0;

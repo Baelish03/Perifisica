@@ -50,9 +50,19 @@ body {
 
 /* Create three equal columns that floats next to each other */
 
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  /* fondamentale per sticky*/
+}
+
 .left {
   width: 19.1%;
-  position: relative;
+  position: sticky;
+  top: 1rem;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
 .middle {
@@ -63,13 +73,12 @@ body {
 
 .right {
   width: 19.1%;
-  position: relative;
+  position: sticky;
+  top: 1rem;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 
-.column {
-  float: left;
-  padding: 10px;
-}
 
 /* =========================
    CONTENUTO PRINCIPALE
@@ -189,4 +198,3 @@ figcaption {
   height: 0;
   width: 0;
 }
-

@@ -38,10 +38,49 @@ function ApriAccessibilità() {
   });
 }
 
+
+
+
+function posiziona() {
+  let lastScrollY = window.scrollY;
+  const bottone = document.querySelector('.apri-indice-mobile');
+  const colonna = document.querySelector('.left');
+  const indice = document.querySelector('.indice');
+  //const dropdown = document.querySelector('.dropdown')
+
+  const titolo = document.querySelector('.h1_indice');
+
+  const rect = bottone.getBoundingClientRect();
+  //const rect_title_bot = dropdown.getBoundingClientRect().bottom;
+  const scrollingDown = window.scrollY > lastScrollY;
+
+  let top;
+  if (rect.bottom <= 0) {
+    // bottone uscito sopra: incollata in cima
+    top = 0;
+  } else if (scrollingDown && rect.bottom > window.innerHeight) {
+    // bottone sotto la viewport: incollata in fondo? non dovrebbe succedere
+    top = 0;
+  } else {
+    top = rect.bottom;
+  }
+
+  colonna.style.top = `${top}px`;
+  colonna.style.height = `calc(100dvh - ${top}px)`;
+  indice.style.height = `calc(100dvh - ${top}px)`;
+  //dropdown.style.height = `calc(100dvh - ${rect_title_bot}px)`;
+}
+
 export function init(root) {
   const AIMbutton = root.querySelector("#apri-indice-mobile");
   AIMbutton?.addEventListener("click", ApriIndice);
 
   const AAMbutton = root.querySelector("#apri-accessibilità-mobile");
   AAMbutton?.addEventListener("click", ApriAccessibilità);
+
+  if (window.innerWidth < 992) {
+    posiziona();
+    window.addEventListener('resize', posiziona);
+    window.addEventListener('scroll', posiziona), { passive: true, capture: true };
+  }
 }
