@@ -90,7 +90,7 @@
 
   /* ======================= COLONNA SINISTRA ===========*/
   .indice {
-    position: absolute;
+    /*position: absolute;*/
     width: 0;
     opacity: 0;
     /*height: 100vh; */
@@ -120,9 +120,6 @@
     overflow: hidden;
   }
 
-  .h1_indice {
-    position: sticky;
-  }
 
   .dropdown_aperto {
     width: calc(50vw - 15px);
