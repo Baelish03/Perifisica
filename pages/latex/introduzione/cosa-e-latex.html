@@ -1,306 +1,370 @@
 <!DOCTYPE html>
 <html lang="it">
-<!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
-
-<head>
-  <meta charset="utf-8" />
-  <title>
-    Cosa è LaTeX? - Perifisica 
-  </title>
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-  <!-- =========================
+  <!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
+  <head>
+    <meta charset="utf-8"/>
+    <title>
+      Cosa è LaTeX? - Perifisica
+    </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <!-- =========================
          SEO METADATA
     ========================== -->
-  <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="description" />
-  <!-- la descrizione deve essere più lunga -->
-  <meta content="fisica, scuola, università" name="keywords" />
-  <meta content="Perifisica" name="author" />
-  <meta content="index, follow" name="robots" />
-  <!-- =========================
+    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="description"/>
+    <!-- la descrizione deve essere più lunga -->
+    <meta content="fisica, scuola, università" name="keywords"/>
+    <meta content="Perifisica" name="author"/>
+    <meta content="index, follow" name="robots"/>
+    <!-- =========================
          OPEN GRAPH (FACEBOOK, LINKEDIN)
     ========================== -->
-  <meta content="Perifisica" property="og:title" />
-  <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università."
-    property="og:description" />
-  <meta content="website" property="og:type" />
-  <meta content="https://www.example.com/" property="og:url" />
-  <meta content="/logo/logo_completo.png" property="og:image" />
-  <!-- "https://www.example.com/preview.jpg"> -->
-  <!-- =========================
+    <meta content="Perifisica" property="og:title"/>
+    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." property="og:description"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://www.example.com/" property="og:url"/>
+    <meta content="/logo/logo_completo.png" property="og:image"/>
+    <!-- "https://www.example.com/preview.jpg"> -->
+    <!-- =========================
          TWITTER CARD
     ========================== -->
-  <meta content="./" name="twitter:card" />
-  <meta content="Perifisica" name="twitter:title" />
-  <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università."
-    name="twitter:description" />
-  <meta content="/logo/logo_completo.png" name="twitter:image" />
-  <!-- =========================
+    <meta content="./" name="twitter:card"/>
+    <meta content="Perifisica" name="twitter:title"/>
+    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="twitter:description"/>
+    <meta content="/logo/logo_completo.png" name="twitter:image"/>
+    <!-- =========================
          FAVICONS
     ========================== -->
-  <link href="/logo/favicon.webp" rel="icon" />
-  <link href="/logo/logo_completo.png" rel="apple-touch-icon" sizes="180x180" />
-  <link href="/logo/favicon.webp" rel="icon" sizes="32x32" />
-  <link href="/logo/favicon.webp" rel="icon" sizes="16x16" />
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="/style.css" rel="stylesheet" />
-  <link href="/mobile/mobile_1500px-992px.css" rel="stylesheet" />
-  <link href="/mobile/mobile_992px-600px.css" rel="stylesheet" />
-</head>
-
-<body>
-  <header class="topbar">
-    <div class="logo">
-      <a href="/index.html" id="logo_link" title="Torna all'indice">
-        <picture>
-          <img alt="Logo Perifisica" height="167.4pt" id="foto_logo" src="/logo/logo_completo.png"
-            srcset="/logo/logo_completo.webp" width="600pt" />
-        </picture>
-      </a>
+    <link href="/logo/favicon.webp" rel="icon"/>
+    <link href="/logo/logo_completo.png" rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/logo/favicon.webp" rel="icon" sizes="32x32"/>
+    <link href="/logo/favicon.webp" rel="icon" sizes="16x16"/>
+    <link href="/style.css" rel="stylesheet"/>
+    <link href="/mobile/mobile_1500px-992px.css" rel="stylesheet"/>
+    <link href="/mobile/mobile_992px-600px.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="logo">
+        <a href="/index.html" id="logo_link" title="Torna all'indice">
+          <picture>
+            <img alt="Logo Perifisica" height="167.4pt" id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp" width="600pt"/>
+          </picture>
+        </a>
+      </div>
+    </header>
+    <form class="topbar input">
+      <div w3-include-html="/barra_ricerca/barra_ricerca.html">
+      </div>
+    </form>
+    <div id="bottoni_mobile">
+      <div w3-include-html="/mobile/mobile.html">
+      </div>
     </div>
-  </header>
-  <form class="topbar input">
-    <div w3-include-html="/barra_ricerca/barra_ricerca.html">
-    </div>
-  </form>
-  <div id="bottoni_mobile">
-    <div w3-include-html="/mobile/mobile.html">
-    </div>
-  </div>
-  <main>
-    <div class="row">
-      <nav class="column left">
-        <div w3-include-html="/colonna_sinistra_indice/indice.html">
-        </div>
-      </nav>
-      <div class="column middle">
-        <article>
-          <h1>
-            Cosa è \(\LaTeX\)?
-          </h1>
-          <p>
-            $\TeX$ (pronunciato "tek") è un linguaggio di programmazione per la composizione
-            <strong>tipografica</strong> progettato da
+    <main>
+      <div class="row">
+        <nav class="column left">
+          <div w3-include-html="/colonna_sinistra_indice/indice.html">
+          </div>
+        </nav>
+        <div class="column middle">
+          <article>
+            <h1>
+              Cosa è \(\LaTeX\)?
+            </h1>
+            <p>
+              $\TeX$ (pronunciato "tek") è un linguaggio di programmazione per la composizione
+              <strong>
+                tipografica
+              </strong>
+              progettato da
             Donald Knuth e pubblicato per la prima volta nel 1978. Il sistema fu sviluppato con due obiettivi
             principali:
-          <ol>
-            <li>
-              permettere a chiunque di produrre documenti e libri di alta qualità tipografica con il minimo sforzo;
-            </li>
-            <li>
-              garantire che lo stesso documento generi risultati identici su qualsiasi computer, indipendentemente dal
+            </p>
+            <ol>
+              <li>
+                permettere a chiunque di produrre documenti e libri di alta qualità tipografica con il minimo sforzo;
+              </li>
+              <li>
+                garantire che lo stesso documento generi risultati identici su qualsiasi computer, indipendentemente dal
               momento o dalla piattaforma utilizzata.
-            </li>
-          </ol>
-          </p>
-          <p>
-            Il nome TeX deriva dalle lettere greche maiuscole $\tau$ (tau), $\epsilon$ (epsilon) e $\chi$ (chi).
+              </li>
+            </ol>
+            <p>
+            </p>
+            <p>
+              Il nome TeX deriva dalle lettere greche maiuscole $\tau$ (tau), $\epsilon$ (epsilon) e $\chi$ (chi).
             È infatti l'abbreviazione della parola greca $\tau \acute\epsilon \chi \nu \eta$ (techn$\mathrm{\bar{e}}$),
             che significa sia "arte" sia "mestiere", a sottolineare il legame tra precisione tecnica
             e qualità estetica nella composizione tipografica.
-          </p>
-          <p>
-            Su TeX si basa $\LaTeX$, un sistema software per la composizione di documenti che ne semplifica l'utilizzo.
+            </p>
+            <p>
+              Su TeX si basa $\LaTeX$, un sistema software per la composizione di documenti che ne semplifica l'utilizzo.
             In
-            questo contesto, TeX si occupa principalmente dell'impaginazione e del <strong>layout</strong> del
+            questo contesto, TeX si occupa principalmente dell'impaginazione e del
+              <strong>
+                layout
+              </strong>
+              del
             documento, mentre LaTeX
-            permette all'autore di concentrarsi sul <strong>contenuto</strong>, fornendo comandi più intuitivi per la
+            permette all'autore di concentrarsi sul
+              <strong>
+                contenuto
+              </strong>
+              , fornendo comandi più intuitivi per la
             formattazione.
             Poiché i comandi di formattazione di TeX sono piuttosto basilari, LaTeX mette a disposizione strumenti già
             pronti
             per gestire elementi comuni dei documenti, come titoli di capitoli, note a piè di pagina, riferimenti
             incrociati
             e bibliografie.
-          </p>
-          <figure class="figure">
-            <img alt="Logo LaTeX" class="image" height="288px" width="288px" loading="lazy"
-              src="./cosa-e-latex/latex-project-logo_288x288.svg">
-            <figcaption class="figcaption">
-              Logo del progetto $\LaTeX$
-            </figcaption>
-          </figure>
-          <p>
-            Il sistema TeX conosce con precisione le dimensioni di tutti i caratteri e dei simboli tipografici. Grazie a
+            </p>
+            <figure class="figure">
+              <img alt="Logo LaTeX" class="image" height="288px" loading="lazy" src="./cosa-e-latex/latex-project-logo_288x288.svg" width="288px"/>
+              <figcaption class="figcaption">
+                Logo del progetto $\LaTeX$
+              </figcaption>
+            </figure>
+            <p>
+              Il sistema TeX conosce con precisione le dimensioni di tutti i caratteri e dei simboli tipografici. Grazie a
             queste informazioni è in grado di calcolare automaticamente la disposizione ottimale delle lettere nelle
             righe e delle righe nella pagina, ottenendo un risultato tipograficamente molto accurato.
             Il processo di compilazione produce tradizionalmente un file DVI (DeVice Independent), che contiene le
             posizioni finali di tutti i caratteri nel documento. Oggi, tuttavia, è molto diffuso l'uso di
-            <em>pdfTeX</em>, che
+              <em>
+                pdfTeX
+              </em>
+              , che
             genera direttamente un file PDF senza passare attraverso il formato DVI.
-          </p>
-          <p>
-            Il sistema TeX di base comprende circa 300 comandi fondamentali, detti primitivi. Questi comandi di basso
+            </p>
+            <p>
+              Il sistema TeX di base comprende circa 300 comandi fondamentali, detti primitivi. Questi comandi di basso
             livello sono raramente utilizzati direttamente dagli utenti, poiché la maggior parte delle funzionalità
             viene fornita attraverso i cosiddetti file di formato.
             Il formato più diffuso è proprio LaTeX, sviluppato originariamente da Leslie Lamport. Esso include diversi
             stili di documento (come libri, articoli, lettere o presentazioni) e introduce funzionalità avanzate come la
-            <strong>numerazione automatica</strong> di sezioni ed equazioni, oltre alla gestione dei riferimenti
+              <strong>
+                numerazione automatica
+              </strong>
+              di sezioni ed equazioni, oltre alla gestione dei riferimenti
             all'interno del testo.
-          </p>
-          <h2>
-            Perché usarlo?
-          </h2>
-          <p>
-            LaTeX consente agli autori di concentrarsi principalmente sul contenuto del documento senza doversi occupare
+            </p>
+            <h2>
+              Perché usarlo?
+            </h2>
+            <p>
+              LaTeX consente agli autori di concentrarsi principalmente sul contenuto del documento senza doversi occupare
             continuamente del suo aspetto grafico. L'autore definisce infatti la struttura logica del testo attraverso
             elementi semplici e familiari come capitoli, sezioni, tabelle o figure, lasciando al sistema LaTeX il
-            compito di gestire <strong>automaticamente</strong> la formattazione e l'impaginazione.
-          </p>
-          <p>
-            Questo approccio favorisce la separazione tra contenuto e layout del documento, pur lasciando comunque la
+            compito di gestire
+              <strong>
+                automaticamente
+              </strong>
+              la formattazione e l'impaginazione.
+            </p>
+            <p>
+              Questo approccio favorisce la separazione tra contenuto e layout del documento, pur lasciando comunque la
             possibilità di intervenire manualmente sulla composizione tipografica quando necessario.
             Grazie alla sua struttura e alle numerose funzionalità disponibili, LaTeX rappresenta uno strumento
-            particolarmente adatto alla produzione di documenti tecnici e <strong>scientifici</strong>, dove chiarezza,
+            particolarmente adatto alla produzione di documenti tecnici e
+              <strong>
+                scientifici
+              </strong>
+              , dove chiarezza,
             precisione e
             coerenza grafica sono aspetti fondamentali.
-          </p>
-          <p>
-            Di seguito sono riportati alcuni motivi per cui scegliere LaTeX per la scrittura dei propri documenti.
-          <ol>
-            <li>
-              Mette a disposizione una vasta gamma di simboli e ambienti matematici, permettendo di scrivere
-              <strong>formule complesse</strong> in modo preciso e veloce.
-            </li>
-            <video autoplay muted loop playsinline width="427px" height="240px">
-              <source src="./cosa-e-latex/formula-word.webm" type="video/webm" />
-              <source src="./cosa-e-latex/formula-word.mp4" type="video/mp4" />
-            </video>
-            <li>
-              Può essere utilizzato su diversi sistemi operativi, tra cui Linux, Windows e macOS. I documenti prodotti
-              mantengono sempre lo <strong>stesso risultato</strong> finale, indipendentemente dal computer utilizzato.
+            </p>
+            <p>
+              Di seguito sono riportati alcuni motivi per cui scegliere LaTeX per la scrittura dei propri documenti.
+            </p>
+            <ol>
+              <li>
+                Mette a disposizione una vasta gamma di simboli e ambienti matematici, permettendo di scrivere
+                <strong>
+                  formule complesse
+                </strong>
+                in modo preciso e veloce.
+              </li>
+              <video autoplay="" height="240px" loop="" muted="" playsinline="" width="427px">
+                <source src="./cosa-e-latex/formula-word.webm" type="video/webm"/>
+                <source src="./cosa-e-latex/formula-word.mp4" type="video/mp4"/>
+              </video>
+              <li>
+                Può essere utilizzato su diversi sistemi operativi, tra cui Linux, Windows e macOS. I documenti prodotti
+              mantengono sempre lo
+                <strong>
+                  stesso risultato
+                </strong>
+                finale, indipendentemente dal computer utilizzato.
               Questo evita
               problemi comuni con altri programmi, ad esempio quando si apre una presentazione creata su Windows in
               macOS e la
               formattazione viene messa a soqquadro.
-            </li>
-            <li>
-              Segue regole tipografiche ben definite e garantisce uno stile uniforme e curato, particolarmente
-              apprezzato in ambito <strong>accademico</strong> e scientifico.
-            </li>
-            <li>
-              È possibile organizzare facilmente testi complessi con diversi livelli di titoli e sottotitoli, includere
+              </li>
+              <li>
+                Segue regole tipografiche ben definite e garantisce uno stile uniforme e curato, particolarmente
+              apprezzato in ambito
+                <strong>
+                  accademico
+                </strong>
+                e scientifico.
+              </li>
+              <li>
+                È possibile organizzare facilmente testi complessi con diversi livelli di titoli e sottotitoli, includere
               note a piè di pagina, tabelle, figure e altri elementi grafici. È possibile forzare in ogni modo il layout
               di equazioni e tabelle per garantire la massima personalizzazione.
-            </li>
-            <li>
-              Gestisce automaticamente diverse funzioni utili nella redazione di documenti lunghi, come la numerazione
+              </li>
+              <li>
+                Gestisce automaticamente diverse funzioni utili nella redazione di documenti lunghi, come la numerazione
               di sezioni ed equazioni, la generazione di riferimenti incrociati e la creazione di indici.
-            </li>
-            <li>
-              I file LaTeX sono semplici file di testo e possono quindi essere facilmente condivisi e gestiti tramite
-              sistemi di controllo di versione, come <em>GitHub</em>, permettendo a più persone di lavorare sullo stesso
+              </li>
+              <li>
+                I file LaTeX sono semplici file di testo e possono quindi essere facilmente condivisi e gestiti tramite
+              sistemi di controllo di versione, come
+                <em>
+                  GitHub
+                </em>
+                , permettendo a più persone di lavorare sullo stesso
               documento.
-              Per un approccio più basilare si può usare <em>Overleaf</em> che permette di <strong>collaborare
-                online</strong> in tempo reale.
-            </li>
-            <li>
-              Oltre alla produzione di documenti PDF, LaTeX può essere utilizzato anche per generare altri tipi di
-              output, come pagine HTML o <strong>presentazioni</strong>.
-            </li>
-            <li>
-              LaTeX è utilizzato da molti anni da ricercatori, studenti e professionisti. Per questo motivo esistono
+              Per un approccio più basilare si può usare
+                <em>
+                  Overleaf
+                </em>
+                che permette di
+                <strong>
+                  collaborare
+                online
+                </strong>
+                in tempo reale.
+              </li>
+              <li>
+                Oltre alla produzione di documenti PDF, LaTeX può essere utilizzato anche per generare altri tipi di
+              output, come pagine HTML o
+                <strong>
+                  presentazioni
+                </strong>
+                .
+              </li>
+              <li>
+                LaTeX è utilizzato da molti anni da ricercatori, studenti e professionisti. Per questo motivo esistono
               numerose guide, forum e documentazioni online, che rendono relativamente semplice trovare soluzioni a
               eventuali problemi. Qualsiasi problema ha una sua soluzione presente su un forum!
-            </li>
-          </ol>
-          </p>
-
-          <h2>
-            Meglio LaTeX o Word?
-          </h2>
-          <h3>
-            Quando preferire LaTeX?
-          </h3>
-          <p>
-            Se si conoscono i comandi principali, scrivere un documento in LaTeX può risultare più rapido rispetto
+              </li>
+            </ol>
+            <p>
+            </p>
+            <h2>
+              Meglio LaTeX o Word?
+            </h2>
+            <h3>
+              Quando preferire LaTeX?
+            </h3>
+            <p>
+              Se si conoscono i comandi principali, scrivere un documento in LaTeX può risultare più rapido rispetto
             all'utilizzo di Word. Una volta acquisita familiarità con la sintassi, infatti, non è più necessario
             interrompere il lavoro per cercare funzioni nei menu o applicare manualmente formattazioni particolari:
             l'autore può concentrarsi principalmente sul contenuto.
-          </p>
-          <p>
-            Un'altra differenza riguarda il modo in cui i documenti vengono elaborati. In LaTeX ogni modifica richiede
-            una <strong>compilazione</strong> del documento, operazione che può richiedere alcuni secondi ma permette
+            </p>
+            <p>
+              Un'altra differenza riguarda il modo in cui i documenti vengono elaborati. In LaTeX ogni modifica richiede
+            una
+              <strong>
+                compilazione
+              </strong>
+              del documento, operazione che può richiedere alcuni secondi ma permette
             l'utilizzo di algoritmi
             tipografici più sofisticati, con una sillabazione più accurata e un risultato tipografico generalmente molto
-            professionale. Word, invece, aggiorna il documento <strong>in tempo reale</strong> mentre si scrive,
+            professionale. Word, invece, aggiorna il documento
+              <strong>
+                in tempo reale
+              </strong>
+              mentre si scrive,
             privilegiando la
             velocità di modifica, rendendo necessario aggiornare manualmente alcuni elementi come il sommario e
             l'indice. Viene
             da sè che in presenza di pochi paragrafi questo sia gestibile, ma in un intero libro diventi insostenibile
             modificare l'indice manualmente.
-          </p>
-          <p>
-            Se il documento contiene immagini, l'elaborazione dei file Word può diventare molto lenta o il programma
+            </p>
+            <p>
+              Se il documento contiene immagini, l'elaborazione dei file Word può diventare molto lenta o il programma
             potrebbe persino bloccarsi. Perché succede? Durante la modifica, tutte le immagini devono essere
             memorizzate.
             Quando si modificano documenti LaTeX, le immagini nell'editor sono visibili
             solo tramite il loro riferimento testuale e solo in un secondo momento vengono compilate, una per una, in un
             PDF.
-          </p>
-          <p>
-            LaTeX consente inoltre di modificare facilmente lo stile dell'intero documento intervenendo su poche righe
+            </p>
+            <p>
+              LaTeX consente inoltre di modificare facilmente lo stile dell'intero documento intervenendo su poche righe
             di codice, mentre in Word operazioni simili richiedono diversi passaggi manuali. Anche la gestione di
             documenti
             molto lunghi o complessi può risultare più semplice in LaTeX, poiché il testo può essere suddiviso in
             file diversi e organizzato in modo modulare.
-          </p>
-          METTI ESEMPIO
+            </p>
+            METTI ESEMPIO
           \input{main/aboutdogs}
           \input{main/aboutcats}
           Per spostare la discussione sui gatti all'inizio � sufficiente cambiare la posizione nel file principale:
           \input{main/aboutcats}
           \input{main/aboutdogs}
-
-
-          <h3>
-            Quando preferire Word?
-          </h3>
-          <p>
-            Uno dei principali vantaggi di Word è il <strong>controllo grammaticale</strong> automatico, che aiuta a
+            <h3>
+              Quando preferire Word?
+            </h3>
+            <p>
+              Uno dei principali vantaggi di Word è il
+              <strong>
+                controllo grammaticale
+              </strong>
+              automatico, che aiuta a
             individuare errori
             durante la scrittura. Alcune piattaforme online per LaTeX, come Overleaf, offrono strumenti di controllo
             ortografico, ma generalmente non includono un sistema di correzione grammaticale completo integrato
             nell'editor.
-          </p>
-          <p>
-            Word risulta spesso più pratico per documenti <strong>brevi</strong> o <strong>semplici</strong>, dove la
+            </p>
+            <p>
+              Word risulta spesso più pratico per documenti
+              <strong>
+                brevi
+              </strong>
+              o
+              <strong>
+                semplici
+              </strong>
+              , dove la
             rapidità di scrittura
             e l'interfaccia grafica immediata permettono di lavorare senza dover conoscere una sintassi specifica.
             Inoltre, quando si lavora con testi che richiedono frequenti revisioni linguistiche o correzioni
             grammaticali, gli
             strumenti integrati di Word possono risultare particolarmente utili.
-          </p>
-          <div class="box-attenzione">
-            In sintesi, Word è generalmente più adatto per documenti brevi, semplici o scritti rapidamente, mentre LaTeX
+            </p>
+            <div class="box-attenzione">
+              In sintesi, Word è generalmente più adatto per documenti brevi, semplici o scritti rapidamente, mentre LaTeX
             tende a offrire maggiori vantaggi nella gestione di documenti lunghi, tecnici o scientifici, dove la qualità
             tipografica e la struttura del testo diventano aspetti più importanti.
-          </div>
-          <h3>
-            Come iniziare a scrivere in LaTeX?
-          </h3>
-          <p>
-            Bene, sono convinto. Ma ora come si comincia a scrivere il LaTeX? Lo vedremo nelle prossime due lezioni
+            </div>
+            <h3>
+              Come iniziare a scrivere in LaTeX?
+            </h3>
+            <p>
+              Bene, sono convinto. Ma ora come si comincia a scrivere il LaTeX? Lo vedremo nelle prossime due lezioni
             verranno proposte due soluzioni di partenza egualmente valide. La prima punta ad utenti con poche basi di
             informatica mentre la seconda è più completa e avanzata, ma richiede l'installazione di un programma che
             faccia da interfaccia grafica ed uno per i pacchetti LaTeX.
-          </p>
-        </article>
-      </div>
-      <div class="column right">
-        <div w3-include-html="/colonna_destra/colonna_destra.html">
+            </p>
+          </article>
+        </div>
+        <div class="column right">
+          <div w3-include-html="/colonna_destra/colonna_destra.html">
+          </div>
         </div>
       </div>
-    </div>
-  </main>
-  <!--ROBA UTILE PER DOPO-->
-  <footer>
-    <address>
-    </address>
-  </footer>
-  <link href="/font.css" rel="stylesheet" />
-  <script defer src="/main.js" type="module">
-  </script>
-</body>
-
+    </main>
+    <!--ROBA UTILE PER DOPO-->
+    <footer>
+      <address>
+      </address>
+    </footer>
+    <link href="/font.css" rel="stylesheet"/>
+    <script defer="" src="/main.js" type="module">
+    </script>
+  </body>
 </html>
