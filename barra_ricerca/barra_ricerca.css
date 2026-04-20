@@ -18,13 +18,13 @@
   justify-content: center;
   width: 30vw;
   transition: width 0.5s ease-in-out;
-  height: 25pt;
+  height: 33px;
   display: flex;
   padding-left: .8rem;
   color: var(--text);
 }
 
-::placeholder {
+#searchInput::placeholder {
   color: var(--text);
 }
 
@@ -46,7 +46,8 @@
   pointer-events: none;
 
   z-index: 1000;
-  border-radius: 5pt;
+  opacity: 0;
+  border-radius: 7px;
   box-shadow: 0px 8px 16px 0px var(--text);
   transition: max-height 0.5s ease,
     opacity 0.5s ease;

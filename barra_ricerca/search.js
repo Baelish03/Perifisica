@@ -1,5 +1,4 @@
-import { highlight } from "./highlight.js";
-import { makeSnippet } from "./highlight.js";
+import { highlight, makeSnippet } from "./highlight.js";
 
 
 export function Search() {
@@ -33,8 +32,12 @@ export function Search() {
     matches.slice(0, 10).forEach(p => {
       const div = document.createElement("div");
       div.className = "result";
+
+      const a = document.createElement("a");
+      a.href = p.url;
+
       div.innerHTML = `
-      <a href="${p.url}">
+      <a href="${a.href}">
         <strong>${highlight(p.title, query)}</strong><br>
         <small>${makeSnippet(p.content, query)}</small>
       </a>
@@ -44,17 +47,14 @@ export function Search() {
     results.classList.add("open");
   });
 
-  /* chiudi cliccando fuori */
-  document.addEventListener("click", e => {
-    if (!e.target.closest(".search-box")) {
-      results.classList.remove("open");
-    }
-  });
 
   document.addEventListener("click", e => {
     if (e.target.closest(".search-box")) {
       if (input.value.toLowerCase().length >= 1) {
         results.classList.add("open");
+      }
+      else {
+        results.classList.remove("open");
       }
     }
   });

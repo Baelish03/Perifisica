@@ -1,5 +1,6 @@
 export function highlight(text, query) {
-  const regex = new RegExp(`(${query})`, "gi");
+  const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(`(${escaped})`, "gi");
   return text.replace(regex, "<mark>$1</mark>");
 }
 
