@@ -22,16 +22,16 @@
     <meta content="Perifisica" property="og:title"/>
     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." property="og:description"/>
     <meta content="website" property="og:type"/>
-    <meta content="https://www.example.com/" property="og:url"/>
-    <meta content="/logo/logo_completo.png" property="og:image"/>
-    <!-- "https://www.example.com/preview.jpg"> -->
+    <meta content="https://perifisica.github.io/" property="og:url"/>
+    <meta content="https://perifisica.github.io/logo/logo_completo.png" property="og:image"/>
+    <meta content="it_IT" property="og:locale"/>
     <!-- =========================
          TWITTER CARD
     ========================== -->
-    <meta content="./" name="twitter:card"/>
+    <meta content="summary_large_image" name="twitter:card"/>
     <meta content="Perifisica" name="twitter:title"/>
     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="twitter:description"/>
-    <meta content="/logo/logo_completo.png" name="twitter:image"/>
+    <meta content="https://perifisica.github.io/logo/logo_completo.png" name="twitter:image"/>
     <!-- =========================
          FAVICONS
     ========================== -->
@@ -48,24 +48,18 @@
       <div class="logo">
         <a href="/index.html" id="logo_link" title="Torna all'indice">
           <picture>
-            <img alt="Logo Perifisica" height="167.4pt" id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp" width="600pt"/>
+            <img alt="Logo Perifisica" height="202px" id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp" width="724px"/>
           </picture>
         </a>
       </div>
     </header>
-    <form class="topbar input">
-      <div w3-include-html="/barra_ricerca/barra_ricerca.html">
-      </div>
-    </form>
-    <div id="bottoni_mobile">
-      <div w3-include-html="/mobile/mobile.html">
-      </div>
+    <div class="topbar input" w3-include-html="/barra_ricerca/barra_ricerca.html">
+    </div>
+    <div id="bottoni_mobile" w3-include-html="/mobile/mobile.html">
     </div>
     <main>
       <div class="row">
-        <nav class="column left">
-          <div w3-include-html="/colonna_sinistra_indice/indice.html">
-          </div>
+        <nav class="column left" w3-include-html="/colonna_sinistra_indice/indice.html">
         </nav>
         <div class="column middle">
           <article>
@@ -188,9 +182,7 @@
             </p>
           </article>
         </div>
-        <div class="column right">
-          <div w3-include-html="/colonna_destra/colonna_destra.html">
-          </div>
+        <div class="column right" w3-include-html="/colonna_destra/colonna_destra.html">
         </div>
       </div>
     </main>
