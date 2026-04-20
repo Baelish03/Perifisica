@@ -33,6 +33,7 @@
 
 .dropdown {
   display: inline-block;
+  overflow: auto;
 }
 
 /* Dropdown content */
@@ -71,7 +72,6 @@
 .show {
   max-height: 20rem; /*questo viene sistemato in automatico nel js*/ 
   opacity: 1;
-  overflow: scroll;
 }
 
 /* ========== MOVIMENTO CHEVRON ==============*/
