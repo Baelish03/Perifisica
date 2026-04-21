@@ -122,4 +122,6 @@ colore barra destra diverso da sinistra in versione mobile
 
 nell'indice vorrei che il titolo rimanesse sempre in alto
 
-FAI PULIZIA SUL PROGETTO, STA DIVENTANDO INCOMPRENSIBILE
+quando ridimensiono la finestra, le lunghezze delle barre laterali non si aggiornano
+
+la barra di scorrimento del corpo centrale si sovrappone a quella di destra

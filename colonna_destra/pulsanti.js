@@ -1,22 +1,57 @@
+function applyPreferences() {
+  const font = localStorage.getItem("font");
+  const contrasto = localStorage.getItem("contrasto");
+  const dimensione = localStorage.getItem("dimensione");
+
+  if (font === "OpenDyslexic") {
+    OpenDyslexic();
+    document.querySelector("#OpenDyslexic").checked = true;
+  }
+  else {
+    document.querySelector("#StandardFont").checked = true;
+  }
+
+  if (contrasto === "high") {
+    HighContrast();
+    document.querySelector("#HighContrast").checked = true;
+  }
+  else {
+    document.querySelector("#StandardContrast").checked = true;
+  }
+
+  if (dimensione === "big") {
+    BigText();
+    document.querySelector("#BigText").checked = true;
+  }
+  else {
+    document.querySelector("#NormalText").checked = true;
+  }
+}
+
 function OpenDyslexic() {
-  document.querySelector('body').style.fontFamily = 'OpenDyslexic, serif';
+  localStorage.setItem("font", "OpenDyslexic");
+  document.body.style.fontFamily = 'OpenDyslexic, serif';
 }
 
 function StandardFont() {
-  document.querySelector('body').style.fontFamily = 'Inter, sans-serif';
+  localStorage.setItem("font", "");
+  document.body.style.fontFamily = 'Inter, sans-serif';
 }
 
-function HighContrast(){
+function HighContrast() {
+  localStorage.setItem("contrasto", "high");
+
   document.querySelector(':root').style.setProperty('--text', '#ffffff');
   document.querySelector(':root').style.setProperty('--primary', '#00ffff');
   document.querySelector(':root').style.setProperty('--link', '#ffff00');
   document.querySelector(':root').style.setProperty('--background', '#1f1f1f');
   document.querySelector(':root').style.setProperty('--button-background', '#ffffff');
   document.querySelector(':root').style.setProperty('--search-background', '#1f1f1f');
-
 }
 
-function StandardContrast(){
+function StandardContrast() {
+  localStorage.setItem("contrasto", "");
+
   document.querySelector(':root').style.setProperty('--text', '#1f1f1f');
   document.querySelector(':root').style.setProperty('--primary', '#a82596');
   document.querySelector(':root').style.setProperty('--link', '#06608f');
@@ -26,30 +61,38 @@ function StandardContrast(){
 
 }
 
-function BigText(){
-  document.querySelector('body').style.fontSize = "16pt";
+function BigText() {
+  localStorage.setItem("dimensione", "big");
+
+  document.body.style.fontSize = "16pt";
 }
 
-function NormalText(){
-  document.querySelector('body').style.fontSize = "13pt";
+function NormalText() {
+  localStorage.setItem("dimensione", "");
+
+  document.body.style.fontSize = "13pt";
 }
 
 export function init(root) {
-    const ODbutton = root.querySelector("#OpenDyslexic");
-    ODbutton?.addEventListener("click", OpenDyslexic);
+  applyPreferences();
 
-    const SFbutton = root.querySelector("#StandardFont");
-    SFbutton?.addEventListener("click", StandardFont);
+  document.querySelector("#contenuto_destra").style.maxHeight = window.innerHeight + "px";
 
-    const HCbutton = root.querySelector("#HighContrast");
-    HCbutton?.addEventListener("click", HighContrast);
+  const ODbutton = root.querySelector("#OpenDyslexic");
+  ODbutton?.addEventListener("click", OpenDyslexic);
 
-    const SCbutton = root.querySelector("#StandardContrast");
-    SCbutton?.addEventListener("click", StandardContrast);
+  const SFbutton = root.querySelector("#StandardFont");
+  SFbutton?.addEventListener("click", StandardFont);
 
-    const BTbutton = root.querySelector("#BigText");
-    BTbutton?.addEventListener("click", BigText);
+  const HCbutton = root.querySelector("#HighContrast");
+  HCbutton?.addEventListener("click", HighContrast);
 
-    const NTbutton = root.querySelector("#NormalText");
-    NTbutton?.addEventListener("click", NormalText);
+  const SCbutton = root.querySelector("#StandardContrast");
+  SCbutton?.addEventListener("click", StandardContrast);
+
+  const BTbutton = root.querySelector("#BigText");
+  BTbutton?.addEventListener("click", BigText);
+
+  const NTbutton = root.querySelector("#NormalText");
+  NTbutton?.addEventListener("click", NormalText);
 }

@@ -1,3 +1,7 @@
+#contenuto_destra {
+  overflow: auto;
+}
+
 /* Customize the label (the container) */
 .container {
   position: relative;
