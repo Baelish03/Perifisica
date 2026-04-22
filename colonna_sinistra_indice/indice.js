@@ -4,16 +4,12 @@ function Chevron(contentId, chevronId) {
 
   const isOpen = content.style.maxHeight;
   if (isOpen) {
-    content.style.maxHeight = null;
     chevron.style.transform = "rotate(0deg) translate(0rem, 0px)";
   } else {
-    content.style.maxHeight = content.scrollHeight + "px";
     chevron.style.transform = "rotate(90deg) translate(+.4rem, 0px)";
   }
 }
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
 function Open1() {
   document.getElementById("content1").classList.toggle("show");
   Chevron("content1", "chevron1");
@@ -36,53 +32,43 @@ Se il corpo è più corto della colonna destra, l'indice si uniforma alla
 */
 function LunghezzaIndice() {
   const middle = document.getElementsByClassName("middle")[0];
-  const middle_bottom = middle.getBoundingClientRect().bottom;
-
   const right = document.getElementsByClassName("right")[0];
-  const right_bottom = right.getBoundingClientRect().bottom;
-
   const dropdown = document.getElementById("dropdown");
-  const dropdown_top = dropdown.getBoundingClientRect().top;
 
-  const bottom = Math.max(middle_bottom, right_bottom)
-  const height = bottom - dropdown_top;
+  const middle_bottom = middle.getBoundingClientRect().bottom + window.scrollY;
+  const right_bottom = right.getBoundingClientRect().bottom + window.scrollY;
+  const dropdown_top = dropdown.getBoundingClientRect().top + window.scrollY;
+
+  const height = Math.max(middle_bottom, right_bottom) - dropdown_top;
   dropdown.style.maxHeight = height + "px";
 }
 
 function ColoraElementoAttuale() {
-  const paginaCorrente = location.pathname.split("/").pop() || "index.html";
-  //console.log(paginaCorrente);
+  const paginaCorrente = location.pathname;
 
   document.querySelectorAll(".dropdown-content a").forEach(link => {
-    var href = link.getAttribute("href");
-    if (href === null) {
+    const href = link.getAttribute("href");
+    if (!href) {
       return;
     }
-    else {
-      href = href.split("/").pop();
-      if (href === paginaCorrente) {
-        link.classList.add("attivo");
-      }
+    if (href === paginaCorrente) {
+      link.classList.add("attivo");
     }
   });
 }
 
 export function init(root) {
   ColoraElementoAttuale();
-  if (window.screen.width > 992) {
+  if (window.innerWidth > 992) {
     LunghezzaIndice();
   }
   else {
-    const dropdown = document.getElementById("dropdown");
-    dropdown.style.maxHeight = "unset";
+    document.getElementById("dropdown").style.maxHeight = "unset";
   }
 
-  const pulsante1 = root.querySelector("#button1");
-  pulsante1?.addEventListener("click", Open1);
+  root.querySelector("#button1")?.addEventListener("click", Open1);
 
-  const pulsante2 = root.querySelector("#button2");
-  pulsante2?.addEventListener("click", Open2);
+  root.querySelector("#button2")?.addEventListener("click", Open2);
 
-  const latex = root.querySelector("#latex-button");
-  latex?.addEventListener("click", OpenLatex);
+  root.querySelector("#latex-button")?.addEventListener("click", OpenLatex);
 }

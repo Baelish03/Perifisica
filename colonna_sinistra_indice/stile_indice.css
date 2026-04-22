@@ -20,6 +20,10 @@
 
 /* ========== MENÙ A CASCATA ================= */
 
+.indice{
+  max-height: 100vh;
+}
+
 .dropbutton {
   background-color: transparent;
   border: none;
@@ -37,6 +41,7 @@
 .dropdown {
   display: inline-block;
   overflow: auto;
+  padding-bottom: 1rem;
 }
 
 /* Dropdown content */
@@ -74,7 +79,7 @@
 }
 
 .show {
-  max-height: 20rem;
+  max-height: 1000vh;
   /*questo viene sistemato in automatico nel js*/
   opacity: 1;
 }
