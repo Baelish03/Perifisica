@@ -2,8 +2,9 @@ function Chevron(contentId, chevronId) {
   const content = document.getElementById(contentId);
   const chevron = document.getElementById(chevronId);
 
-  const isOpen = content.style.maxHeight;
-  if (isOpen) {
+  const isOpen = content.classList.contains("show");
+  console.log(isOpen);
+  if (!isOpen) {
     chevron.style.transform = "rotate(0deg) translate(0rem, 0px)";
   } else {
     chevron.style.transform = "rotate(90deg) translate(+.4rem, 0px)";
