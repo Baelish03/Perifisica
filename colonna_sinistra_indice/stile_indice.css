@@ -80,7 +80,6 @@
 
 .show {
   max-height: 1000vh;
-  /*questo viene sistemato in automatico nel js*/
   opacity: 1;
 }
 

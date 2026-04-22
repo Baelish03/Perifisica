@@ -37,14 +37,14 @@ function AllargaImmagine() {
   overlay.appendChild(cross);
   document.body.appendChild(overlay);
 
-  document.querySelectorAll("img").forEach(i => {
-    const img_id = i.getAttribute('id');
-    if (img_id === 'foto_logo') {
+  document.querySelectorAll("img").forEach(img_iterator => {
+    img_iterator.style.cursor = "pointer";
+    if (img_iterator.id === 'foto_logo') {
       return
     }
     else {
-      i.addEventListener("click", () => {
-        img.src = i.src;
+      img_iterator.addEventListener("click", () => {
+        img.src = img_iterator.src;
         overlay.style.display = "flex";
       });
     };
@@ -54,10 +54,6 @@ function AllargaImmagine() {
   cross.addEventListener("click", () => {
     overlay.style.display = "none";
   });
-
-  /*overlay.addEventListener("click", () => {
-    overlay.style.display = "none";
-  });*/
 
   document.addEventListener("keydown", e => {
     if (e.key === "Escape") overlay.style.display = "none";
