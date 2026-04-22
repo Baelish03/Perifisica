@@ -1,4 +1,7 @@
-.h1_indice, .h2_indice, .h3_indice, .h4_indice {
+.h1_indice,
+.h2_indice,
+.h3_indice,
+.h4_indice {
   text-align: left;
 }
 
@@ -26,7 +29,7 @@
   justify-content: left;
   align-items: center;
   color: var(--text);
-  height: 22pt;
+  height: 30px;
   margin-top: 1rem;
   margin-bottom: .5rem;
 }
@@ -44,13 +47,13 @@
   overflow: hidden;
   min-width: 160px;
   z-index: 1;
-  transition: max-height  .5s ease,
-              opacity .5s ease;
+  transition: max-height .5s ease,
+    opacity .5s ease;
 }
 
 /* Links inside dropdown content */
 .dropdown-content a {
-  color:  var(--link);
+  color: var(--link);
   text-decoration: none;
   display: list-item;
 }
@@ -62,15 +65,17 @@
 
 .attivo {
   box-shadow: inset 3px 0 0 var(--primary);
-  background: linear-gradient(
-    90deg,
-    oklch(from var(--primary) l c h / 0.6),
-    oklch(from var(--primary) l c h / 0.4)
-  );
+  background: linear-gradient(90deg, /* FALLBACK */
+      color-mix(in srgb, var(--primary) 60%, transparent),
+      color-mix(in srgb, var(--primary) 40%, transparent));
+  background: linear-gradient(90deg,
+      oklch(from var(--primary) l c h / 0.6),
+      oklch(from var(--primary) l c h / 0.4));
 }
 
 .show {
-  max-height: 20rem; /*questo viene sistemato in automatico nel js*/ 
+  max-height: 20rem;
+  /*questo viene sistemato in automatico nel js*/
   opacity: 1;
 }
 
@@ -82,6 +87,6 @@
   align-items: center;
   font-size: xx-large;
   top: -.4rem;
-	transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
   margin: 0px 13.825px;
 }
