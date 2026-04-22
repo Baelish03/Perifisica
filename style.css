@@ -63,7 +63,6 @@ body {
   position: sticky;
   top: 1rem;
   max-height: 100vh;
-  /*overflow-y: auto;*/
 }
 
 .middle {
@@ -78,7 +77,6 @@ body {
   position: sticky;
   top: 1rem;
   max-height: 100vh;
-  /*overflow-y: auto;*/
 }
 
 

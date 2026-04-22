@@ -76,8 +76,6 @@ function NormalText() {
 export function init(root) {
   applyPreferences();
 
-  document.querySelector("#contenuto_destra").style.maxHeight = window.innerHeight + "px";
-
   const ODbutton = root.querySelector("#OpenDyslexic");
   ODbutton?.addEventListener("click", OpenDyslexic);
 

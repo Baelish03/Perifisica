@@ -1,3 +1,7 @@
+.sidebar_right {
+  height: 100vh;
+}
+
 #contenuto_destra {
   overflow: auto;
 }
