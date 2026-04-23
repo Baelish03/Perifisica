@@ -10,9 +10,10 @@
   .left {
     margin: 0;
     padding: 0;
+    width: 0;
 
     /*position: absolute;*/
-    overflow: unset;
+    /*overflow: unset;*/
     top: 0;
   }
 
@@ -24,9 +25,10 @@
   .right {
     margin: 0;
     padding: 0;
-    /*position: absolute;*/
+    width: 0;
+    /*position: absolute;
     right: 0;
-    overflow: unset;
+    /*overflow: unset;*/
     top: 0;
   }
 
@@ -58,7 +60,7 @@
   #apri-indice-mobile {
     position: absolute;
     width: 50%;
-    height: 20pt;
+    height: 30px;
     background-color: var(--search-background);
     color: var(--text);
     border-top: 0px;
@@ -72,7 +74,7 @@
     position: absolute;
     left: 50%;
     width: 50%;
-    height: 20pt;
+    height: 30px;
     background-color: var(--search-background);
     color: var(--text);
     border-top: 0px;
@@ -90,10 +92,8 @@
 
   /* ======================= COLONNA SINISTRA ===========*/
   .indice {
-    /*position: absolute;*/
     width: 0;
     opacity: 0;
-    /*height: 100vh; */
     transition: width 0.25s ease-out, padding 0.25s ease-out, opacity 0.25s ease-out;
 
     background-color: var(--search-background);
@@ -103,13 +103,6 @@
     z-index: 1;
   }
 
-  .dropdown {
-    width: 0;
-    background-color: transparent;
-    overflow: scroll;
-    height: 100vh;
-  }
-
   .indice_aperto {
     width: 50vw;
     padding-top: 1rem;
@@ -117,13 +110,22 @@
     padding-right: 15px;
     padding-bottom: 15px;
     opacity: 1;
-    overflow: hidden;
+    /*overflow: hidden;*/
+  }
+
+  .dropdown {
+    width: 0;
+    background-color: transparent;
+    /*overflow: scroll;*/
+    min-height: calc(100vh - 1rem - 15px);
+    /*height: 100vh;*/
+    max-height: calc(100vh - 1rem - 15px);
   }
 
 
   .dropdown_aperto {
     width: calc(50vw - 15px);
-    height: inherit;
+    /*height: inherit;*/
   }
 
   /* ======================= COLONNA DESTRA ===========*/
@@ -135,7 +137,6 @@
     min-height: 100vh;
     width: 0;
     opacity: 0;
-    overflow: hidden;
     transition: width 0.25s ease-out, padding 0.25s ease-out, opacity 0.25s ease-out;
 
     background-color: var(--search-background);
@@ -158,15 +159,15 @@
 
   /* ======================= COLONNA SINISTRA ===========*/
   .indice_aperto {
-    width: 75vw;
+    width: 80vw;
   }
 
   .dropdown_aperto {
-    width: calc(75vw - 15px);
+    width: calc(80vw - 15px);
   }
 
   /* ======================= COLONNA DESTRA ===========*/
   .right_aperta {
-    width: 75vw;
+    width: 80vw;
   }
 }

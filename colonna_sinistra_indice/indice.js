@@ -63,9 +63,9 @@ export function init(root) {
   if (window.innerWidth > 992) {
     LunghezzaIndice();
   }
-  else {
-    document.getElementById("dropdown").style.maxHeight = "unset";
-  }
+  //else {
+  //  document.getElementById("dropdown").style.maxHeight = "unset";
+  //}
 
   root.querySelector("#button1")?.addEventListener("click", Open1);
 

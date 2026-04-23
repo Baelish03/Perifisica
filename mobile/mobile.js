@@ -72,15 +72,13 @@ function posiziona() {
 }
 
 export function init(root) {
-  const AIMbutton = root.querySelector("#apri-indice-mobile");
-  AIMbutton?.addEventListener("click", ApriIndice);
+  root.querySelector("#apri-indice-mobile")?.addEventListener("click", ApriIndice);
 
-  const AAMbutton = root.querySelector("#apri-accessibilità-mobile");
-  AAMbutton?.addEventListener("click", ApriAccessibilità);
+  root.querySelector("#apri-accessibilità-mobile")?.addEventListener("click", ApriAccessibilità);
 
-  if (window.innerWidth < 992) {
+  /*if (window.innerWidth < 992) {
     posiziona();
     window.addEventListener('resize', posiziona);
     window.addEventListener('scroll', posiziona), { passive: true, capture: true };
-  }
+  }*/
 }
