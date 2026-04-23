@@ -69,7 +69,7 @@ function PopOver() {
     });
 
     // chiudi il popover cliccando fuori
-    document.addEventListener("click", e => {
+    /*document.addEventListener("click", e => {
       if (!span.contains(e.target) && !e.target.closest(".sidenote")) {
         span.style.display = "none";
         sup.style.color = "var(--text)"; // decolora il sup chiuso 
@@ -91,7 +91,31 @@ function PopOver() {
         }
       }
     });
+  });*/
+
+
   });
+
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".sidenote")) {
+      if (currentOpen) {
+        currentOpen.style.display = "none";
+        supOpen.style.color = "var(--text)";
+        currentOpen = null;
+        supOpen = null;
+      }
+    }
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && currentOpen) {
+      currentOpen.style.display = "none";
+      supOpen.style.color = "var(--text)";
+      currentOpen = null;
+      supOpen = null;
+    }
+  });
+
 }
 
 export function init() {

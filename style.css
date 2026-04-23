@@ -103,9 +103,9 @@ main {
 }
 
 /* niente sfondo bianco */
-main * {
+/*main {
   background: transparent;
-}
+}*/
 
 /* =========================
    TITOLI
