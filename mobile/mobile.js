@@ -14,6 +14,7 @@ document.addEventListener("click", e => {
   }
   if (!e.target.closest("#sidebar_right") && !e.target.closest("#apri-accessibilità-mobile")) {
       document.getElementById("sidebar_right").classList.remove("right_aperta");
+  }
 });
 
   document.addEventListener("keydown", e => {
