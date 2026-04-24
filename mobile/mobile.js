@@ -13,57 +13,34 @@ document.addEventListener("click", e => {
     document.getElementById("dropdown").classList.remove("dropdown_aperto");
   }
   if (!e.target.closest("#sidebar_right") && !e.target.closest("#apri-accessibilità-mobile")) {
-      document.getElementById("sidebar_right").classList.remove("right_aperta");
+    document.getElementById("sidebar_right").classList.remove("right_aperta");
   }
 });
 
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
-      document.getElementById("indice").classList.remove("indice_aperto");
-      document.getElementById("dropdown").classList.remove("dropdown_aperto");
-      document.getElementById("sidebar_right").classList.remove("right_aperta");
-    }
-  });
-
-
-function posiziona() {
-  let lastScrollY = window.scrollY;
-  const bottone = document.querySelector('.apri-indice-mobile');
-  const colonna = document.querySelector('.left');
-  const indice = document.querySelector('.indice');
-  //const dropdown = document.querySelector('.dropdown')
-
-  const titolo = document.querySelector('.h1_indice');
-
-  const rect = bottone.getBoundingClientRect();
-  //const rect_title_bot = dropdown.getBoundingClientRect().bottom;
-  const scrollingDown = window.scrollY > lastScrollY;
-
-  let top;
-  if (rect.bottom <= 0) {
-    // bottone uscito sopra: incollata in cima
-    top = 0;
-  } else if (scrollingDown && rect.bottom > window.innerHeight) {
-    // bottone sotto la viewport: incollata in fondo? non dovrebbe succedere
-    top = 0;
-  } else {
-    top = rect.bottom;
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") {
+    document.getElementById("indice").classList.remove("indice_aperto");
+    document.getElementById("dropdown").classList.remove("dropdown_aperto");
+    document.getElementById("sidebar_right").classList.remove("right_aperta");
   }
+});
 
-  colonna.style.top = `${top}px`;
-  colonna.style.height = `calc(100dvh - ${top}px)`;
-  indice.style.height = `calc(100dvh - ${top}px)`;
-  //dropdown.style.height = `calc(100dvh - ${rect_title_bot}px)`;
+function AltezzaDropdown() {
+  const bottom_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().bottom;
+  document.querySelector("#dropdown").style.height = `calc(100vh - 1rem - ${bottom_titolo}px)`
+}
+
+function AltezzaContenutoDestra() {
+  const bottom_titolo = document.querySelectorAll(".h1_indice")[1].getBoundingClientRect().bottom;
+  document.querySelector("#contenuto_destra").style.height = `calc(100vh - 1rem - 15px - ${bottom_titolo}px)`
 }
 
 export function init(root) {
   root.querySelector("#apri-indice-mobile")?.addEventListener("click", ApriIndice);
-
   root.querySelector("#apri-accessibilità-mobile")?.addEventListener("click", ApriAccessibilità);
 
-  /*if (window.innerWidth < 992) {
-    posiziona();
-    window.addEventListener('resize', posiziona);
-    window.addEventListener('scroll', posiziona), { passive: true, capture: true };
-  }*/
+  if (window.innerWidth < 992) {
+    AltezzaDropdown();
+    AltezzaContenutoDestra();
+  }
 }
