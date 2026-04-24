@@ -29,6 +29,10 @@
     padding-bottom: 2rem;
   }
 
+  #foto_logo {
+    width: 80vw;
+  }
+
   /* ==================== MARGIN INDICE =========================== */
   .h3_indice {
     margin-left: 3rem;
