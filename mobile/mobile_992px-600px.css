@@ -132,6 +132,7 @@
 
   .sidebar_right {
     position: absolute;
+    overflow: hidden;
     right: 0;
     top: 0;
     min-height: 100vh;
