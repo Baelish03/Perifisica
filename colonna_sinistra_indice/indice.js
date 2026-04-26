@@ -33,7 +33,7 @@ function LunghezzaIndice() {
   const margin_bottom = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[0]).marginBottom, 10);
 
   const height = (bottom_titolo - top_titolo) + margin_top + margin_bottom;
-  dropdown.style.maxHeight = `calc(100vh - ${height}px - 1rem)`;
+  document.querySelector("#dropdown").style.height = `calc(100vh - ${height}px - 1rem)`;
 }
 
 function ColoraElementoAttuale() {

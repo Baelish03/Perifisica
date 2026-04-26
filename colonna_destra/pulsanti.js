@@ -73,8 +73,20 @@ function NormalText() {
   document.body.style.fontSize = "13pt";
 }
 
+
+function LunghezzaAccessibilita() {
+  const top_titolo = document.querySelectorAll(".h1_indice")[1].getBoundingClientRect().top;
+  const bottom_titolo = document.querySelectorAll(".h1_indice")[1].getBoundingClientRect().bottom;
+  const margin_top = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[1]).marginTop, 10);
+  const margin_bottom = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[1]).marginBottom, 10);
+
+  const height = (bottom_titolo - top_titolo) + margin_top + margin_bottom;
+  document.querySelector("#contenuto_destra").style.height = `calc(100vh - 1rem - ${height}px)`;
+}
+
 export function init(root) {
   applyPreferences();
+  LunghezzaAccessibilita();
 
   const ODbutton = root.querySelector("#OpenDyslexic");
   ODbutton?.addEventListener("click", OpenDyslexic);
