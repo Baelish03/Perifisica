@@ -3,7 +3,6 @@ function Chevron(contentId, chevronId) {
   const chevron = document.getElementById(chevronId);
 
   const isOpen = content.classList.contains("show");
-  console.log(isOpen);
   if (!isOpen) {
     chevron.style.transform = "rotate(0deg) translate(0rem, 0px)";
   } else {
@@ -46,9 +45,16 @@ function ColoraElementoAttuale() {
     }
     if (href === paginaCorrente) {
       link.classList.add("attivo");
+
+      const content = link.closest('.dropdown-content');
+      const button = content.previousElementSibling;   // il <button> che lo precede
+      const chevron = button.querySelector('.chevron');
+      content.classList.toggle("show");
+      Chevron(content.id, chevron.id);
     }
   });
 }
+
 
 export function init(root) {
   ColoraElementoAttuale();

@@ -114,10 +114,6 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 Bisogna cambiare i title dei vari html.
 
-le due barre laterali sono un pochino troppo alte
-
 L'indice dovrebbe rimanere aperto nel capito della pagina dove si è attualmente.
 
-la barra di scorrimento del corpo centrale si sovrappone a quella di destra
-
-migliora l'ombra e il border delle finestrelle
+alcuni oggetti di article si sovrappongono alle sidebar nella versione mobile
