@@ -67,33 +67,6 @@ function PopOver() {
         supOpen = null;
       }
     });
-
-    // chiudi il popover cliccando fuori
-    /*document.addEventListener("click", e => {
-      if (!span.contains(e.target) && !e.target.closest(".sidenote")) {
-        span.style.display = "none";
-        sup.style.color = "var(--text)"; // decolora il sup chiuso 
-        if (currentOpen === span) {
-          currentOpen = null;
-          supOpen = null;
-        }
-      }
-    });
-
-    // chiudi il popover con Escape
-    document.addEventListener("keydown", e => {
-      if (e.key === "Escape") {
-        span.style.display = "none";
-        sup.style.color = "var(--text)"; // decolora il sup chiuso 
-        if (currentOpen === span) {
-          currentOpen = null;
-          supOpen = null;
-        }
-      }
-    });
-  });*/
-
-
   });
 
   document.addEventListener("click", e => {

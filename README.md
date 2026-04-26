@@ -113,7 +113,3 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 
 Bisogna cambiare i title dei vari html.
-
-L'indice dovrebbe rimanere aperto nel capito della pagina dove si è attualmente.
-
-alcuni oggetti di article si sovrappongono alle sidebar nella versione mobile

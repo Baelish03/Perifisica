@@ -114,6 +114,8 @@
   .dropdown {
     width: 0;
     background-color: transparent;
+
+    scrollbar-width: none;
   }
 
 
@@ -152,6 +154,8 @@
 
   .contenuto_destra {
     margin-right: -15px;
+
+    scrollbar-width: none;
   }
 }
 
