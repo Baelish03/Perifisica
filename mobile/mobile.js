@@ -28,8 +28,8 @@ document.addEventListener("keydown", e => {
 function AltezzaDropdown() {
   const top_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().top;
   const bottom_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().bottom;
-  const margin_top = document.querySelectorAll(".h1_indice")[0].style.marginTop;
-  const margin_bottom = document.querySelectorAll(".h1_indice")[0].style.marginBottom;
+  const margin_top = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[0]).marginTop, 10);
+  const margin_bottom = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[0]).marginBottom, 10);
 
   const height = -top_titolo + bottom_titolo + margin_top + margin_bottom;
   document.querySelector("#dropdown").style.height = `calc(100vh - 1rem - 15px - ${height}px)`;
@@ -38,11 +38,11 @@ function AltezzaDropdown() {
 function AltezzaContenutoDestra() {
   const top_titolo = document.querySelectorAll(".h1_indice")[1].getBoundingClientRect().top;
   const bottom_titolo = document.querySelectorAll(".h1_indice")[1].getBoundingClientRect().bottom;
-  const margin_top = document.querySelectorAll(".h1_indice")[1].style.marginTop;
-  const margin_bottom = document.querySelectorAll(".h1_indice")[1].style.marginBottom;
+  const margin_top = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[1]).marginTop, 10);
+  const margin_bottom = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[1]).marginBottom, 10);
 
   const height = -top_titolo + bottom_titolo + margin_top + margin_bottom;
-  document.querySelector("#contenuto_destra").style.height = `calc(100vh - 1rem - 15px - ${bottom_titolo}px)`;
+  document.querySelector("#contenuto_destra").style.height = `calc(100vh - 1rem - 15px - ${height}px)`;
 }
 
 export function init(root) {

@@ -29,8 +29,8 @@ function OpenLatex() {
 function LunghezzaIndice() {
   const top_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().top;
   const bottom_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().bottom;
-  const margin_top = document.querySelectorAll(".h1_indice")[0].style.marginTop;
-  const margin_bottom = document.querySelectorAll(".h1_indice")[0].style.marginBottom;
+  const margin_top = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[0]).marginTop, 10);
+  const margin_bottom = parseFloat(getComputedStyle(document.querySelectorAll(".h1_indice")[0]).marginBottom, 10);
 
   const height = (bottom_titolo - top_titolo) + margin_top + margin_bottom;
   dropdown.style.maxHeight = `calc(100vh - ${height}px - 1rem)`;
@@ -55,9 +55,6 @@ export function init(root) {
   if (window.innerWidth > 992) {
     LunghezzaIndice();
   }
-  //else {
-  //  document.getElementById("dropdown").style.maxHeight = "unset";
-  //}
 
   root.querySelector("#button1")?.addEventListener("click", Open1);
 
