@@ -26,13 +26,23 @@ document.addEventListener("keydown", e => {
 });
 
 function AltezzaDropdown() {
+  const top_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().top;
   const bottom_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().bottom;
-  document.querySelector("#dropdown").style.height = `calc(100vh - 1rem - ${bottom_titolo}px)`
+  const margin_top = document.querySelectorAll(".h1_indice")[0].style.marginTop;
+  const margin_bottom = document.querySelectorAll(".h1_indice")[0].style.marginBottom;
+
+  const height = -top_titolo + bottom_titolo + margin_top + margin_bottom;
+  document.querySelector("#dropdown").style.height = `calc(100vh - 1rem - 15px - ${height}px)`;
 }
 
 function AltezzaContenutoDestra() {
+  const top_titolo = document.querySelectorAll(".h1_indice")[1].getBoundingClientRect().top;
   const bottom_titolo = document.querySelectorAll(".h1_indice")[1].getBoundingClientRect().bottom;
-  document.querySelector("#contenuto_destra").style.height = `calc(100vh - 1rem - 15px - ${bottom_titolo}px)`
+  const margin_top = document.querySelectorAll(".h1_indice")[1].style.marginTop;
+  const margin_bottom = document.querySelectorAll(".h1_indice")[1].style.marginBottom;
+
+  const height = -top_titolo + bottom_titolo + margin_top + margin_bottom;
+  document.querySelector("#contenuto_destra").style.height = `calc(100vh - 1rem - 15px - ${bottom_titolo}px)`;
 }
 
 export function init(root) {

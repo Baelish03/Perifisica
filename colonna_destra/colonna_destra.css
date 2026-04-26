@@ -2,7 +2,7 @@
   height: 100vh;
 }
 
-#contenuto_destra {
+.contenuto_destra {
   overflow: auto;
 }
 

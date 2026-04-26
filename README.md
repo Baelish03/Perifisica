@@ -114,8 +114,13 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 Bisogna cambiare i title dei vari html.
 
+le due barre laterali sono un pochino troppo alte
+
+a seconda di dove è l'h1_indice quando ricarichi cambia il comportamento ottenuto, funziona così anche per la versione desktop. 
+i rect si devono aggionrare dinamicamente altrimenti è tutto inutile.
+
 L'indice dovrebbe rimanere aperto nel capito della pagina dove si è attualmente.
 
-quando ridimensiono la finestra, le lunghezze delle barre laterali non si aggiornano
-
 la barra di scorrimento del corpo centrale si sovrappone a quella di destra
+
+migliora l'ombra e il border delle finestrelle

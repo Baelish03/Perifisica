@@ -141,6 +141,10 @@
     padding-right: 15px;
     padding-bottom: 15px;
   }
+
+  .contenuto_destra {
+    margin-right: -15px;
+  }
 }
 
 @media screen and (max-width: 600px) {

@@ -26,22 +26,14 @@ function OpenLatex() {
   Chevron("latex-content", "latex-chevron");
 }
 
-/*
-Rende l'indice della stessa lunghezza del corpo centrale della pagina.
-Se il corpo è più corto della colonna destra, l'indice si uniforma alla 
-  colonna destra.
-*/
 function LunghezzaIndice() {
-  const middle = document.getElementsByClassName("middle")[0];
-  const right = document.getElementsByClassName("right")[0];
-  const dropdown = document.getElementById("dropdown");
+  const top_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().top;
+  const bottom_titolo = document.querySelectorAll(".h1_indice")[0].getBoundingClientRect().bottom;
+  const margin_top = document.querySelectorAll(".h1_indice")[0].style.marginTop;
+  const margin_bottom = document.querySelectorAll(".h1_indice")[0].style.marginBottom;
 
-  const middle_bottom = middle.getBoundingClientRect().bottom + window.scrollY;
-  const right_bottom = right.getBoundingClientRect().bottom + window.scrollY;
-  const dropdown_top = dropdown.getBoundingClientRect().top + window.scrollY;
-
-  const height = Math.max(middle_bottom, right_bottom) - dropdown_top;
-  dropdown.style.maxHeight = height + "px";
+  const height = (bottom_titolo - top_titolo) + margin_top + margin_bottom;
+  dropdown.style.maxHeight = `calc(100vh - ${height}px - 1rem)`;
 }
 
 function ColoraElementoAttuale() {
