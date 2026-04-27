@@ -1,0 +1,91 @@
+/*.contenuto-footer {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+
+}
+*/
+.footer-logo {
+  display: block;
+  margin-bottom: 3px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-greek {
+  font-family: 'Libre-Baskerville', serif;
+  font-style: italic;
+  color: #06608f;
+  letter-spacing: 0.08em;
+  display: grid;
+  justify-content: center;
+}
+
+.footer-desc {
+  font-size: 11pt;
+  line-height: 1.75;
+  flex: 1;
+  width: 60vw;
+  display: grid;
+  text-align: center;
+  margin-left: calc(20vw - 25px);
+}
+
+.pf5-social {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.pf5-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  color: #555b6e;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.pf5-social a:hover {
+  color: #b0b8c8;
+}
+
+.pf5-social svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+.pf5-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 1.1rem 0;
+}
+
+.pf5-copy {
+  font-size: 11.5px;
+  color: #373c4a;
+}
+
+.pf5-legal {
+  display: flex;
+  gap: 16px;
+}
+
+.pf5-legal a {
+  font-size: 11.5px;
+  color: #373c4a;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.pf5-legal a:hover {
+  color: #6b7384;
+}

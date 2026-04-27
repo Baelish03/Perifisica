@@ -82,6 +82,15 @@ body {
   max-height: 100vh;
 }
 
+.footer{ 
+  width: 100vw;
+  background: white;
+  color: #1f1f1f;
+  margin-top: 2rem;
+  padding: 25px;
+  border-top: 1px solid var(--border) ;
+}
+
 
 /* =========================
    CONTENUTO PRINCIPALE
