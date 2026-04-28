@@ -51,7 +51,7 @@
   #bottoni_mobile {
     visibility: visible;
     display: flex;
-    height: 20pt;
+    height: 30px;
   }
 
   #apri-indice-mobile {
@@ -89,6 +89,7 @@
 
   /* ======================= COLONNA SINISTRA ===========*/
   .indice {
+    position: absolute;
     width: 0;
     opacity: 0;
     transition: width 0.25s ease-out, padding 0.25s ease-out, opacity 0.25s ease-out;
@@ -98,8 +99,6 @@
     box-shadow: 6px 16px 16px 0px var(--text);
     border-radius: 0px 10px 10px 0px;
     padding: 0;
-    z-index: 1;
-    margin-top: 3px;
   }
 
   .indice_aperto {
@@ -114,7 +113,7 @@
   .dropdown {
     width: 0;
     background-color: transparent;
-
+    padding-bottom: 0;
     scrollbar-width: none;
   }
 
@@ -140,7 +139,6 @@
     border-radius: 10px 0px 0px 10px;
     border: 0.5px solid var(--border);
     padding: 0;
-    margin-top: 3px;
   }
 
   .right_aperta {
@@ -163,15 +161,15 @@
 
   /* ======================= COLONNA SINISTRA ===========*/
   .indice_aperto {
-    width: 80vw;
+    width: 65vw;
   }
 
   .dropdown_aperto {
-    width: calc(80vw - 15px);
+    width: calc(65vw - 15px);
   }
 
   /* ======================= COLONNA DESTRA ===========*/
   .right_aperta {
-    width: 80vw;
+    width: 65vw;
   }
 }

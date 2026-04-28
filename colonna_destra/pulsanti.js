@@ -16,6 +16,7 @@ function applyPreferences() {
     document.querySelector("#HighContrast").checked = true;
   }
   else {
+    StandardContrast();
     document.querySelector("#StandardContrast").checked = true;
   }
 
@@ -23,7 +24,12 @@ function applyPreferences() {
     BigText();
     document.querySelector("#BigText").checked = true;
   }
+  else if (dimensione === "huge") {
+    HugeText();
+    document.querySelector("#HugeText").checked = true;
+  }
   else {
+    BigText();
     document.querySelector("#NormalText").checked = true;
   }
 }
@@ -61,16 +67,19 @@ function StandardContrast() {
 
 }
 
+function HugeText() {
+  localStorage.setItem("dimensione", "huge");
+  document.documentElement.style.fontSize = "20px";
+}
+
 function BigText() {
   localStorage.setItem("dimensione", "big");
-
-  document.body.style.fontSize = "16pt";
+  document.documentElement.style.fontSize = "18px";
 }
 
 function NormalText() {
   localStorage.setItem("dimensione", "");
-
-  document.body.style.fontSize = "13pt";
+  document.documentElement.style.fontSize = "16px";
 }
 
 
@@ -88,21 +97,13 @@ export function init(root) {
   applyPreferences();
   LunghezzaAccessibilita();
 
-  const ODbutton = root.querySelector("#OpenDyslexic");
-  ODbutton?.addEventListener("click", OpenDyslexic);
+  root.querySelector("#OpenDyslexic")?.addEventListener("click", OpenDyslexic);
+  root.querySelector("#StandardFont")?.addEventListener("click", StandardFont);
 
-  const SFbutton = root.querySelector("#StandardFont");
-  SFbutton?.addEventListener("click", StandardFont);
+  root.querySelector("#HighContrast")?.addEventListener("click", HighContrast);
+  root.querySelector("#StandardContrast")?.addEventListener("click", StandardContrast);
 
-  const HCbutton = root.querySelector("#HighContrast");
-  HCbutton?.addEventListener("click", HighContrast);
-
-  const SCbutton = root.querySelector("#StandardContrast");
-  SCbutton?.addEventListener("click", StandardContrast);
-
-  const BTbutton = root.querySelector("#BigText");
-  BTbutton?.addEventListener("click", BigText);
-
-  const NTbutton = root.querySelector("#NormalText");
-  NTbutton?.addEventListener("click", NormalText);
+  root.querySelector("#HugeText")?.addEventListener("click", HugeText);
+  root.querySelector("#BigText")?.addEventListener("click", BigText);
+  root.querySelector("#NormalText")?.addEventListener("click", NormalText);
 }

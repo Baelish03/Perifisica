@@ -17,27 +17,6 @@
 }
 
 @media screen and (max-width: 1200px) {
-
-  /* =========================
-   TITOLI
-   ========================= */
-  h1 {
-    font-size: 20pt;
-    text-transform: uppercase;
-  }
-
-  h2 {
-    font-size: 18pt;
-  }
-
-  h3 {
-    font-size: 16pt;
-  }
-
-  h4 {
-    font-size: 14pt;
-  }
-
   /* ==================== MARGIN INDICE =========================== */
   .h3_indice {
     margin-left: 1rem;

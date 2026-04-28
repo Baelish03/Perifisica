@@ -116,12 +116,8 @@ Bisogna cambiare i title dei vari html.
 
 rendere sticky i titoletti 
 
-finire il footer
+finire il footer, con i bottoni per la navigazione avanti e indietro
 
 in-page navigation da finire
 
-diminuire font e dare 3 scelte: standard, grande, enorme
-
 uniformare il codice per le chevron
-
-togliere i 3px di margin-top alle sidebar e mettere 3px margin-bottom ai bottoni

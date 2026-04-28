@@ -17,7 +17,7 @@
 
 body {
   font-family: "Inter", sans-serif;
-  font-size: 13pt;
+  font-size: 16px;
   font-weight: 500;
   margin: 0;
   background: var(--background);
@@ -133,20 +133,20 @@ h4 {
 }
 
 h1 {
-  font-size: 23pt;
+  font-size: 1.85rem;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 20pt;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 17pt;
+  font-size: 1.25rem;
 }
 
 h4 {
-  font-size: 14pt;
+  font-size: 1rem;
 }
 
 /* =========================

@@ -22,6 +22,7 @@
 
 .indice{
   max-height: 100vh;
+  padding-left: 15px;
 }
 
 .dropbutton {
@@ -41,7 +42,7 @@
 .dropdown {
   display: inline-block;
   overflow: auto;
-  padding-bottom: 1rem;
+  padding-right: 5px;
 }
 
 /* Dropdown content */
@@ -51,7 +52,6 @@
   background-color: transparent;
   overflow: hidden;
   min-width: 160px;
-  z-index: 1;
   transition: max-height .5s ease,
     opacity .5s ease;
 }
