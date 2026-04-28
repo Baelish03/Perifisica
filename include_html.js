@@ -3,7 +3,7 @@ export async function includeHTML() {
 
     await Promise.all(
         elements.map(async (el) => {
-            const file = el.getAttribute("w3-include-html");
+            const file = el.getAttribute("include-html");
             if (!file) return;
 
             const res = await fetch(file);

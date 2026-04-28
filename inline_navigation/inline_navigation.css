@@ -1,0 +1,39 @@
+.toc-box {
+    border: 0.5px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 680px;
+  }
+  .toc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+  .toc-header:hover { background: #f5f5f5; }
+  .toc-chevron { transition: transform 0.25s; }
+  .toc-chevron.open { transform: rotate(180deg); }
+  .toc-body {
+    border-top: 0.5px solid #ddd;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+  .toc-body.open { max-height: 600px; }
+  .toc-list { list-style: none; padding: 12px 0; margin: 0; }
+  .toc-list li a {
+    display: block;
+    padding: 7px 20px;
+    font-size: 14px;
+    color: #555;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+  }
+  .toc-list li a:hover {
+    background: #f5f5f5;
+    color: #111;
+    border-left-color: #999;
+  }
+  .toc-list li.h3 a { padding-left: 36px; font-size: 13px; }
