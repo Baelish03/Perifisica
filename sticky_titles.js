@@ -20,6 +20,27 @@ function StickyTitles() {
   });
 }
 
+function ToggleCssTitle() {
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting && (entry.boundingClientRect.top >= 0 || entry.boundingClientRect.top <= 5)) {
+          console.log("stuck");
+          entry.target.classList.add('is-stuck');
+        } else {
+          console.log("unstack");
+          entry.target.classList.remove('is-stuck');
+        }
+      });
+    },
+    { rootMargin: '-1px 0px 0px 0px', threshold: 1 }
+  );
+
+  const article = document.querySelector('article');
+  article.querySelectorAll('h1, h2, h3').forEach(h => observer.observe(h));
+}
+
 export function init() {
   StickyTitles();
+  ToggleCssTitle();
 }

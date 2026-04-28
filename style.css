@@ -56,7 +56,7 @@ body {
   display: flex;
   align-items: flex-start;
   /* fondamentale per sticky*/
-  padding-right: 1vw; 
+  padding-right: 1vw;
   /* per non far sovrapporre le scrollbar destra e generale*/
 }
 
@@ -65,7 +65,7 @@ body {
   position: sticky;
   top: 1rem;
   max-height: 100vh;
-  z-index: 2;
+  z-index: 10;
 }
 
 .middle {
@@ -80,15 +80,16 @@ body {
   position: sticky;
   top: 1rem;
   max-height: 100vh;
+  z-index: 10;
 }
 
-.footer{ 
+.footer {
   width: 100vw;
   background: white;
   color: #1f1f1f;
   margin-top: 2rem;
   padding: 25px;
-  border-top: 1px solid var(--border) ;
+  border-top: 1px solid var(--border);
 }
 
 
@@ -127,15 +128,6 @@ h4 {
   text-align: center;
 }
 
-article h1,
-article h2,
-article h3 {
-  position: sticky;
-  top: 0;
-  background: var(--background);
-  /*box-shadow: 0px 5px 5px 0px var(--text);*/
-  z-index: 10;
-}
 
 h1 {
   font-size: 1.5rem;
@@ -153,6 +145,40 @@ h3 {
 h4 {
   font-size: 1rem;
 }
+
+article h1,
+article h2,
+article h3 {
+  position: sticky;
+  top: 0;
+  background: var(--background);
+  /*box-shadow: 0px 5px 5px 0px var(--text);*/
+  z-index: 5;
+}
+
+article h1.is-stuck,
+article h2.is-stuck,
+article h3.is-stuck {
+  box-shadow: 0px 5px 5px -5px var(--text);
+  /*background-color: red; placeholder per controllare se funziona*/
+  padding-top: 7.5px;
+  padding-bottom: 10px;
+  border-radius: 0px 0px 5px 5px;
+
+  backdrop-filter: blur(10px);
+  /*background-color: color-mix(in srgb, var(--background) 80%, transparent);
+  NON SO COSA SIA PIÙ BELLO */
+  background: color-mix(in srgb, var(--primary) 50%, transparent); 
+  /* FALLBACK */
+  background: linear-gradient(90deg,
+      color-mix(in srgb, var(--primary) 60%, transparent),
+      color-mix(in srgb, var(--primary) 40%, transparent));
+  transition: box-shadow 0.125s ease-out, border-color 0.125s ease-out, font-size 0.125s ease-out, border-left 0.125s ease-out;
+  border-left: 3px solid var(--primary);
+
+  font-size: 0.9em;
+}
+
 
 /* =========================
    TESTO

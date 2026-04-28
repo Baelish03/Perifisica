@@ -29,7 +29,7 @@ function applyPreferences() {
     document.querySelector("#HugeText").checked = true;
   }
   else {
-    BigText();
+    NormalText();
     document.querySelector("#NormalText").checked = true;
   }
 }
