@@ -39,6 +39,7 @@ const { init: Indice }   = await import("./colonna_sinistra_indice/indice.js");
 const { init: Mobile }   = await import("./mobile/mobile.js");
 const { init: Allarga }  = await import("./image_enlarge.js");
 const { init: PopOver }  = await import("./pop_over.js");
+const { init: StickyTitles } = await import("./sticky_titles.js") 
 const { init: InlineNav }  = await import("./inline_navigation/inline_navigation.js");
 
 
@@ -49,3 +50,4 @@ Mobile(document);
 Allarga();
 PopOver();
 //InlineNav();
+StickyTitles();
