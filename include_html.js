@@ -1,5 +1,5 @@
 export async function includeHTML() {
-    const elements = [...document.querySelectorAll("[w3-include-html]")];
+    const elements = [...document.querySelectorAll("[include-html]")];
 
     await Promise.all(
         elements.map(async (el) => {
@@ -12,7 +12,7 @@ export async function includeHTML() {
                 ? await res.text()
                 : "Page not found.";
 
-            el.removeAttribute("w3-include-html");
+            el.removeAttribute("include-html");
         })
     );
 }
