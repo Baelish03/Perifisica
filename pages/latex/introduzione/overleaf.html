@@ -32,6 +32,106 @@
     <meta content="Perifisica" name="twitter:title"/>
     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="twitter:description"/>
     <meta content="https://perifisica.github.io/logo/logo_completo.png" name="twitter:image"/>
+    <!-- ===========
+          CSS CRITICO
+     ============================ -->
+    <style>
+      * {
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: "Inter", sans-serif;
+               font-size: 16px;
+               font-weight: 500;
+               margin: 0;
+               background: var(--background);
+               color: var(--text);
+               line-height: 1.65;
+               text-align: justify;
+          }
+
+          .topbar {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               gap: 1.5rem;
+               padding-top: 3rem;
+               background: #ffffff;
+          }
+
+          .input {
+               padding-top: 2rem;
+               border-bottom: 1px solid var(--border);
+               padding-bottom: 3rem;
+               height: 7rem;
+          }
+
+          .row {
+               display: flex;
+               align-items: flex-start;
+               /* fondamentale per sticky*/
+               padding-right: 1vw;
+               /* per non far sovrapporre le scrollbar destra e generale*/
+          }
+
+          .left {
+               width: 19.1%;
+               position: sticky;
+               top: 1rem;
+               max-height: 100vh;
+               z-index: 10;
+          }
+
+          .middle {
+               width: 61.8%;
+               padding-right: 1rem;
+               padding-left: 1rem;
+               overflow: visible;
+          }
+
+          .right {
+               width: 19.1%;
+               position: sticky;
+               top: 1rem;
+               max-height: 100vh;
+               z-index: 10;
+          }
+
+          .footer {
+               width: 100vw;
+               background: white;
+               color: #1f1f1f;
+               margin-top: 2rem;
+               padding: 25px;
+               border-top: 1px solid var(--border);
+          }
+
+          #logo_link {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          #foto_logo {
+               max-width: 100%;
+               height: auto;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          main {
+               padding-top: 3rem;
+          }
+
+          h1, h2, h3, h4 {
+               font-family: "Libre Baskerville", serif;
+               font-weight: 600;
+               line-height: 1;
+               text-align: center;
+          }
+    </style>
     <!-- =========================
          FAVICONS
     ========================== -->
@@ -128,7 +228,7 @@
             </p>
             <figure>
               <picture>
-                <img alt="Nuovo progetto Overleaf" loading="lazy" height="480px" src="./overleaf/nuovo-progetto.webp" srcset="./overleaf/nuovo-progetto.png" width="178.5px"/>
+                <img alt="Nuovo progetto Overleaf" height="480px" loading="lazy" src="./overleaf/nuovo-progetto.webp" srcset="./overleaf/nuovo-progetto.png" width="178.5px"/>
               </picture>
               <figcaption>
                 Template di progetti \(\LaTeX\) su Overleaf.
@@ -164,7 +264,7 @@
             </p>
             <figure>
               <picture>
-                <img alt="Interfaccia di modifica" loading="lazy" height="287.35px" src="./overleaf/interfaccia-modifica.webp" srcset="./overleaf/interfaccia-modifica.png" width="636.917px"/>
+                <img alt="Interfaccia di modifica" height="287.35px" loading="lazy" src="./overleaf/interfaccia-modifica.webp" srcset="./overleaf/interfaccia-modifica.png" width="636.917px"/>
               </picture>
               <figcaption>
                 Interfaccia di un progetto vuoto in Overleaf. Viene aggiunto in automatico il titolo, l'autore, la data e
@@ -302,7 +402,7 @@
                 </sup>
                 <figure>
                   <picture>
-                    <img alt="Interfaccia per l'inserimento delle figure" loading="lazy" height="480px" src="./overleaf/inserimento-figure.webp" srcset="./overleaf/inserimento-figure.png" width="502.767px"/>
+                    <img alt="Interfaccia per l'inserimento delle figure" height="480px" loading="lazy" src="./overleaf/inserimento-figure.webp" srcset="./overleaf/inserimento-figure.png" width="502.767px"/>
                   </picture>
                   <figcaption>
                     Interfaccia per l'inserimento di una figura con caricamento dal PC.
@@ -376,7 +476,7 @@
             </p>
             <figure>
               <picture>
-                <img alt="Esempio di tabella predefinita inserita" loading="lazy" height="328.6px" src="./overleaf/inserimento-tabelle.webp" srcset="./overleaf/inserimento-tabelle.png" width="636.917px"/>
+                <img alt="Esempio di tabella predefinita inserita" height="328.6px" loading="lazy" src="./overleaf/inserimento-tabelle.webp" srcset="./overleaf/inserimento-tabelle.png" width="636.917px"/>
               </picture>
               <figcaption>
                 Un esempio di tabella standard con cui è possibile interagire cliccando sulle celle.
@@ -408,7 +508,7 @@
             </p>
             <figure>
               <picture>
-                <img alt="Interfaccia per la collaborazione" loading="lazy" height="480px" src="./overleaf/collaborare.webp" srcset="./overleaf/collaborare.png" width="536.217px"/>
+                <img alt="Interfaccia per la collaborazione" height="480px" loading="lazy" src="./overleaf/collaborare.webp" srcset="./overleaf/collaborare.png" width="536.217px"/>
               </picture>
               <figcaption>
                 Interfaccia per aggiungere dei collaboratori al progetto.

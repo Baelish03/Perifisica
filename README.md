@@ -114,8 +114,6 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 Bisogna cambiare i title dei vari html.
 
-cambiare il mobile da 1500px a 1400px
-
 finire il footer, con i bottoni per la navigazione avanti e indietro
 
 
