@@ -130,20 +130,43 @@ h4 {
 
 
 h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
 }
 
 h2 {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.15rem;
+}
+
+/* ============ TITOLI IN ARTICLE =========*/
+
+article {
+  --base: 16px;
+  font-size: var(--base);
+}
+
+article h1 {
+  font-size: calc(2 * var(--base));
+}
+
+article h2 {
+  font-size: calc(1.5 * var(--base));
+}
+
+article h3 {
+  font-size: calc(1.25 * var(--base));
+}
+
+article h4 {
+  font-size: calc(1.15 * var(--base));
 }
 
 article h1,

@@ -114,10 +114,10 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 Bisogna cambiare i title dei vari html.
 
-rendere testo sidebar non scalabile
-
-finire il footer, con i bottoni per la navigazione avanti e indietro
+uniformare il codice per le chevron
 
 in-page navigation da finire
 
-uniformare il codice per le chevron
+finire il footer, con i bottoni per la navigazione avanti e indietro
+
+

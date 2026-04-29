@@ -69,17 +69,17 @@ function StandardContrast() {
 
 function HugeText() {
   localStorage.setItem("dimensione", "huge");
-  document.documentElement.style.fontSize = "20px";
+  document.querySelector('article').style.setProperty('--base', '20px');
 }
 
 function BigText() {
   localStorage.setItem("dimensione", "big");
-  document.documentElement.style.fontSize = "18px";
+  document.querySelector('article').style.setProperty('--base', '18px');
 }
 
 function NormalText() {
   localStorage.setItem("dimensione", "");
-  document.documentElement.style.fontSize = "16px";
+  document.querySelector('article').style.setProperty('--base', '16px');
 }
 
 
