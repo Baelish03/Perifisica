@@ -49,5 +49,5 @@ Indice(document);
 Mobile(document);
 Allarga();
 PopOver();
-//InlineNav();
+InlineNav();
 StickyTitles();

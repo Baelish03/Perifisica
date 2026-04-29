@@ -1,13 +1,21 @@
 <link rel="stylesheet" href="/inline_navigation/inline_navigation.css">
 
 <div class="toc-box">
-  <div class="toc-header" onclick="toggleTOC()">
-    <span>Contenuto</span>
-    <span class="toc-chevron" id="chevron">▼</span>
-  </div>
-  <div class="toc-body" id="toc-body">
+  <button class="dropbutton" id="toc-header">
+    <p class="chevron">
+      &#8250
+    </p>
+    <h2 class="h2_indice" id="toc-title">
+      Contenuto
+    </h2>
+    <span class="toc-count" id="toc-count"></span>
+  </button>
+
+  <div class="dropdown-content">
     <ul class="toc-list">
-      <li class="h2"><a href="#introduzione">1 — Introduzione</a></li>
+      <li class="h2">
+        <a href="#introduzione">1 — Introduzione</a>
+      </li>
       <li class="h2"><a href="#metodologia">2 — Metodologia</a></li>
       <li class="h3"><a href="#raccolta-dati">2.1 Raccolta dei dati</a></li>
       <li class="h2"><a href="#risultati">3 — Risultati</a></li>
@@ -16,4 +24,3 @@
 </div>
 
 <script type="module" src="./inline_navigation.js"></script>
-
