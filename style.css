@@ -128,11 +128,16 @@ h4 {
   text-align: center;
 }
 
-
-h1 {
+/* bisogna definire globalmente h1 per le compatibilità tra i diversi browser */
+article h1,
+aside h1,
+nav h1,
+section h1 {
   font-size: 2rem;
+  margin: 15px 0;
   text-transform: uppercase;
 }
+
 
 h2 {
   font-size: 1.5rem;
