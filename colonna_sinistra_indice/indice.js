@@ -1,28 +1,30 @@
-function Chevron(contentId, chevronId) {
-  const content = document.getElementById(contentId);
-  const chevron = document.getElementById(chevronId);
+function toggleSection(button) {
+  const content = button.nextElementSibling; // il div .dropdown-content dopo il button
+  const chevron = button.querySelector('.chevron');
 
   const isOpen = content.classList.contains("show");
-  if (!isOpen) {
-    chevron.style.transform = "rotate(0deg) translate(0rem, 0px)";
-  } else {
-    chevron.style.transform = "rotate(90deg) translate(+.4rem, 0px)";
-  }
+  content.classList.toggle("show");
+
+  chevron.style.transform = isOpen
+    ? "rotate(0deg) translate(0rem, 0px)"
+    : "rotate(90deg) translate(+.4rem, 0px)";
 }
 
-function Open1() {
-  document.getElementById("content1").classList.toggle("show");
-  Chevron("content1", "chevron1");
-}
+function ColoraElementoAttuale() {
+  const paginaCorrente = location.pathname;
 
-function Open2() {
-  document.getElementById("content2").classList.toggle("show");
-  Chevron("content2", "chevron2");
-}
+  document.querySelectorAll(".dropdown-content a").forEach(link => {
+    if (link.getAttribute("href") === paginaCorrente) {
+      link.classList.add("attivo");
 
-function OpenLatex() {
-  document.getElementById("latex-content").classList.toggle("show");
-  Chevron("latex-content", "latex-chevron");
+      const content = link.closest('.dropdown-content');
+      const button = content.previousElementSibling;
+      const chevron = button.querySelector('.chevron');
+
+      content.classList.add("show");
+      chevron.style.transform = "rotate(90deg) translate(+.4rem, 0px)";
+    }
+  });
 }
 
 function LunghezzaIndice() {
@@ -35,36 +37,14 @@ function LunghezzaIndice() {
   document.querySelector("#dropdown").style.height = `calc(100vh - ${height}px - 1rem)`;
 }
 
-function ColoraElementoAttuale() {
-  const paginaCorrente = location.pathname;
-
-  document.querySelectorAll(".dropdown-content a").forEach(link => {
-    const href = link.getAttribute("href");
-    if (!href) {
-      return;
-    }
-    if (href === paginaCorrente) {
-      link.classList.add("attivo");
-
-      const content = link.closest('.dropdown-content');
-      const button = content.previousElementSibling;   // il <button> che lo precede
-      const chevron = button.querySelector('.chevron');
-      content.classList.toggle("show");
-      Chevron(content.id, chevron.id);
-    }
-  });
-}
-
-
 export function init(root) {
   ColoraElementoAttuale();
+
   if (window.innerWidth > 992) {
     LunghezzaIndice();
   }
 
-  root.querySelector("#button1")?.addEventListener("click", Open1);
-
-  root.querySelector("#button2")?.addEventListener("click", Open2);
-
-  root.querySelector("#latex-button")?.addEventListener("click", OpenLatex);
+  root.querySelectorAll(".dropbutton").forEach(button => {
+    button.addEventListener("click", () => toggleSection(button));
+  });
 }
