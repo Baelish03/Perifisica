@@ -53,8 +53,13 @@
   background-color: transparent;
   overflow: hidden;
   min-width: 160px;
-  transition: max-height .5s ease,
-    opacity .5s ease;
+  transition: max-height .125s ease,
+    opacity .125s ease;
+}
+
+.show {
+  max-height: 1000vh;
+  opacity: 1;
 }
 
 /* Links inside dropdown content */
@@ -77,11 +82,6 @@
   background: linear-gradient(90deg,
       oklch(from var(--primary) l c h / 0.6),
       oklch(from var(--primary) l c h / 0.4));
-}
-
-.show {
-  max-height: 1000vh;
-  opacity: 1;
 }
 
 /* ========== MOVIMENTO CHEVRON ==============*/
