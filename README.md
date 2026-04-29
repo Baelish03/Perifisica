@@ -114,7 +114,7 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 Bisogna cambiare i title dei vari html.
 
-rendere sticky i titoletti 
+rendere testo sidebar non scalabile
 
 finire il footer, con i bottoni per la navigazione avanti e indietro
 
