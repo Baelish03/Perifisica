@@ -1,6 +1,30 @@
-/* ======================= MAIN CSS ======================= */
+@media screen and (max-width: 1400px) {
+  .left {
+    width: 25%;
+  }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  .middle {
+    padding: 10px 15px;
+    width: 50%;
+  }
+
+  .right {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  /* ==================== MARGIN INDICE =========================== */
+  .h3_indice {
+    margin-left: 1rem;
+  }
+
+  .h4_indice {
+    margin-left: 1.5rem;
+    margin-top: -0.5rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .row{
     padding-right: 0;
