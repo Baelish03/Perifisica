@@ -1,9 +1,12 @@
-.toc-box {
+#toc-box {
   border-radius: 12px;
   overflow: hidden;
-  max-width: 35vw;
-  margin-left: auto;
+  max-width: 100vw;
+  /*margin-left: auto;
   margin-right: auto;
+
+  display: grid;
+  justify-content: center;*/
 }
 
 #toc-header {
@@ -15,29 +18,22 @@
   font-weight: 500;
 }
 
-.toc-list {
+#toc-list {
   list-style: none;
-  padding: 12px 0;
   margin: 0;
 }
 
-.toc-list li a {
+#toc-list li a {
   display: block;
-  padding: 7px 20px;
+  padding: 3px 10px 3px 0px;
   text-decoration: none;
   border-left: 3px solid transparent;
 }
 
-.toc-list li a:hover {
+#toc-list li a:hover {
   background: linear-gradient(90deg, /* FALLBACK */
       color-mix(in srgb, var(--primary) 60%, transparent),
       color-mix(in srgb, var(--primary) 40%, transparent));
   border-left-color: var(--primary);
   color: var(--link);
 }
-
-/*.toc-list li.h3 a {
-
-  padding-left: 36px;
-  font-size: 13px;
-}*/
