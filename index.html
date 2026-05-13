@@ -41,6 +41,164 @@
           content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
      <meta name="twitter:image" content="https://perifisica.github.io/logo/logo_completo.png">
 
+     <!-- ===========
+          CSS CRITICO
+     ============================ -->
+     <style>
+          * {
+               box-sizing: border-box;
+          }
+
+          body {
+               font-family: "Inter", sans-serif;
+               font-size: 16px;
+               font-weight: 500;
+               margin: 0;
+               background: var(--background);
+               color: var(--text);
+               line-height: 1.65;
+               text-align: justify;
+          }
+
+          .topbar {
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               gap: 1.5rem;
+               padding-top: 3rem;
+               background: #ffffff;
+          }
+
+          .input {
+               padding-top: 2rem;
+               border-bottom: 1px solid var(--border);
+               padding-bottom: 3rem;
+               height: 7rem;
+          }
+
+          .row {
+               display: flex;
+               align-items: flex-start;
+               /* fondamentale per sticky*/
+               padding-right: 1vw;
+               /* per non far sovrapporre le scrollbar destra e generale*/
+          }
+
+          .left {
+               width: 19.1%;
+               position: sticky;
+               top: 1rem;
+               max-height: 100vh;
+               z-index: 10;
+          }
+
+          .middle {
+               width: 61.8%;
+               padding-right: 1rem;
+               padding-left: 1rem;
+               overflow: visible;
+          }
+
+          .right {
+               width: 19.1%;
+               position: sticky;
+               top: 1rem;
+               max-height: 100vh;
+               z-index: 10;
+          }
+
+          .footer {
+               width: 100%;
+               background: white;
+               color: #1f1f1f;
+               margin-top: 2rem;
+               padding: 25px;
+               border-top: 1px solid var(--border);
+          }
+
+          #logo_link {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          #foto_logo {
+               max-width: 100%;
+               height: auto;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+          }
+
+          main {
+               padding-top: 3rem;
+          }
+
+          h1,
+          h2,
+          h3,
+          h4 {
+               font-family: "Libre Baskerville", serif;
+               font-weight: 500;
+               line-height: 1;
+               text-align: center;
+          }
+     </style>
+
+     <!-- ========================
+          FONT
+          =======================
+     -->
+     <style>
+          @font-face {
+               font-family: 'Inter';
+               src: url('/font/Inter-Medium.woff2') format('woff2');
+               font-display: swap;
+          }
+
+          @font-face {
+               font-family: 'Inter';
+               src: url('/font/Inter-Italic.woff2') format('woff2');
+               font-display: swap;
+               font-style: italic;
+          }
+
+          @font-face {
+               font-family: 'Inter';
+               src: url('/font/Inter-Bold.woff2') format('woff2');
+               font-display: swap;
+               font-weight: bold;
+          }
+
+
+          @font-face {
+               font-family: 'Libre Baskerville';
+               src: url('/font/LibreBaskerville-Regular.woff2') format('woff2');
+               font-display: swap;
+          }
+
+
+          @font-face {
+               font-family: 'OpenDyslexic';
+               src: url('/font/OpenDyslexic-Regular.woff2') format('woff2');
+               font-display: swap;
+          }
+
+          @font-face {
+               font-family: 'OpenDyslexic';
+               src: url('/font/OpenDyslexic-Bold.woff2') format('woff2');
+               font-weight: bold;
+               font-display: swap;
+          }
+
+          @font-face {
+               font-family: 'OpenDyslexic';
+               src: url('/font/OpenDyslexic-Italic.woff2') format('woff2');
+               font-style: italic;
+               font-display: swap;
+          }
+     </style>
+
      <!-- =========================
          FAVICONS
     ========================== -->
@@ -49,7 +207,6 @@
      <link rel="icon" sizes="32x32" href="/logo/favicon.webp">
      <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
 
-     <link rel="stylesheet" href="/font.css">
      <link rel="stylesheet" href="/style.css">
 </head>
 
