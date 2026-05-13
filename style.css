@@ -16,22 +16,22 @@ article h1,
 aside h1,
 nav h1,
 section h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 15px 0;
   text-transform: uppercase;
 }
 
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.35rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
 }
 
 h4 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 /* ============ TITOLI IN ARTICLE =========*/
