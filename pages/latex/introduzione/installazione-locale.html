@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="it">
-<!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
-
-<head>
-     <meta charset="utf-8" />
-     <title>
-          Installazione locale - Perifisica
-     </title>
-     <meta content="width=device-width, initial-scale=1" name="viewport" />
-     <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-     <!-- =========================
+  <!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
+  <head>
+    <meta charset="utf-8"/>
+    <title>
+      Installazione locale - Perifisica
+    </title>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <!-- =========================
          SEO METADATA
     ========================== -->
-     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="description" />
-     <!-- la descrizione deve essere più lunga -->
-     <meta content="fisica, scuola, università" name="keywords" />
-     <meta content="Perifisica" name="author" />
-     <meta content="index, follow" name="robots" />
-     <!-- =========================
+    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="description"/>
+    <!-- la descrizione deve essere più lunga -->
+    <meta content="fisica, scuola, università" name="keywords"/>
+    <meta content="Perifisica" name="author"/>
+    <meta content="index, follow" name="robots"/>
+    <!-- =========================
          OPEN GRAPH (FACEBOOK, LINKEDIN)
     ========================== -->
-     <meta content="Perifisica" property="og:title" />
-     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università."
-          property="og:description" />
-     <meta content="website" property="og:type" />
-     <meta content="https://perifisica.github.io/" property="og:url" />
-     <meta content="https://perifisica.github.io/logo/logo_completo.png" property="og:image" />
-     <meta content="it_IT" property="og:locale" />
-     <!-- =========================
+    <meta content="Perifisica" property="og:title"/>
+    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." property="og:description"/>
+    <meta content="website" property="og:type"/>
+    <meta content="https://perifisica.github.io/" property="og:url"/>
+    <meta content="https://perifisica.github.io/logo/logo_completo.png" property="og:image"/>
+    <meta content="it_IT" property="og:locale"/>
+    <!-- =========================
          TWITTER CARD
     ========================== -->
-     <meta content="summary_large_image" name="twitter:card" />
-     <meta content="Perifisica" name="twitter:title" />
-     <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università."
-          name="twitter:description" />
-     <meta content="https://perifisica.github.io/logo/logo_completo.png" name="twitter:image" />
-     <!-- ===========
+    <meta content="summary_large_image" name="twitter:card"/>
+    <meta content="Perifisica" name="twitter:title"/>
+    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="twitter:description"/>
+    <meta content="https://perifisica.github.io/logo/logo_completo.png" name="twitter:image"/>
+    <!-- ===========
           CSS CRITICO
      ============================ -->
-     <style>
-          * {
+    <style>
+      * {
                box-sizing: border-box;
           }
 
@@ -102,7 +99,7 @@
           }
 
           .footer {
-               width: 100vw;
+               width: 100%;
                background: white;
                color: #1f1f1f;
                margin-top: 2rem;
@@ -137,13 +134,13 @@
                line-height: 1;
                text-align: center;
           }
-     </style>
-     <!-- ========================
+    </style>
+    <!-- ========================
           FONT
           =======================
      -->
-     <style>
-          @font-face {
+    <style>
+      @font-face {
                font-family: 'Inter';
                src: url('/font/Inter-Medium.woff2') format('woff2');
                font-display: swap;
@@ -190,95 +187,99 @@
                font-style: italic;
                font-display: swap;
           }
-     </style>
-     <!-- =========================
+    </style>
+    <!-- =========================
          FAVICONS
     ========================== -->
-     <link href="/logo/favicon.webp" rel="icon" />
-     <link href="/logo/logo_completo.png" rel="apple-touch-icon" sizes="180x180" />
-     <link href="/logo/favicon.webp" rel="icon" sizes="32x32" />
-     <link href="/logo/favicon.webp" rel="icon" sizes="16x16" />
-     <link href="/style.css" rel="stylesheet" />
-</head>
-
-<body>
-     <header class="topbar">
-          <div class="logo">
-               <a href="/index.html" id="logo_link" title="Torna all'indice">
-                    <picture>
-                         <img alt="Logo Perifisica" height="202px" id="foto_logo" src="/logo/logo_completo.png"
-                              srcset="/logo/logo_completo.webp" width="724px" />
-                    </picture>
-               </a>
+    <link href="/logo/favicon.webp" rel="icon"/>
+    <link href="/logo/logo_completo.png" rel="apple-touch-icon" sizes="180x180"/>
+    <link href="/logo/favicon.webp" rel="icon" sizes="32x32"/>
+    <link href="/logo/favicon.webp" rel="icon" sizes="16x16"/>
+    <link href="/style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="logo">
+        <a href="/index.html" id="logo_link" title="Torna all'indice">
+          <picture>
+            <img alt="Logo Perifisica" height="202px" id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp" width="724px"/>
+          </picture>
+        </a>
+      </div>
+    </header>
+    <div class="topbar input" include-html="/barra_ricerca/barra_ricerca.html">
+    </div>
+    <div id="bottoni_mobile" include-html="/mobile/mobile.html">
+    </div>
+    <main>
+      <div class="row">
+        <nav class="column left" include-html="/colonna_sinistra_indice/indice.html">
+        </nav>
+        <div class="column middle">
+          <div class="inline_navigation" include-html="/inline_navigation/inline_navigation.html">
           </div>
-     </header>
-     <div class="topbar input" include-html="/barra_ricerca/barra_ricerca.html">
-     </div>
-     <div id="bottoni_mobile" include-html="/mobile/mobile.html">
-     </div>
-     <main>
-          <div class="row">
-               <nav class="column left" include-html="/colonna_sinistra_indice/indice.html">
-               </nav>
-               <div class="column middle">
-                    <div class="inline_navigation" include-html="/inline_navigation/inline_navigation.html">
-                    </div>
-                    <article>
-                         <h1>
-                              Installazione locale
-                         </h1>
-                         Questa lezione verte sull'installazione in locale di:
-                         <ul>
-                              <li> \(\TeX\) Live, che è una raccolta di
-                                   pacchetti<sup class="sidenote">?
-                                        <span class="sidenote_text" style="display: none;">
-                                             Il funzionamento è del tutto simile alle librerie in qualsiasi linguaggio
+          <article>
+            <h1>
+              Installazione locale
+            </h1>
+            Questa lezione verte sull'installazione in locale di:
+            <ul>
+              <li>
+                \(\TeX\) Live, che è una raccolta di
+                                   pacchetti
+                <sup class="sidenote">
+                  ?
+                  <span class="sidenote_text" style="display: none;">
+                    Il funzionamento è del tutto simile alle librerie in qualsiasi linguaggio
                                              di programmazione.
-                                        </span>
-                                   </sup> utili per ampliare le funzionalità oppure per aggiungere simboli
+                  </span>
+                </sup>
+                utili per ampliare le funzionalità oppure per aggiungere simboli
                                    particolari,
                                    come quelli matematici e fisici e tanto altro ancora.
-                              </li>
-                              <li>
-                                   \(\TeX\)Studio, che è un editor di testo, ottimizzato per questo scopo.
+              </li>
+              <li>
+                \(\TeX\)Studio, che è un editor di testo, ottimizzato per questo scopo.
                                    Nelle prossime lezioni verrà usato quest'ultimo, ma un utente più esperto è
                                    libero di usare altri edito, come Visual Studio Code, che ha un'estensione
                                    per il \(\LaTeX\) oppure Vim ed eseguire la compilazione da shell.
-                              </li>
-                         </ul>
-
-                         <h2>
-                              \(\TeX\) Live
-                         </h2>
-                         <h3>
-                              GNU/Linux
-                         </h3>
-                         L'installazione è molto semplice:
-                         <ol>
-                              <li>
-                                   in primis bisogna scaricare il <a
-                                        href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">
-                                        file</a><sup class="sidenote">?
-                                        <span class="sidenote_text" style="display: none;">
-                                             Per i più diffidenti, è possibile scaricarlo dalla <a
-                                        href="https://tug.org/texlive/quickinstall.html">
-                                        pagina ufficiale.</a>
-                                        </span>
-                                   </sup> per l'installazione.
-                              </li>
-                         </ol>
-
-                    </article>
-               </div>
-               <div class="column right" include-html="/colonna_destra/colonna_destra.html">
-               </div>
-          </div>
-     </main>
-     <footer class="footer" include-html="/footer/footer.html">
-     </footer>
-     <link href="/mobile/mobile.css" rel="stylesheet" />
-     <script defer="" src="/main.js" type="module">
-     </script>
-</body>
-
+              </li>
+            </ul>
+            <h2>
+              \(\TeX\) Live
+            </h2>
+            <h3>
+              GNU/Linux
+            </h3>
+            L'installazione è molto semplice:
+            <ol>
+              <li>
+                in primis bisogna scaricare il
+                <a href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">
+                  file
+                </a>
+                <sup class="sidenote">
+                  ?
+                  <span class="sidenote_text" style="display: none;">
+                    Per i più diffidenti, è possibile scaricarlo dalla
+                    <a href="https://tug.org/texlive/quickinstall.html">
+                      pagina ufficiale.
+                    </a>
+                  </span>
+                </sup>
+                per l'installazione.
+              </li>
+            </ol>
+          </article>
+        </div>
+        <div class="column right" include-html="/colonna_destra/colonna_destra.html">
+        </div>
+      </div>
+    </main>
+    <footer class="footer" include-html="/footer/footer.html">
+    </footer>
+    <link href="/mobile/mobile.css" rel="stylesheet"/>
+    <script defer="" src="/main.js" type="module">
+    </script>
+  </body>
 </html>
