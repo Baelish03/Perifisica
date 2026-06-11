@@ -169,4 +169,24 @@ border-radius: 30px;
 
 ::-webkit-scrollbar-thumb:hover {
 background:var(--link); 
+  
+/* =================== CODICE =================== */
+code{
+  background-color: var(--border);
+  border-radius: 5px;
+  border-color: var(--muted);
+  border-width: 1px;
+  padding: 2px;
+}
+
+pre{
+  background-color: var(--border);
+  border-radius: 10px;
+  border-color: var(--muted);
+  border-width: 1px;
+  padding: 5px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

@@ -243,43 +243,135 @@
                                    Nelle prossime lezioni verrà usato quest'ultimo, ma un utente più esperto è
                                    libero di usare altri edito, come Visual Studio Code, che ha un'estensione
                                    per il \(\LaTeX\) oppure Vim ed eseguire la compilazione da shell.
-              </li>
-            </ul>
-            <h2>
-              \(\TeX\) Live
-            </h2>
-            <h3>
-              GNU/Linux
-            </h3>
-            L'installazione è molto semplice:
-            <ol>
-              <li>
-                in primis bisogna scaricare il
-                <a href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">
-                  file
-                </a>
-                <sup class="sidenote">
-                  ?
-                  <span class="sidenote_text" style="display: none;">
-                    Per i più diffidenti, è possibile scaricarlo dalla
-                    <a href="https://tug.org/texlive/quickinstall.html">
-                      pagina ufficiale.
-                    </a>
-                  </span>
-                </sup>
-                per l'installazione.
-              </li>
-            </ol>
-          </article>
-        </div>
-        <div class="column right" include-html="/colonna_destra/colonna_destra.html">
-        </div>
-      </div>
-    </main>
-    <footer class="footer" include-html="/footer/footer.html">
-    </footer>
-    <link href="/mobile/mobile.css" rel="stylesheet"/>
-    <script defer="" src="/main.js" type="module">
-    </script>
-  </body>
+                              </li>
+                         </ul>
+
+                         <h2>
+                              \(\TeX\) Live
+                         </h2>
+                         <h3>
+                              GNU/Linux
+                         </h3>
+                         L'installazione è molto semplice.
+                         <ol>
+                              <li>
+                                   Il primo passo è scaricare il <a
+                                        href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">
+                                        file</a><sup class="sidenote">?
+                                        <span class="sidenote_text" style="display: none;">
+                                             È possibile scaricarlo dalla <a
+                                                  href="https://tug.org/texlive/quickinstall.html">
+                                                  pagina ufficiale.</a>
+                                        </span>
+                                   </sup> per l'installazione.
+                              </li>
+                              <li>
+                                   Una volta scaricato si può estrarre l'archivio cliccando due volte oppure con
+                                   <em>tasto destro > estrai </em> a seconda delle distribuzioni.
+                              </li>
+                              <li>
+                                   Entra nella cartella estratta fino a trovare un file <em>install-tl</em>,
+                                   apri un terminale nella cartella ed esegui:
+                                   <pre> $ sudo ./install-tl -gui </pre>
+                                   <em>sudo</em> ti permette di installare le librerie con permessi di amministratore,
+                                   <em>-gui</em> permette di usare l'interfaccia grafica, semplificando
+                                   l'operazione.
+                              </li>
+                              <li>
+                                   Si aprirà questa interfaccia per la scelta del server da cui scaricare \(\TeX\) Live
+                                   <figure>
+                                        <picture>
+                                             <img alt="Interfaccia per la scelta del server TeX Live" loading="lazy"
+                                                  src="./installazione-locale/interfaccia-iniziale.webp"
+                                                  srcset="./installazione-locale/interfaccia-iniziale.png"
+                                                  width="517.6px" height="480px">
+                                             <figcaption>
+                                                  Interfaccia per la scelta del server di TeXLive.
+                                             </figcaption>
+                                        </picture>
+                                   </figure>
+
+                                   È possibile che il server venga scelto in automatico abbastanza velocemente da non
+                                   permettere all'utente di
+                                   visualizzare la schermata. Questo dipende dalla connessione.
+
+                                   Nel caso in cui si abbia la possibilità di scegliere, il server italiano dovrebbe
+                                   essere il più veloce.
+                              </li>
+                              <li>
+                                   La scheda successiva permette di scegliere il percorso di installazione, la lingue,
+                                   il formato e la spaziatura predefinita.
+                                   Se si è indecisi, conviene lasciare le impostazioni predefinite e premere
+                                   <em>Installa</em>. L'instalazione prevede di avere circa 10 GB liberi.
+                                   <figure>
+                                        <picture>
+                                             <img alt="Interfaccia per la scelta del percorso TeX Live"
+                                                  src="./installazione-locale/path-texlive.webp" loading="lazy"
+                                                  srcset="./installazione-locale/path-texlive.png" width="1000px"
+                                                  height="1000px">
+                                             <figcaption>
+                                                  Scelta del percorso di installazione.
+                                             </figcaption>
+                                        </picture>
+                                   </figure>
+                              </li>
+                              <li>
+                                   L'installazione può richiedere qualche ora e, dopo di ciò, si deve aggiungere
+                                   il percorso di installazione al <code>$PATH</code> in modo che il sistema
+                                   trovi in automatico il programma.
+
+                                   Nelle impostazioni del file manager bisogna attivare <em>Mostra file nascosti</em>
+                                   <figure>
+                                        <picture>
+                                             <img alt="Mostra file nascosti" loading="lazy"
+                                                  src="./installazione-locale/file-nascosti.webp"
+                                                  srcset="./installazione-locale/file-nascosti.png" width="1000px"
+                                                  height="4800px">
+                                        </picture>
+                                   </figure>
+
+                                   Nella cartella <em>Home</em> è possibile trovare il file <code>.bashrc</code>
+                                   (oppure <code>.zshrc</code> a seconda della distro). Apritelo con un editor di testo
+                                   e troverete una riga che inizia con <code>export PATH=</code>.
+
+                                   Qui aggiungete il percorso di TeX Live (in genere
+                                   <code>/usr/local/texlive/YYYY/bin/PLATFORM</code>)
+                                   subito dopo l'uguale, facendo attenzione
+                                   a non cancellare quello che era già presente, ma separarlo con i due punti.
+                                   <br>
+                                   <pre> export PATH=&ltpercorso di TeX Live&gt:&ltscritte precedenti&gt </pre>
+                                   Nel mio caso:
+                                   <pre> export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH </pre>
+                              </li>
+                              <li>
+                                   Infine aprite un terminale e usate il comando
+                                   <pre> $ source ~/.bashrc </pre>
+                                   Questo dice al sistema di rileggere il file <code>.bashrc</code> dopo la modifica.
+                              </li>
+                         </ol>
+                         L'installazione è terminata, ma può essere utile controllare che tutto sia a posto con i
+                         seguenti comandi:
+                         <pre> $ which pdflatex
+ $ pdflatex --version</pre>
+                         Il primo restituisce il percorso di installazione, che deve coincidere con quello impostato in
+                         <code>PATH</code>,
+                         mentre il secondo ci dice che versione del software è installata.
+
+                         <h3>
+                              MacOS
+                         </h3>
+
+                    </article>
+               </div>
+               <div class="column right" include-html="/colonna_destra/colonna_destra.html">
+               </div>
+          </div>
+     </main>
+     <footer class="footer" include-html="/footer/footer.html">
+     </footer>
+     <link href="/mobile/mobile.css" rel="stylesheet" />
+     <script defer="" src="/main.js" type="module">
+     </script>
+</body>
+
 </html>
