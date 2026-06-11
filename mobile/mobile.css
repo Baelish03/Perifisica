@@ -62,12 +62,13 @@
   }
 
   /* ==================== MARGIN INDICE =========================== */
+
   .h3_indice {
-    margin-left: 3rem;
+    margin-left: 2.5rem;
   }
 
   .h4_indice {
-    margin-left: 4.5rem;
+    margin-left: 3rem;
     margin-top: -0.5rem;
   }
 
@@ -131,9 +132,9 @@
   .indice_aperto {
     width: 50vw;
     padding-top: 1rem;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
     opacity: 1;
     pointer-events: all;
   }
@@ -147,7 +148,11 @@
 
 
   .dropdown_aperto {
-    width: calc(50vw - 15px);
+    width: calc(50vw - 5px);
+  }
+
+  .dropbutton{
+    padding-left: 0;
   }
 
   /* ======================= COLONNA DESTRA ===========*/
@@ -173,13 +178,13 @@
     width: 50vw;
     opacity: 1;
     padding-top: 1rem;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
   }
 
   .contenuto_destra {
-    margin-right: -15px;
+    margin-right: -5px;
 
     scrollbar-width: none;
   }
@@ -193,11 +198,28 @@
   }
 
   .dropdown_aperto {
-    width: calc(65vw - 15px);
+    width: calc(65vw - 5px);
   }
 
   /* ======================= COLONNA DESTRA ===========*/
   .right_aperta {
     width: 65vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  /* ======================= COLONNA SINISTRA ===========*/
+  .indice_aperto {
+    width: 80vw;
+  }
+
+  .dropdown_aperto {
+    width: calc(80vw - 5px);
+  }
+
+  /* ======================= COLONNA DESTRA ===========*/
+  .right_aperta {
+    width: 80vw;
   }
 }
