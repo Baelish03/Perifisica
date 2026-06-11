@@ -114,8 +114,7 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 Bisogna cambiare i title dei vari html.
 
-colore della scrollbar
-
 finire il footer, con i bottoni per la navigazione avanti e indietro
 
-
+il parser cambia alcune scritte come il sup a capo e &lt e &gt vengono cambiati in < e >
+Ho cambiato il parser, ora prima vanno ricontrollate a mano le pagine e poi rifatto passare
