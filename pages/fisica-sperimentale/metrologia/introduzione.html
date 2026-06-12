@@ -1,42 +1,53 @@
 <!DOCTYPE html>
 <html lang="it">
-  <!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
-  <head>
-    <meta charset="utf-8"/>
-    <title>
+<!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
+
+
+<head>
+     <meta charset="UTF-8">
+
+     <title>
       Introduzione alla metrologia
     </title>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <!-- =========================
+
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+     <!-- =========================
          SEO METADATA
     ========================== -->
-    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="description"/>
-    <!-- la descrizione deve essere più lunga -->
-    <meta content="fisica, scuola, università" name="keywords"/>
-    <meta content="Perifisica" name="author"/>
-    <meta content="index, follow" name="robots"/>
-    <!-- =========================
+
+     <meta name="description" content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
+     <!-- la descrizione deve essere più lunga -->
+     <meta name="keywords" content="fisica, scuola, università">
+     <meta name="author" content="Perifisica">
+     <meta name="robots" content="index, follow">
+
+     <!-- =========================
          OPEN GRAPH (FACEBOOK, LINKEDIN)
     ========================== -->
-    <meta content="Perifisica" property="og:title"/>
-    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." property="og:description"/>
-    <meta content="website" property="og:type"/>
-    <meta content="https://perifisica.github.io/" property="og:url"/>
-    <meta content="https://perifisica.github.io/logo/logo_completo.png" property="og:image"/>
-    <meta content="it_IT" property="og:locale"/>
-    <!-- =========================
+     <meta property="og:title" content="Perifisica">
+     <meta property="og:description"
+          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://perifisica.github.io/">
+     <meta property="og:image" content="https://perifisica.github.io/logo/logo_completo.png">
+     <meta property="og:locale" content="it_IT" />
+
+     <!-- =========================
          TWITTER CARD
     ========================== -->
-    <meta content="summary_large_image" name="twitter:card"/>
-    <meta content="Perifisica" name="twitter:title"/>
-    <meta content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università." name="twitter:description"/>
-    <meta content="https://perifisica.github.io/logo/logo_completo.png" name="twitter:image"/>
-    <!-- ===========
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:title" content="Perifisica">
+     <meta name="twitter:description"
+          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
+     <meta name="twitter:image" content="https://perifisica.github.io/logo/logo_completo.png">
+
+     <!-- ===========
           CSS CRITICO
      ============================ -->
-    <style>
-      * {
+     <style>
+          * {
                box-sizing: border-box;
           }
 
@@ -116,6 +127,7 @@
           #foto_logo {
                max-width: 100%;
                height: auto;
+               width: auto;
                display: flex;
                justify-content: center;
                align-items: center;
@@ -134,13 +146,14 @@
                line-height: 1;
                text-align: center;
           }
-    </style>
-    <!-- ========================
+     </style>
+
+     <!-- ========================
           FONT
           =======================
      -->
-    <style>
-      @font-face {
+     <style>
+          @font-face {
                font-family: 'Inter';
                src: url('/font/Inter-Medium.woff2') format('woff2');
                font-display: swap;
@@ -187,38 +200,46 @@
                font-style: italic;
                font-display: swap;
           }
-    </style>
-    <!-- =========================
+     </style>
+
+     <!-- =========================
          FAVICONS
     ========================== -->
-    <link href="/logo/favicon.webp" rel="icon"/>
-    <link href="/logo/logo_completo.png" rel="apple-touch-icon" sizes="180x180"/>
-    <link href="/logo/favicon.webp" rel="icon" sizes="32x32"/>
-    <link href="/logo/favicon.webp" rel="icon" sizes="16x16"/>
-    <link href="/style.css" rel="stylesheet"/>
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="logo">
-        <a href="/index.html" id="logo_link" title="Torna all'indice">
-          <picture>
-            <img alt="Logo Perifisica" height="202px" id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp" width="724px"/>
-          </picture>
-        </a>
-      </div>
-    </header>
-    <div class="topbar input" include-html="/barra_ricerca/barra_ricerca.html">
-    </div>
-    <div id="bottoni_mobile" include-html="/mobile/mobile.html">
-    </div>
-    <main>
-      <div class="row">
-        <nav class="column left" include-html="/colonna_sinistra_indice/indice.html">
-        </nav>
-        <div class="column middle">
-          <div class="inline_navigation" include-html="/inline_navigation/inline_navigation.html">
+     <link rel="icon" href="/logo/favicon.webp">
+     <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo_completo.png">
+     <link rel="icon" sizes="32x32" href="/logo/favicon.webp">
+     <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
+
+     <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+     <header class="topbar">
+          <div class="logo">
+               <a href="/index.html" title="Torna all'indice" id="logo_link">
+                    <picture>
+                         <img id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp"
+                              alt="Logo Perifisica" width="724px" height="202px">
+                    </picture>
+               </a>
           </div>
-          <article>
+     </header>
+
+     <div class="topbar input" include-html="/barra_ricerca/barra_ricerca.html"></div>
+
+     <div id="bottoni_mobile" include-html="/mobile/mobile.html"></div>
+
+     <main>
+          <div class="row">
+               <nav class="column left" include-html="/colonna_sinistra_indice/indice.html">
+               </nav>
+
+               <div class="column middle">
+
+                    <div class="inline_navigation" include-html="/inline_navigation/inline_navigation.html">
+                    </div>
+
+                    <article>
             <h1>
               Introduzione alla Metrologia
             </h1>
@@ -498,15 +519,17 @@
               </figcaption>
             </figure>
           </article>
-        </div>
-        <div class="column right" include-html="/colonna_destra/colonna_destra.html">
-        </div>
-      </div>
-    </main>
-    <footer class="footer" include-html="/footer/footer.html">
-    </footer>
-    <link href="/mobile/mobile.css" rel="stylesheet"/>
-    <script defer="" src="/main.js" type="module">
-    </script>
-  </body>
+               </div>
+
+               <div class="column right" include-html="/colonna_destra/colonna_destra.html">
+               </div>
+     </main>
+
+     <footer class="footer" include-html="/footer/footer.html">
+     </footer>
+
+     <link rel="stylesheet" href="/mobile/mobile.css">
+     <script type="module" src="/main.js" defer></script>
+</body>
+
 </html>
