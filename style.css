@@ -126,14 +126,15 @@ img {
   max-height: 30rem; /* fallback */
 
   max-width: min(90%, 60rem);
-  max-height: clamp(20rem, 50vh, 45rem);
+  max-height: clamp(25rem, 50vh, 45rem);
 
   height: auto;
-  width: auto;
+  /*width: auto;*/
   display: block;
   margin-left: auto;
   margin-right: auto;
   cursor: pointer;
+  object-fit: contain;
 }
 
 figcaption {
