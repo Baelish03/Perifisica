@@ -205,6 +205,11 @@
   .right_aperta {
     width: 65vw;
   }
+
+  /* ============= SPAZIATURE ============== */
+  ol, ul{
+    padding-left: 15px;
+  }
 }
 
 @media screen and (max-width: 350px) {

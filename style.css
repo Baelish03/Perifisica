@@ -122,8 +122,12 @@ strong {
 /* ======================= FIGURE GENERALE =========== */
 
 img {
-  max-width: 75%;
-  max-height: 30rem;
+  max-width: 75%; /* fallback */
+  max-height: 30rem; /* fallback */
+
+  max-width: min(90%, 60rem);
+  max-height: clamp(20rem, 50vh, 45rem);
+
   height: auto;
   width: auto;
   display: block;
@@ -154,25 +158,25 @@ figcaption {
 
 /* =================== COLORI SCROLLBAR ============ */
 ::-webkit-scrollbar {
-width: 4px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-box-shadow: inset 0 0 5px var(--border); 
-border-radius: 30px;
+  box-shadow: inset 0 0 5px var(--border);
+  border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb {
-background:var(--primary); 
-border-radius: 30px;
+  background: var(--primary);
+  border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-background:var(--link); 
+  background: var(--link);
 }
-  
+
 /* =================== CODICE =================== */
-code{
+code {
   background-color: var(--border);
   border-radius: 5px;
   border-color: var(--muted);
@@ -180,7 +184,7 @@ code{
   padding: 2px;
 }
 
-pre{
+pre {
   background-color: var(--border);
   border-radius: 10px;
   border-color: var(--muted);
@@ -190,4 +194,9 @@ pre{
   margin-right: 40px;
   margin-top: 5px;
   margin-bottom: 5px;
+
+  /*white-space: pre-wrap; */
+  /*word-break: break-word;*/
+  overflow-x: auto;
+  max-width: 100%;
 }
