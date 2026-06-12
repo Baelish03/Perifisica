@@ -122,8 +122,10 @@ strong {
 /* ======================= FIGURE GENERALE =========== */
 
 img {
-  max-width: 75%; /* fallback */
-  max-height: 30rem; /* fallback */
+  max-width: 75%;
+  /* fallback */
+  max-height: 30rem;
+  /* fallback */
 
   max-width: min(90%, 60rem);
   max-height: clamp(25rem, 50vh, 45rem);
@@ -183,6 +185,8 @@ code {
   border-color: var(--muted);
   border-width: 1px;
   padding: 2px;
+
+  word-break: break-word;
 }
 
 pre {
