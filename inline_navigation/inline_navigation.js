@@ -30,15 +30,16 @@ function buildTOC() {
       prefix = h2counter + '. ';
     } else if (tag === 'h3') {
       h3counter++; h4counter = 0;
-      prefix = h2counter + '.' + h3counter + ' ';
+      prefix = '\u00A0\u00A0' + h2counter + '.' + h3counter + ' ';
     } else if (tag === 'h4') {
       h4counter++;
-      prefix = h2counter + '.' + h3counter + '.' + h4counter + ' ';
+      prefix = '\u00A0\u00A0\u00A0\u00A0' + h2counter + '.' + h3counter + '.' + h4counter + ' ';
     }
 
     const a = document.createElement('a');
     a.href = '#' + el.id;
     a.textContent = prefix + el.textContent;
+    console.log(a.textContent);
     li.appendChild(a);
     list.appendChild(li);
   });
