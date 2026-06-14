@@ -211,6 +211,8 @@
      <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
 
      <link rel="stylesheet" href="/style.css">
+     <link rel="stylesheet" id="default-theme" href="/prism.css">
+     <link rel="stylesheet" id="okaidia-theme" href="/prism-okaidia.css" disbled>
 </head>
 
 <body>
@@ -295,7 +297,7 @@
                 install-tl
               </em>
               , apri un terminale nella cartella ed esegui:
-              <pre> $ sudo ./install-tl -gui </pre>
+              <pre><code class="language-shell"> $ sudo ./install-tl -gui</code></pre>
               <em>
                 sudo
               </em>
@@ -361,8 +363,7 @@
               L'installazione può richiedere qualche ora e, dopo di ciò, si deve aggiungere
               il percorso di installazione al
               <code>
-                  $PATH
-                </code>
+                  $PATH</code>
               in modo che il sistema
               trovi in automatico il programma.
 
@@ -383,56 +384,48 @@
               </em>
               è possibile trovare il file
               <code>
-                  .bashrc
-                </code>
+                  .bashrc</code>
               (oppure
               <code>
-                  .zshrc
-                </code>
+                  .zshrc</code>
               a seconda della distro). Apritelo con un editor di testo
               e troverete una riga che inizia con
               <code>
-                  export PATH=
-                </code>
-              .
+                  export PATH=</code>.
 
               Qui aggiungete il percorso di TeX Live (in genere
               <code>
-                  /usr/local/texlive/YYYY/bin/PLATFORM
-                </code>
+                  /usr/local/texlive/YYYY/bin/PLATFORM</code>
               )
               subito dopo l'uguale, facendo attenzione
               a non cancellare quello che era già presente, ma separarlo con i due punti.
               <br />
-              <pre> export PATH=&ltpercorso di TeX Live&gt:&ltscritte precedenti&gt</pre>
+              <pre><code class="language-shell">export PATH=&ltpercorso di TeX Live&gt:&ltscritte precedenti&gt</code></pre>
               Nel mio caso:
-              <pre> export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH </pre>
+              <pre><code class="language-shell">export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH</code></pre>
             </li>
             <li>
               Infine aprite un terminale e usate il comando
-              <pre> $ source ~/.bashrc </pre>
+              <pre><code class="language-shell">$ source ~/.bashrc</code></pre>
               Questo dice al sistema di rileggere il file
               <code>
-                  .bashrc
-                </code>
+                  .bashrc</code>
               dopo la modifica.
             </li>
           </ol>
           L'installazione è terminata, ma può essere utile controllare che tutto sia a posto con i
           seguenti comandi:
-          <pre> $ which pdflatex
- $ pdflatex --version</pre>
+          <pre><code class="language-shell"> $ which pdflatex
+ $ pdflatex --version</code></pre>
           Il primo restituisce il percorso di installazione, che deve coincidere con quello impostato in
           <code>
-              PATH
-            </code>
+              PATH</code>
           ,
           mentre il secondo ci dice che versione del software è installata.
           <h3>
             MacOS
           </h3>
         </article>
-
                </div>
 
                <div class="column right" include-html="/colonna_destra/colonna_destra.html">
@@ -444,6 +437,7 @@
 
      <link rel="stylesheet" href="/mobile/mobile.css">
      <script type="module" src="/main.js" defer></script>
+     <script type="module" src="/prism.js" defer></script>
 </body>
 
 </html>
