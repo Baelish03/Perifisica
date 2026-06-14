@@ -9,6 +9,7 @@
   --background: #EEF3F6;
   --button-background: #1f1f1f;
   --search-background: white;
+  --code-background: #dddddd; 
 }
 
 /* bisogna definire globalmente h1 per le compatibilità tra i diversi browser */
@@ -180,7 +181,7 @@ figcaption {
 
 /* =================== CODICE =================== */
 code {
-  background-color: var(--border);
+  background-color: var(--code-background);
   border-radius: 5px;
   border-color: var(--muted);
   border-width: 1px;
@@ -190,7 +191,7 @@ code {
 }
 
 pre {
-  background-color: var(--border);
+  background-color: var(--code-background);
   border-radius: 10px;
   border-color: var(--muted);
   border-width: 1px;

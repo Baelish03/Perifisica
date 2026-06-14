@@ -53,6 +53,7 @@ function HighContrast() {
   document.querySelector(':root').style.setProperty('--background', '#1f1f1f');
   document.querySelector(':root').style.setProperty('--button-background', '#ffffff');
   document.querySelector(':root').style.setProperty('--search-background', '#1f1f1f');
+  document.querySelector(':root').style.setProperty('--code-background', '#363636');
 }
 
 function StandardContrast() {
@@ -64,7 +65,7 @@ function StandardContrast() {
   document.querySelector(':root').style.setProperty('--background', '#EEF3F6');
   document.querySelector(':root').style.setProperty('--button-background', '#1f1f1f');
   document.querySelector(':root').style.setProperty('--search-background', '#ffffff');
-
+  document.querySelector(':root').style.setProperty('--code-background', '#dddddd');
 }
 
 function HugeText() {
