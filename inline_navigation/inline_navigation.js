@@ -39,7 +39,6 @@ function buildTOC() {
     const a = document.createElement('a');
     a.href = '#' + el.id;
     a.textContent = prefix + el.textContent;
-    console.log(a.textContent);
     li.appendChild(a);
     list.appendChild(li);
   });

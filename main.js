@@ -42,7 +42,6 @@ const { init: PopOver }  = await import("./pop_over.js");
 const { init: StickyTitles } = await import("./sticky_titles.js") 
 const { init: InlineNav }  = await import("./inline_navigation/inline_navigation.js");
 
-
 Search();
 Pulsanti(document);
 Indice(document);
