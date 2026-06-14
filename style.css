@@ -191,9 +191,9 @@ code {
 }
 
 pre {
-  background-color: var(--code-background);
+  background-color: var(--code-background) !important;
   border-radius: 10px;
-  border-color: var(--muted);
+  border-color: var(--muted) !important;
   border-width: 1px;
   padding: 5px;
   margin-left: 40px;
