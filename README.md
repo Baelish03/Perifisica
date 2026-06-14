@@ -117,5 +117,3 @@ Bisogna cambiare i title dei vari html.
 finire il footer, con i bottoni per la navigazione avanti e indietro
 
 Ho cambiato il parser, ora prima vanno ricontrollate a mano le pagine e poi rifatto passare
-
-Aggiungere syntax highlight

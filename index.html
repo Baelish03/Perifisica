@@ -1,313 +1,58 @@
-<!DOCTYPE html>
-<html lang="it">
-<!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
+---
+layout: default
+title: Perifisica
+---
 
+<h1>
+     <center>Benvenuti!</center>
+</h1>
 
-<head>
-     <meta charset="UTF-8">
+<p>
+     <center><q><em>
+                    O dèi, stornate dalla mia lingua follia di argomenti,
+                    e da sante labbra fate sgorgare una limpida sorgente.
+                    E a te, musa agognata, o vergine dalle candide braccia,
+                    io mi rivolgo: ciò che spetta agli effimeri ascoltare,
+                    tu porta, guidando avanti il carro ben governato dell'amore devoto.
+                    Ma non ti turbi il cogliere fiori di nobile gloria
+                    fra i mortali con un discorso, ricolmo di santità,
+                    che sia ardimentoso; e allora tu giunga leggera alla vetta della saggezza.
+               </em></q></center>
+</p>
 
-     <title>Perifisica</title>
+<p>
+     Così Empedocle di Agrigento nel V secolo a.C. apriva il suo "Peri Physeos" ovvero "Sulla
+     Natura" ma anche "Sulla realtà di tutte le cose",
+     ed è da qui che abbiamo voluto partire alla scoperta delle conoscenze sulla natura.
+     Un'arte che persegue se stessa come puro interesse,
+     andando dritti alla ricerca del principio primo. Che cos'è la fisica alla fine se non un
+     fantastico tentativo descrittivo, razionale di spiegare
+     come funziona la natura delle cose che ci circondano? Non sta forse la sua genesi nella
+     meraviglia? In questo cammino cercheremo di farci tante
+     domande e vedere di discorrere sulle loro risposte, fornendo al possibile un'organica
+     guida alla disciplina e a quelle strettamente correlate perchè
+     la fisica non sono solo conti e particelle, c'è un forte e contrastato, a volte
+     travagliato, pensiero dietro, per quanto poi sia algida alla resa dei conti appunto.
+     Nell'intento di essere chiari e guidare il lettore alla comprensione (o rivelazione
+     chissà) di alcuni dei più noti o reconditi fatti fisici, con annessi
+     e connessi, nonché alla disciplina della fisica e della matematica propedeutica: ecco a
+     voi un pratico manuale online alla scienza fisica di livello
+     universitario che parta dal metodo, passi per l'esperimento e l'analisi dell'esperienza e
+     giunga alla legge fisica. Questo è solo l'inizio. A bordo Signori!
+</p>
 
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<p>
+     L'iniziativa nasce nell'autunno 2025 da un gruppo eterogeneo di studenti universitari
+     presso la facoltà di Fisica dell'Università di Padova.
+</p>
 
-     <!-- =========================
-         SEO METADATA
-    ========================== -->
+<p>
+     Per navigare nel sito vi invitiamo ad andare sull'Indice.
+</p>
 
-     <meta name="description" content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <!-- la descrizione deve essere più lunga -->
-     <meta name="keywords" content="fisica, scuola, università">
-     <meta name="author" content="Perifisica">
-     <meta name="robots" content="index, follow">
-
-     <!-- =========================
-         OPEN GRAPH (FACEBOOK, LINKEDIN)
-    ========================== -->
-     <meta property="og:title" content="Perifisica">
-     <meta property="og:description"
-          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta property="og:type" content="website">
-     <meta property="og:url" content="https://perifisica.github.io/">
-     <meta property="og:image" content="https://perifisica.github.io/logo/logo_completo.png">
-     <meta property="og:locale" content="it_IT" />
-
-     <!-- =========================
-         TWITTER CARD
-    ========================== -->
-     <meta name="twitter:card" content="summary_large_image">
-     <meta name="twitter:title" content="Perifisica">
-     <meta name="twitter:description"
-          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta name="twitter:image" content="https://perifisica.github.io/logo/logo_completo.png">
-
-     <!-- ===========
-          CSS CRITICO
-     ============================ -->
-     <style>
-          * {
-               box-sizing: border-box;
-          }
-
-          body {
-               font-family: "Inter", sans-serif;
-               font-size: 16px;
-               font-weight: 500;
-               margin: 0;
-               background: var(--background);
-               color: var(--text);
-               line-height: 1.65;
-               text-align: justify;
-          }
-
-          .topbar {
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               gap: 1.5rem;
-               padding-top: 3rem;
-               background: #ffffff;
-          }
-
-          .input {
-               padding-top: 2rem;
-               border-bottom: 1px solid var(--border);
-               padding-bottom: 3rem;
-               height: 7rem;
-          }
-
-          .row {
-               display: flex;
-               align-items: flex-start;
-               /* fondamentale per sticky*/
-               padding-right: 1vw;
-               /* per non far sovrapporre le scrollbar destra e generale*/
-          }
-
-          .left {
-               width: 19.1%;
-               position: sticky;
-               top: 1rem;
-               max-height: 100vh;
-               z-index: 10;
-          }
-
-          .middle {
-               width: 61.8%;
-               padding-right: 1rem;
-               padding-left: 1rem;
-               overflow: visible;
-          }
-
-          .right {
-               width: 19.1%;
-               position: sticky;
-               top: 1rem;
-               max-height: 100vh;
-               z-index: 10;
-          }
-
-          .footer {
-               width: 100%;
-               background: white;
-               color: #1f1f1f;
-               margin-top: 2rem;
-               padding: 25px;
-               border-top: 1px solid var(--border);
-          }
-
-          #logo_link {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-          }
-
-          #foto_logo {
-               max-width: 100%;
-               height: auto;
-               width: auto;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-          }
-
-          main {
-               padding-top: 3rem;
-          }
-
-          h1,
-          h2,
-          h3,
-          h4 {
-               font-family: "Libre Baskerville", serif;
-               font-weight: 500;
-               line-height: 1;
-               text-align: center;
-          }
-     </style>
-
-     <!-- ========================
-          FONT
-          =======================
-     -->
-     <style>
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Medium.woff2') format('woff2');
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Italic.woff2') format('woff2');
-               font-display: swap;
-               font-style: italic;
-          }
-
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Bold.woff2') format('woff2');
-               font-display: swap;
-               font-weight: bold;
-          }
-
-
-          @font-face {
-               font-family: 'Libre Baskerville';
-               src: url('/font/LibreBaskerville-Regular.woff2') format('woff2');
-               font-display: swap;
-          }
-
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Regular.woff2') format('woff2');
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Bold.woff2') format('woff2');
-               font-weight: bold;
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Italic.woff2') format('woff2');
-               font-style: italic;
-               font-display: swap;
-          }
-     </style>
-
-     <!-- =========================
-         FAVICONS
-    ========================== -->
-     <link rel="icon" href="/logo/favicon.webp">
-     <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo_completo.png">
-     <link rel="icon" sizes="32x32" href="/logo/favicon.webp">
-     <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
-
-     <link rel="stylesheet" href="/style.css">
-     <link rel="stylesheet" id="default-theme" href="/prism.css">
-     <link rel="stylesheet" id="okaidia-theme" href="/prism-okaidia.css" disbled>
-</head>
-
-<body>
-     <header class="topbar">
-          <div class="logo">
-               <a href="/index.html" title="Torna all'indice" id="logo_link">
-                    <picture>
-                         <img id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp"
-                              alt="Logo Perifisica" width="724px" height="202px">
-                    </picture>
-               </a>
-          </div>
-     </header>
-
-     <div class="topbar input" include-html="/barra_ricerca/barra_ricerca.html"></div>
-
-     <div id="bottoni_mobile" include-html="/mobile/mobile.html"></div>
-
-     <main>
-          <div class="row">
-               <nav class="column left" include-html="/colonna_sinistra_indice/indice.html">
-               </nav>
-
-               <div class="column middle">
-
-                    <div class="inline_navigation" include-html="/inline_navigation/inline_navigation.html">
-                    </div>
-
-                    <article>
-
-                         <h1>
-                              <center>Benvenuti!</center>
-                         </h1>
-
-                         <p>
-                              <center><q><em>
-                                             O dèi, stornate dalla mia lingua follia di argomenti,
-                                             e da sante labbra fate sgorgare una limpida sorgente.
-                                             E a te, musa agognata, o vergine dalle candide braccia,
-                                             io mi rivolgo: ciò che spetta agli effimeri ascoltare,
-                                             tu porta, guidando avanti il carro ben governato dell'amore devoto.
-                                             Ma non ti turbi il cogliere fiori di nobile gloria
-                                             fra i mortali con un discorso, ricolmo di santità,
-                                             che sia ardimentoso; e allora tu giunga leggera alla vetta della saggezza.
-                                        </em></q></center>
-                         </p>
-
-                         <p>
-                              Così Empedocle di Agrigento nel V secolo a.C. apriva il suo "Peri Physeos" ovvero "Sulla
-                              Natura" ma anche "Sulla realtà di tutte le cose",
-                              ed è da qui che abbiamo voluto partire alla scoperta delle conoscenze sulla natura.
-                              Un'arte che persegue se stessa come puro interesse,
-                              andando dritti alla ricerca del principio primo. Che cos'è la fisica alla fine se non un
-                              fantastico tentativo descrittivo, razionale di spiegare
-                              come funziona la natura delle cose che ci circondano? Non sta forse la sua genesi nella
-                              meraviglia? In questo cammino cercheremo di farci tante
-                              domande e vedere di discorrere sulle loro risposte, fornendo al possibile un'organica
-                              guida alla disciplina e a quelle strettamente correlate perchè
-                              la fisica non sono solo conti e particelle, c'è un forte e contrastato, a volte
-                              travagliato, pensiero dietro, per quanto poi sia algida alla resa dei conti appunto.
-                              Nell'intento di essere chiari e guidare il lettore alla comprensione (o rivelazione
-                              chissà) di alcuni dei più noti o reconditi fatti fisici, con annessi
-                              e connessi, nonché alla disciplina della fisica e della matematica propedeutica: ecco a
-                              voi un pratico manuale online alla scienza fisica di livello
-                              universitario che parta dal metodo, passi per l'esperimento e l'analisi dell'esperienza e
-                              giunga alla legge fisica. Questo è solo l'inizio. A bordo Signori!
-                         </p>
-
-                         <p>
-                              L'iniziativa nasce nell'autunno 2025 da un gruppo eterogeneo di studenti universitari
-                              presso la facoltà di Fisica dell'Università di Padova.
-                         </p>
-
-                         <p>
-                              Per navigare nel sito vi invitiamo ad andare sull'Indice.
-                         </p>
-
-                         <p>
-                              <center><q><em>
-                                             Altro non è l'esser ignorante, che il non si quietar nel vero.
-                                        </em></q></center>
-                         </p>
-                         [Galileo Galilei]
-
-                    </article>
-               </div>
-
-               <div class="column right" include-html="/colonna_destra/colonna_destra.html">
-               </div>
-     </main>
-
-     <footer class="footer" include-html="/footer/footer.html">
-     </footer>
-
-     <link rel="stylesheet" href="/mobile/mobile.css">
-     <script type="module" src="/main.js" defer></script>
-     <script type="module" src="/prism.js" defer></script>
-</body>
-
-</html>
+<p>
+     <center><q><em>
+                    Altro non è l'esser ignorante, che il non si quietar nel vero.
+               </em></q></center>
+</p>
+[Galileo Galilei]
