@@ -114,3 +114,5 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 finire il footer, con i bottoni per la navigazione avanti e indietro
 
 sistemare js di pagefind e veder cosa deve essere asincrono in main e cosa no, infine vorrei prism come funzione da mettere in main, così è tutto raccolto
+
+mathjax è troppo pesante, passa a katex
