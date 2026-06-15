@@ -33,20 +33,27 @@ await includeHTML();
 await loadMathJax();
 await MathJax.typesetPromise();
 
-const { Search }   = await import("./barra_ricerca/search.js");
-const { init: Pulsanti } = await import("./colonna_destra/pulsanti.js");
-const { init: Indice }   = await import("./colonna_sinistra_indice/indice.js");
-const { init: Mobile }   = await import("./mobile/mobile.js");
-const { init: Allarga }  = await import("./image_enlarge.js");
-const { init: PopOver }  = await import("./pop_over.js");
-const { init: StickyTitles } = await import("./sticky_titles.js") 
-const { init: InlineNav }  = await import("./inline_navigation/inline_navigation.js");
+//const { Search }   = await import("./barra_ricerca/search.js");
+const [PageFind, Pulsanti, Indice, Mobile, Allarga, PopOver, InlineNav, StickyTitles] = 
+  await Promise.all([
+    import("./pagefind/pagefind.js"),
+    import("./colonna_destra/pulsanti.js"),
+    import("./colonna_sinistra_indice/indice.js"),
+    import("./mobile/mobile.js"),
+    import("./image_enlarge.js"),
+    import("./pop_over.js"),
+    import("./sticky_titles.js"),
+    import("./inline_navigation/inline_navigation.js")]);
 
-Search();
-Pulsanti(document);
-Indice(document);
-Mobile(document);
-Allarga();
-PopOver();
-InlineNav();
-StickyTitles();
+//Search();
+PageFind.init();
+
+Pulsanti.init(document);
+Indice.init(document);
+Mobile.init(document);
+Allarga.init();
+PopOver.init();
+InlineNav.init();
+StickyTitles.init();
+
+Prism.highlightAll();
