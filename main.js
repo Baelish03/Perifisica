@@ -33,10 +33,9 @@ await includeHTML();
 await loadMathJax();
 await MathJax.typesetPromise();
 
-//const { Search }   = await import("./barra_ricerca/search.js");
-const [PageFind, Pulsanti, Indice, Mobile, Allarga, PopOver, InlineNav, StickyTitles] = 
+const [Search, Pulsanti, Indice, Mobile, Allarga, PopOver, InlineNav, StickyTitles] = 
   await Promise.all([
-    import("./pagefind/pagefind.js"),
+    import("./barra_ricerca/search.js"),
     import("./colonna_destra/pulsanti.js"),
     import("./colonna_sinistra_indice/indice.js"),
     import("./mobile/mobile.js"),
@@ -45,9 +44,7 @@ const [PageFind, Pulsanti, Indice, Mobile, Allarga, PopOver, InlineNav, StickyTi
     import("./sticky_titles.js"),
     import("./inline_navigation/inline_navigation.js")]);
 
-//Search();
-PageFind.init();
-
+Search.init();
 Pulsanti.init(document);
 Indice.init(document);
 Mobile.init(document);
