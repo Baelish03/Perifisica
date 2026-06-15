@@ -69,6 +69,10 @@
   background: #00000018;
 }
 
+.result.active {
+  background-color: #00000018;
+}
+
 mark {
   background: var(--primary);
 }

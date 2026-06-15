@@ -1,4 +1,20 @@
-export function Search(input, results) {
+function setActive(index, results) {
+  const items = results.querySelectorAll(".result");
+  items.forEach(el => el.classList.remove("active"));
+
+  if (index < 0) {
+    return -1;
+  }
+
+  if (index >= items.length) index = items.length - 1;
+
+  const el = items[index];
+  el.classList.add("active");
+  el.scrollIntoView({ block: "nearest" });
+  return index;
+}
+
+function Search(input, results) {
   let pagefind;
 
   async function loadPagefind() {
@@ -47,9 +63,33 @@ export function Search(input, results) {
 
 
 export function init() {
+  let activeIndex = -1;
   const input = document.getElementById("searchInput");
   const results = document.getElementById("searchResults");
+
   Search(input, results);
+
+  input.addEventListener("keydown", e => {
+    const items = results.querySelectorAll(".result");
+    if (items.length === 0) return;
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActive(activeIndex + 1, results);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActive(activeIndex - 1, results);
+    } else if (e.key === "Enter") {
+      if (activeIndex >= 0) {
+        e.preventDefault();
+        const link = items[activeIndex].querySelector("a");
+        if (link) link.click();
+      }
+    } else if (e.key === "Escape") {
+      results.classList.remove("open");
+      activeIndex = setActive(-1, results);
+    }
+  });
 
   document.addEventListener("click", e => {
     if (e.target.closest(".search-box")) {
@@ -63,12 +103,6 @@ export function init() {
 
   document.addEventListener("click", e => {
     if (!e.target.closest(".search-box")) {
-      results.classList.remove("open");
-    }
-  });
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
       results.classList.remove("open");
     }
   });
