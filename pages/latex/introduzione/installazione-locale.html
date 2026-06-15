@@ -1,443 +1,186 @@
-<!DOCTYPE html>
-<html lang="it">
-<!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
+---
+layout: default
+title: Installazione locale - Perifisica
+---
 
-
-<head>
-     <meta charset="UTF-8">
-
-     <title>
-    Installazione locale - Perifisica
-  </title>
-
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-     <!-- =========================
-         SEO METADATA
-    ========================== -->
-
-     <meta name="description" content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <!-- la descrizione deve essere più lunga -->
-     <meta name="keywords" content="fisica, scuola, università">
-     <meta name="author" content="Perifisica">
-     <meta name="robots" content="index, follow">
-
-     <!-- =========================
-         OPEN GRAPH (FACEBOOK, LINKEDIN)
-    ========================== -->
-     <meta property="og:title" content="Perifisica">
-     <meta property="og:description"
-          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta property="og:type" content="website">
-     <meta property="og:url" content="https://perifisica.github.io/">
-     <meta property="og:image" content="https://perifisica.github.io/logo/logo_completo.png">
-     <meta property="og:locale" content="it_IT" />
-
-     <!-- =========================
-         TWITTER CARD
-    ========================== -->
-     <meta name="twitter:card" content="summary_large_image">
-     <meta name="twitter:title" content="Perifisica">
-     <meta name="twitter:description"
-          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta name="twitter:image" content="https://perifisica.github.io/logo/logo_completo.png">
-
-     <!-- ===========
-          CSS CRITICO
-     ============================ -->
-     <style>
-          * {
-               box-sizing: border-box;
-          }
-
-          body {
-               font-family: "Inter", sans-serif;
-               font-size: 16px;
-               font-weight: 500;
-               margin: 0;
-               background: var(--background);
-               color: var(--text);
-               line-height: 1.65;
-               text-align: justify;
-          }
-
-          .topbar {
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               gap: 1.5rem;
-               padding-top: 3rem;
-               background: #ffffff;
-          }
-
-          .input {
-               padding-top: 2rem;
-               border-bottom: 1px solid var(--border);
-               padding-bottom: 3rem;
-               height: 7rem;
-          }
-
-          .row {
-               display: flex;
-               align-items: flex-start;
-               /* fondamentale per sticky*/
-               padding-right: 1vw;
-               /* per non far sovrapporre le scrollbar destra e generale*/
-          }
-
-          .left {
-               width: 19.1%;
-               position: sticky;
-               top: 1rem;
-               max-height: 100vh;
-               z-index: 10;
-          }
-
-          .middle {
-               width: 61.8%;
-               padding-right: 1rem;
-               padding-left: 1rem;
-               overflow: visible;
-          }
-
-          .right {
-               width: 19.1%;
-               position: sticky;
-               top: 1rem;
-               max-height: 100vh;
-               z-index: 10;
-          }
-
-          .footer {
-               width: 100%;
-               background: white;
-               color: #1f1f1f;
-               margin-top: 2rem;
-               padding: 25px;
-               border-top: 1px solid var(--border);
-          }
-
-          #logo_link {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-          }
-
-          #foto_logo {
-               max-width: 100%;
-               height: auto;
-               width: auto;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-          }
-
-          main {
-               padding-top: 3rem;
-          }
-
-          h1,
-          h2,
-          h3,
-          h4 {
-               font-family: "Libre Baskerville", serif;
-               font-weight: 500;
-               line-height: 1;
-               text-align: center;
-          }
-     </style>
-
-     <!-- ========================
-          FONT
-          =======================
-     -->
-     <style>
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Medium.woff2') format('woff2');
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Italic.woff2') format('woff2');
-               font-display: swap;
-               font-style: italic;
-          }
-
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Bold.woff2') format('woff2');
-               font-display: swap;
-               font-weight: bold;
-          }
-
-
-          @font-face {
-               font-family: 'Libre Baskerville';
-               src: url('/font/LibreBaskerville-Regular.woff2') format('woff2');
-               font-display: swap;
-          }
-
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Regular.woff2') format('woff2');
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Bold.woff2') format('woff2');
-               font-weight: bold;
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Italic.woff2') format('woff2');
-               font-style: italic;
-               font-display: swap;
-          }
-     </style>
-
-     <!-- =========================
-         FAVICONS
-    ========================== -->
-     <link rel="icon" href="/logo/favicon.webp">
-     <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo_completo.png">
-     <link rel="icon" sizes="32x32" href="/logo/favicon.webp">
-     <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
-
-     <link rel="stylesheet" href="/style.css">
-     <link rel="stylesheet" id="default-theme" href="/prism.css">
-     <link rel="stylesheet" id="okaidia-theme" href="/prism-okaidia.css" disbled>
-</head>
-
-<body>
-     <header class="topbar">
-          <div class="logo">
-               <a href="/index.html" title="Torna all'indice" id="logo_link">
-                    <picture>
-                         <img id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp"
-                              alt="Logo Perifisica" width="724px" height="202px">
-                    </picture>
-               </a>
-          </div>
-     </header>
-
-     <div class="topbar input" include-html="/barra_ricerca/barra_ricerca.html"></div>
-
-     <div id="bottoni_mobile" include-html="/mobile/mobile.html"></div>
-
-     <main>
-          <div class="row">
-               <nav class="column left" include-html="/colonna_sinistra_indice/indice.html">
-               </nav>
-
-               <div class="column middle">
-
-                    <div class="inline_navigation" include-html="/inline_navigation/inline_navigation.html">
-                    </div>
-
-                    <article>
-          <h1>
-            Instal&shy;lazione locale
-          </h1>
-          Questa lezione verte sull'installazione in locale di:
-          <ul>
-            <li>
-              \(\TeX\) Live, che è una raccolta di
-              pacchetti<sup class="sidenote">?<span class="sidenote_text" style="display: none;">
-                  Il funzionamento è del tutto simile alle librerie in qualsiasi linguaggio
-                  di programmazione.
-                </span>
-              </sup>
-              utili per ampliare le funzionalità oppure per aggiungere simboli
-              particolari,
-              come quelli matematici e fisici e tanto altro ancora.
-            </li>
-            <li>
-              \(\TeX\)Studio, che è un editor di testo, ottimizzato per questo scopo.
-              Nelle prossime lezioni verrà usato quest'ultimo, ma un utente più esperto è
-              libero di usare altri edito, come Visual Studio Code, che ha un'estensione
-              per il \(\LaTeX\) oppure Vim ed eseguire la compilazione da shell.
-            </li>
-          </ul>
-          <h2>
-            \(\TeX\) Live
-          </h2>
-          <h3>
-            GNU/Linux
-          </h3>
-          <ol>
-            <li>
-              Il primo passo è scaricare il
-              <a href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">
-                file</a><sup class="sidenote">?<span class="sidenote_text" style="display: none;">
-                  È possibile scaricarlo dalla
-                  <a href="https://tug.org/texlive/quickinstall.html">
-                    pagina ufficiale.
-                  </a>
-                </span>
-              </sup>
-              per l'installazione.
-            </li>
-            <li>
-              Una volta scaricato si può estrarre l'archivio cliccando due volte oppure con
-              <em>
-                tasto destro > estrai
-              </em>
-              a seconda delle distribuzioni.
-            </li>
-            <li>
-              Entra nella cartella estratta fino a trovare un file
-              <em>
-                install-tl
-              </em>
-              , apri un terminale nella cartella ed esegui:
-              <pre><code class="language-shell"> $ sudo ./install-tl -gui</code></pre>
-              <em>
-                sudo
-              </em>
-              ti permette di installare le librerie con permessi di amministratore,
-              <em>
-                -gui
-              </em>
-              permette di usare l'interfaccia grafica, semplificando
-              l'operazione.
-            </li>
-            <li>
-              Si aprirà questa interfaccia per la scelta del server da cui scaricare \(\TeX\) Live
-              <figure>
-                <picture>
-                  <source type="image/webp" srcset="./installazione-locale/interfaccia-iniziale.webp, 
+<h1>
+  Instal&shy;lazione locale
+</h1>
+Questa lezione verte sull'installazione in locale di:
+<ul>
+  <li>
+    \(\TeX\) Live, che è una raccolta di
+    pacchetti<sup class="sidenote">?<span class="sidenote_text" style="display: none;">
+        Il funzionamento è del tutto simile alle librerie in qualsiasi linguaggio
+        di programmazione.
+      </span>
+    </sup>
+    utili per ampliare le funzionalità oppure per aggiungere simboli
+    particolari,
+    come quelli matematici e fisici e tanto altro ancora.
+  </li>
+  <li>
+    \(\TeX\)Studio, che è un editor di testo, ottimizzato per questo scopo.
+    Nelle prossime lezioni verrà usato quest'ultimo, ma un utente più esperto è
+    libero di usare altri edito, come Visual Studio Code, che ha un'estensione
+    per il \(\LaTeX\) oppure Vim ed eseguire la compilazione da shell.
+  </li>
+</ul>
+<h2>
+  \(\TeX\) Live
+</h2>
+<h3>
+  GNU/Linux
+</h3>
+<ol>
+  <li>
+    Il primo passo è scaricare il
+    <a href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">
+      file</a><sup class="sidenote">?<span class="sidenote_text" style="display: none;">
+        È possibile scaricarlo dalla
+        <a href="https://tug.org/texlive/quickinstall.html">
+          pagina ufficiale.
+        </a>
+      </span>
+    </sup>
+    per l'installazione.
+  </li>
+  <li>
+    Una volta scaricato si può estrarre l'archivio cliccando due volte oppure con
+    <em>
+      tasto destro > estrai
+    </em>
+    a seconda delle distribuzioni.
+  </li>
+  <li>
+    Entra nella cartella estratta fino a trovare un file
+    <em>
+      install-tl
+    </em>
+    , apri un terminale nella cartella ed esegui:
+    <pre><code class="language-shell"> $ sudo ./install-tl -gui</code></pre>
+    <em>
+      sudo
+    </em>
+    ti permette di installare le librerie con permessi di amministratore,
+    <em>
+      -gui
+    </em>
+    permette di usare l'interfaccia grafica, semplificando
+    l'operazione.
+  </li>
+  <li>
+    Si aprirà questa interfaccia per la scelta del server da cui scaricare \(\TeX\) Live
+    <figure>
+      <picture>
+        <source type="image/webp" srcset="./installazione-locale/interfaccia-iniziale.webp, 
                   ./installazione-locale/interfaccia-iniziale-3000.webp 3000w">
-                  <img alt="Interfaccia per la scelta del server TeX Live"  width="1095px" height="1175px" loading="lazy"
-                    src="./installazione-locale/interfaccia-iniziale.png" srcset="./installazione-locale/interfaccia-iniziale-3000.png 3000w" />
-                  <figcaption>
-                    Interfaccia per la scelta del server di TeXLive.
-                  </figcaption>
-                </picture>
-              </figure>
-              È possibile che il server venga scelto in automatico abbastanza velocemente da non
-              permettere all'utente di
-              visualizzare la schermata. Questo dipende dalla connessione.
+        <img alt="Interfaccia per la scelta del server TeX Live" width="1095px" height="1175px" loading="lazy"
+          src="./installazione-locale/interfaccia-iniziale.png"
+          srcset="./installazione-locale/interfaccia-iniziale-3000.png 3000w" />
+        <figcaption>
+          Interfaccia per la scelta del server di TeXLive.
+        </figcaption>
+      </picture>
+    </figure>
+    È possibile che il server venga scelto in automatico abbastanza velocemente da non
+    permettere all'utente di
+    visualizzare la schermata. Questo dipende dalla connessione.
 
-              Nel caso in cui si abbia la possibilità di scegliere, il server italiano dovrebbe
-              essere il più veloce.
-            </li>
-            <li>
-              La scheda successiva permette di scegliere il percorso di installazione, la lingue,
-              il formato e la spaziatura predefinita.
-              Se si è indecisi, conviene lasciare le impostazioni predefinite e premere
-              <em>
-                Installa
-              </em>
-              . L'instalazione prevede di avere circa 10 GB liberi.
-              <figure>
-                <picture>
-                  <source type="image/webp" srcset="./installazione-locale/path-texlive.webp,
+    Nel caso in cui si abbia la possibilità di scegliere, il server italiano dovrebbe
+    essere il più veloce.
+  </li>
+  <li>
+    La scheda successiva permette di scegliere il percorso di installazione, la lingue,
+    il formato e la spaziatura predefinita.
+    Se si è indecisi, conviene lasciare le impostazioni predefinite e premere
+    <em>
+      Installa
+    </em>
+    . L'instalazione prevede di avere circa 10 GB liberi.
+    <figure>
+      <picture>
+        <source type="image/webp" srcset="./installazione-locale/path-texlive.webp,
                   ./installazione-locale/path-texlive-3000.webp 3000w,
                   ./installazione-locale/path-texlive-1400.webp 1400w,
                   ./installazione-locale/path-texlive-1200.webp 1200w,
                   ./installazione-locale/path-texlive-3000.webp 992w,
                   ./installazione-locale/path-texlive-1200.webp 600w">
-                  <img alt="Interfaccia per la scelta del percorso TeX Live" loading="lazy"
-                    sizes="(max-width: 350px) 350px, (max-width: 600px) 600px, (max-width: 992px) 992px,
-                    (max-width: 1200px) 1200px, 1400px"
-                    src="./installazione-locale/path-texlive.png" srcset="./installazione-locale/path-texlive-3000.png 3000w,
+        <img alt="Interfaccia per la scelta del percorso TeX Live" loading="lazy" sizes="(max-width: 350px) 350px, (max-width: 600px) 600px, (max-width: 992px) 992px,
+                    (max-width: 1200px) 1200px, 1400px" src="./installazione-locale/path-texlive.png" srcset="./installazione-locale/path-texlive-3000.png 3000w,
                     ./installazione-locale/path-texlive-1400.png 1400w,
                     ./installazione-locale/path-texlive-1200.png 1200w,
                     ./installazione-locale/path-texlive-3000.png 992w,
-                    ./installazione-locale/path-texlive-1200.png 600w"
-                    width="1082px" height="821px" />
-                  <figcaption>
-                    Scelta del percorso di installazione.
-                  </figcaption>
-                </picture>
-              </figure>
-            </li>
-            <li>
-              L'installazione può richiedere qualche ora e, dopo di ciò, si deve aggiungere
-              il percorso di installazione al
-              <code>
+                    ./installazione-locale/path-texlive-1200.png 600w" width="1082px" height="821px" />
+        <figcaption>
+          Scelta del percorso di installazione.
+        </figcaption>
+      </picture>
+    </figure>
+  </li>
+  <li>
+    L'installazione può richiedere qualche ora e, dopo di ciò, si deve aggiungere
+    il percorso di installazione al
+    <code>
                   $PATH</code>
-              in modo che il sistema
-              trovi in automatico il programma.
+    in modo che il sistema
+    trovi in automatico il programma.
 
-              Nelle impostazioni del file manager bisogna attivare
-              <em>
-                Mostra file nascosti
-              </em>
-              <figure>
-                <picture>
-                  <source type="image/webp" srcset="./installazione-locale/file-nascosti.webp">
-                  <img alt="Mostra file nascosti" width="336px" height="497px" loading="lazy"
-                    src="./installazione-locale/file-nascosti.png" />
-                </picture>
-              </figure>
-              Nella cartella
-              <em>
-                Home
-              </em>
-              è possibile trovare il file
-              <code>
+    Nelle impostazioni del file manager bisogna attivare
+    <em>
+      Mostra file nascosti
+    </em>
+    <figure>
+      <picture>
+        <source type="image/webp" srcset="./installazione-locale/file-nascosti.webp">
+        <img alt="Mostra file nascosti" width="336px" height="497px" loading="lazy"
+          src="./installazione-locale/file-nascosti.png" />
+      </picture>
+    </figure>
+    Nella cartella
+    <em>
+      Home
+    </em>
+    è possibile trovare il file
+    <code>
                   .bashrc</code>
-              (oppure
-              <code>
+    (oppure
+    <code>
                   .zshrc</code>
-              a seconda della distro). Apritelo con un editor di testo
-              e troverete una riga che inizia con
-              <code>
+    a seconda della distro). Apritelo con un editor di testo
+    e troverete una riga che inizia con
+    <code>
                   export PATH=</code>.
 
-              Qui aggiungete il percorso di TeX Live (in genere
-              <code>
+    Qui aggiungete il percorso di TeX Live (in genere
+    <code>
                   /usr/local/texlive/YYYY/bin/PLATFORM</code>
-              )
-              subito dopo l'uguale, facendo attenzione
-              a non cancellare quello che era già presente, ma separarlo con i due punti.
-              <br />
-              <pre><code class="language-shell">export PATH=&ltpercorso di TeX Live&gt:&ltscritte precedenti&gt</code></pre>
-              Nel mio caso:
-              <pre><code class="language-shell">export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH</code></pre>
-            </li>
-            <li>
-              Infine aprite un terminale e usate il comando
-              <pre><code class="language-shell">$ source ~/.bashrc</code></pre>
-              Questo dice al sistema di rileggere il file
-              <code>
+    )
+    subito dopo l'uguale, facendo attenzione
+    a non cancellare quello che era già presente, ma separarlo con i due punti.
+    <br />
+    <pre><code class="language-shell">export PATH=&ltpercorso di TeX Live&gt:&ltscritte precedenti&gt</code></pre>
+    Nel mio caso:
+    <pre><code class="language-shell">export PATH=/usr/local/texlive/2025/bin/x86_64-linux:$PATH</code></pre>
+  </li>
+  <li>
+    Infine aprite un terminale e usate il comando
+    <pre><code class="language-shell">$ source ~/.bashrc</code></pre>
+    Questo dice al sistema di rileggere il file
+    <code>
                   .bashrc</code>
-              dopo la modifica.
-            </li>
-          </ol>
-          L'installazione è terminata, ma può essere utile controllare che tutto sia a posto con i
-          seguenti comandi:
-          <pre><code class="language-shell"> $ which pdflatex
+    dopo la modifica.
+  </li>
+</ol>
+L'installazione è terminata, ma può essere utile controllare che tutto sia a posto con i
+seguenti comandi:
+<pre><code class="language-shell"> $ which pdflatex
  $ pdflatex --version</code></pre>
-          Il primo restituisce il percorso di installazione, che deve coincidere con quello impostato in
-          <code>
+Il primo restituisce il percorso di installazione, che deve coincidere con quello impostato in
+<code>
               PATH</code>
-          ,
-          mentre il secondo ci dice che versione del software è installata.
-          <h3>
-            MacOS
-          </h3>
-        </article>
-               </div>
-
-               <div class="column right" include-html="/colonna_destra/colonna_destra.html">
-               </div>
-     </main>
-
-     <footer class="footer" include-html="/footer/footer.html">
-     </footer>
-
-     <link rel="stylesheet" href="/mobile/mobile.css">
-     <script type="module" src="/main.js" defer></script>
-     <script type="module" src="/prism.js" defer></script>
-</body>
-
-</html>
+,
+mentre il secondo ci dice che versione del software è installata.
+<h3>
+  MacOS
+</h3>

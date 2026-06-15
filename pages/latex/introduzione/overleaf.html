@@ -1,691 +1,427 @@
-<!DOCTYPE html>
-<html lang="it">
-<!--NON METTERE AMBIENTI ARTICLE NEL TESTO ALTRIMENTI SI ROMPE BASE_SYNC.PY-->
+---
+layout: default
+title: Overleaf - Perifisica
+---
 
-
-<head>
-     <meta charset="UTF-8">
-
-     <title>
-      Come iniziare: Overleaf - Perifisica
-    </title>
-
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-     <!-- =========================
-         SEO METADATA
-    ========================== -->
-
-     <meta name="description" content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <!-- la descrizione deve essere più lunga -->
-     <meta name="keywords" content="fisica, scuola, università">
-     <meta name="author" content="Perifisica">
-     <meta name="robots" content="index, follow">
-
-     <!-- =========================
-         OPEN GRAPH (FACEBOOK, LINKEDIN)
-    ========================== -->
-     <meta property="og:title" content="Perifisica">
-     <meta property="og:description"
-          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta property="og:type" content="website">
-     <meta property="og:url" content="https://perifisica.github.io/">
-     <meta property="og:image" content="https://perifisica.github.io/logo/logo_completo.png">
-     <meta property="og:locale" content="it_IT" />
-
-     <!-- =========================
-         TWITTER CARD
-    ========================== -->
-     <meta name="twitter:card" content="summary_large_image">
-     <meta name="twitter:title" content="Perifisica">
-     <meta name="twitter:description"
-          content="Appunti, lezioni e spiegazioni sulla fisica di scuole superiori e università.">
-     <meta name="twitter:image" content="https://perifisica.github.io/logo/logo_completo.png">
-
-     <!-- ===========
-          CSS CRITICO
-     ============================ -->
-     <style>
-          * {
-               box-sizing: border-box;
-          }
-
-          body {
-               font-family: "Inter", sans-serif;
-               font-size: 16px;
-               font-weight: 500;
-               margin: 0;
-               background: var(--background);
-               color: var(--text);
-               line-height: 1.65;
-               text-align: justify;
-          }
-
-          .topbar {
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               gap: 1.5rem;
-               padding-top: 3rem;
-               background: #ffffff;
-          }
-
-          .input {
-               padding-top: 2rem;
-               border-bottom: 1px solid var(--border);
-               padding-bottom: 3rem;
-               height: 7rem;
-          }
-
-          .row {
-               display: flex;
-               align-items: flex-start;
-               /* fondamentale per sticky*/
-               padding-right: 1vw;
-               /* per non far sovrapporre le scrollbar destra e generale*/
-          }
-
-          .left {
-               width: 19.1%;
-               position: sticky;
-               top: 1rem;
-               max-height: 100vh;
-               z-index: 10;
-          }
-
-          .middle {
-               width: 61.8%;
-               padding-right: 1rem;
-               padding-left: 1rem;
-               overflow: visible;
-          }
-
-          .right {
-               width: 19.1%;
-               position: sticky;
-               top: 1rem;
-               max-height: 100vh;
-               z-index: 10;
-          }
-
-          .footer {
-               width: 100%;
-               background: white;
-               color: #1f1f1f;
-               margin-top: 2rem;
-               padding: 25px;
-               border-top: 1px solid var(--border);
-          }
-
-          #logo_link {
-               display: flex;
-               justify-content: center;
-               align-items: center;
-          }
-
-          #foto_logo {
-               max-width: 100%;
-               height: auto;
-               width: auto;
-               display: flex;
-               justify-content: center;
-               align-items: center;
-          }
-
-          main {
-               padding-top: 3rem;
-          }
-
-          h1,
-          h2,
-          h3,
-          h4 {
-               font-family: "Libre Baskerville", serif;
-               font-weight: 500;
-               line-height: 1;
-               text-align: center;
-          }
-     </style>
-
-     <!-- ========================
-          FONT
-          =======================
-     -->
-     <style>
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Medium.woff2') format('woff2');
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Italic.woff2') format('woff2');
-               font-display: swap;
-               font-style: italic;
-          }
-
-          @font-face {
-               font-family: 'Inter';
-               src: url('/font/Inter-Bold.woff2') format('woff2');
-               font-display: swap;
-               font-weight: bold;
-          }
-
-
-          @font-face {
-               font-family: 'Libre Baskerville';
-               src: url('/font/LibreBaskerville-Regular.woff2') format('woff2');
-               font-display: swap;
-          }
-
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Regular.woff2') format('woff2');
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Bold.woff2') format('woff2');
-               font-weight: bold;
-               font-display: swap;
-          }
-
-          @font-face {
-               font-family: 'OpenDyslexic';
-               src: url('/font/OpenDyslexic-Italic.woff2') format('woff2');
-               font-style: italic;
-               font-display: swap;
-          }
-     </style>
-
-     <!-- =========================
-         FAVICONS
-    ========================== -->
-     <link rel="icon" href="/logo/favicon.webp">
-     <link rel="apple-touch-icon" sizes="180x180" href="/logo/logo_completo.png">
-     <link rel="icon" sizes="32x32" href="/logo/favicon.webp">
-     <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
-
-     <link rel="stylesheet" href="/style.css">
-     <link rel="stylesheet" id="default-theme" href="/prism.css">
-     <link rel="stylesheet" id="okaidia-theme" href="/prism-okaidia.css" disbled>
-</head>
-
-<body>
-     <header class="topbar">
-          <div class="logo">
-               <a href="/index.html" title="Torna all'indice" id="logo_link">
-                    <picture>
-                         <img id="foto_logo" src="/logo/logo_completo.png" srcset="/logo/logo_completo.webp"
-                              alt="Logo Perifisica" width="724px" height="202px">
-                    </picture>
-               </a>
-          </div>
-     </header>
-
-     <div class="topbar input" include-html="/barra_ricerca/barra_ricerca.html"></div>
-
-     <div id="bottoni_mobile" include-html="/mobile/mobile.html"></div>
-
-     <main>
-          <div class="row">
-               <nav class="column left" include-html="/colonna_sinistra_indice/indice.html">
-               </nav>
-
-               <div class="column middle">
-
-                    <div class="inline_navigation" include-html="/inline_navigation/inline_navigation.html">
-                    </div>
-
-                    <article>
-            <h1>
-              Come iniziare a scrivere? Overleaf
-            </h1>
-            <p>
-              In questa lezione verrà mostrato il modo più basilare per interfacciarsi al \(\LaTeX\), con la possibilità
-            di non scrivere nemmeno una riga di codice, grazie alle funzioni precostituite di
-              <strong>
-                Overleaf
-              </strong>
-              .
-            </p>
-            <h2>
-              Creare un account
-            </h2>
-            <p>
-              Per iniziare su Overleaf il primo passo è la creazione di un account. Per registrarti, vai alla homepage di
-              <a href="https://www.overleaf.com" target="_blank" title="Pagina principale di Overleaf">
-                Overleaf
-              </a>
-              e
-            clicca sul pulsante "Registrati" in alto a destra. Per
-            registrarti ti serviranno un indirizzo
-              <strong>
-                e-mail
-              </strong>
-              ed una
-              <strong>
-                password
-              </strong>
-              ; in
-            alternativa è possibile registrarsi tramite Google,
-            ORCID
-              <sup class="sidenote">
-                ?
-                <span class="sidenote_text" style="display: none;">
-                  Open Researcher and
-                Contributor ID, un identificativo alfanumerico per l'identificazione
-                univoca degli scienziati e degli autori della letteratura scientifica.
-                </span>
-              </sup>
-              oppure
-            SSO
-              <sup class="sidenote">
-                ?
-                <span class="sidenote_text" style="display: none;">
-                  Il single sign-on consente ad
-                un utente di effettuare un'unica autenticazione valida per più
-                sistemi software o risorse informatiche alle quali è abilitato.
-                </span>
-              </sup>
-              .
-            riceverai una mail che ti chiederà di verificare il tuo indirizzo e-mail e, una volta fatto, sarai
-            pronto
-            per iniziare!
-            </p>
-            <h2>
-              Creare un progetto
-            </h2>
-            <p>
-              Per creare un nuovo progetto su Overleaf, bisogna accedere al proprio profilo e si troverà "Nuovo progetto"
-            in alto a sinistra nella pagina.
-            </p>
-            <figure>
-              <picture>
-                <source type="image/webp" srcset="./overleaf/nuovo-progetto.webp, 
+<h1>
+  Come iniziare a scrivere? Overleaf
+</h1>
+<p>
+  In questa lezione verrà mostrato il modo più basilare per interfacciarsi al \(\LaTeX\), con la possibilità
+  di non scrivere nemmeno una riga di codice, grazie alle funzioni precostituite di
+  <strong>
+    Overleaf
+  </strong>
+  .
+</p>
+<h2>
+  Creare un account
+</h2>
+<p>
+  Per iniziare su Overleaf il primo passo è la creazione di un account. Per registrarti, vai alla homepage di
+  <a href="https://www.overleaf.com" target="_blank" title="Pagina principale di Overleaf">
+    Overleaf
+  </a>
+  e
+  clicca sul pulsante "Registrati" in alto a destra. Per
+  registrarti ti serviranno un indirizzo
+  <strong>
+    e-mail
+  </strong>
+  ed una
+  <strong>
+    password
+  </strong>
+  ; in
+  alternativa è possibile registrarsi tramite Google,
+  ORCID
+  <sup class="sidenote">
+    ?
+    <span class="sidenote_text" style="display: none;">
+      Open Researcher and
+      Contributor ID, un identificativo alfanumerico per l'identificazione
+      univoca degli scienziati e degli autori della letteratura scientifica.
+    </span>
+  </sup>
+  oppure
+  SSO
+  <sup class="sidenote">
+    ?
+    <span class="sidenote_text" style="display: none;">
+      Il single sign-on consente ad
+      un utente di effettuare un'unica autenticazione valida per più
+      sistemi software o risorse informatiche alle quali è abilitato.
+    </span>
+  </sup>
+  .
+  riceverai una mail che ti chiederà di verificare il tuo indirizzo e-mail e, una volta fatto, sarai
+  pronto
+  per iniziare!
+</p>
+<h2>
+  Creare un progetto
+</h2>
+<p>
+  Per creare un nuovo progetto su Overleaf, bisogna accedere al proprio profilo e si troverà "Nuovo progetto"
+  in alto a sinistra nella pagina.
+</p>
+<figure>
+  <picture>
+    <source type="image/webp" srcset="./overleaf/nuovo-progetto.webp, 
                 ./overleaf/nuovo-progetto-3000.webp 3000w">
-                <img alt="Nuovo progetto Overleaf" width="508px" height="1366px" loading="lazy"
-                src="./overleaf/nuovo-progetto.png"
-                srcset="./overleaf/nuovo-progetto-3000.png 3000w"/>
-              </picture>
-              <figcaption>
-                Template di progetti \(\LaTeX\) su Overleaf.
-              </figcaption>
-            </figure>
-            <p>
-              Verranno mostrati una serie di modelli disponibili per iniziare, suddivisi in categorie come riviste
-            accademiche, presentazioni e tesi. Potete selezionare uno dei modelli visibili nella categoria di vostra
-            scelta, così come altri modelli disponibili, sebbene si possa anche sfogliare i modelli recenti e popolari
-            utilizzati da altri utenti di Overleaf. Infine c'è la possibilità di partire da un foglio bianco per
-            personalizzare al massimo la propria opera. In questa guida si partirà da qui.
-            </p>
-            <h2>
-              Modifica base
-            </h2>
-            <p>
-              Una volta aperto un progetto, lo schermo mostrerà tre colonne, da sinistra a destra:
-            </p>
-            <ol>
-              <li>
-                la struttura del progetto, dove esiste già il file main.tex che è quello su cui si sta scrivendo
-              attualmente. Qui è possibile aggiungere file, cartelle, immagini come se foste in una cartella del vostro
-              PC.
-              </li>
-              <li>
-                la finestra di modifica dove si può scrivere;
-              </li>
-              <li>
-                una finestra per l'anteprima del documento dopo la compilazione.
-              </li>
-            </ol>
-            <p>
-            </p>
-            <figure>
-              <picture>
-                <source type="image/webp"
-                srcset="./overleaf/interfaccia-modifica.webp,
+    <img alt="Nuovo progetto Overleaf" width="508px" height="1366px" loading="lazy" src="./overleaf/nuovo-progetto.png"
+      srcset="./overleaf/nuovo-progetto-3000.png 3000w" />
+  </picture>
+  <figcaption>
+    Template di progetti \(\LaTeX\) su Overleaf.
+  </figcaption>
+</figure>
+<p>
+  Verranno mostrati una serie di modelli disponibili per iniziare, suddivisi in categorie come riviste
+  accademiche, presentazioni e tesi. Potete selezionare uno dei modelli visibili nella categoria di vostra
+  scelta, così come altri modelli disponibili, sebbene si possa anche sfogliare i modelli recenti e popolari
+  utilizzati da altri utenti di Overleaf. Infine c'è la possibilità di partire da un foglio bianco per
+  personalizzare al massimo la propria opera. In questa guida si partirà da qui.
+</p>
+<h2>
+  Modifica base
+</h2>
+<p>
+  Una volta aperto un progetto, lo schermo mostrerà tre colonne, da sinistra a destra:
+</p>
+<ol>
+  <li>
+    la struttura del progetto, dove esiste già il file main.tex che è quello su cui si sta scrivendo
+    attualmente. Qui è possibile aggiungere file, cartelle, immagini come se foste in una cartella del vostro
+    PC.
+  </li>
+  <li>
+    la finestra di modifica dove si può scrivere;
+  </li>
+  <li>
+    una finestra per l'anteprima del documento dopo la compilazione.
+  </li>
+</ol>
+<p>
+</p>
+<figure>
+  <picture>
+    <source type="image/webp" srcset="./overleaf/interfaccia-modifica.webp,
                 ./overleaf/interfaccia-modifica-3000.webp 3000w">
-                <img alt="Interfaccia di modifica" width="3072px" height="1376px" loading="lazy"
-                src="./overleaf/interfaccia-modifica.png"
-                srcset="./overleaf/interfaccia-modifica-3000.png 3000w"/>
-              </picture>
-              <figcaption>
-                Interfaccia di un progetto vuoto in Overleaf. Viene aggiunto in automatico il titolo, l'autore, la data e
-              il primo capitolo.
-              </figcaption>
-            </figure>
-            <p>
-              La prima colonna può essere chiusa e riaperta cliccando sul pulsante in alto a sinistra oppure sulla
-            freccetta al centro, al fine di avere una visuale più ampia della parte modificabile. Anche la colonna di
-            destra può essere rimossa tramite l'apposita freccetta. Infine tutte le colonne possono essere
-            ridimensionate interagendo con il bordo separatore.
-            </p>
-            <p>
-              Per impostazione predefinita l'anteprima si aggiorna automaticamente man mano che vengono apportate
-            modifiche, ma può essere impostata su un'opzione manuale, perciò ogni aggiornamento viene applicato solo
-            dopo aver cliccato il tasto
-              <strong>
-                Ricompila
-              </strong>
-            </p>
-            <p>
-              Quando si modifica un progetto, è possibile scegliere tra due opzioni: "Code Editor" e "Visual Editor". La
-            modalità di scrittura è uguale ad ogni altro editor \(\LaTeX\), ma la modalità visuale offre degli strumenti
-            grafici in più,
-            permettendo all'utente di interagire senza modificare il codice manualmente. Ci si concentrerà
-            principalmente sulla modifica in Visual Editor, perché è una peculiarità di Overleaf; nelle
-            lezioni successive il focus sarà il codice, per una conoscenza completa del linguaggio di programmazione.
-            </p>
-            <h2>
-              Barra degli strumenti
-            </h2>
-            <p>
-              Overleaf offre la possibilità di automatizzare l'inserimento di elementi di base, come la creazione di
-            elenchi e l'applicazione di grassetto o corsivo al testo, figure, tabelle, presenti nel campo
-              <strong>
-                Inserisci
-              </strong>
-              e in
-              <strong>
-                Formato
-              </strong>
-              .
-            </p>
-            <p>
-              In alto a destra è presente un orologio con una freccia in senso antiorario come contorno: è la
-              <strong>
-                cronologia
-              </strong>
-              del file. Con la versione online gratuita di Overleaf, gli utenti possono visualizzare le revisioni delle
-            ultime 24 ore del progetto. È possibile accedere alla cronologia di un progetto anche
-            nella barra degli strumenti tramite
-              <code>
+    <img alt="Interfaccia di modifica" width="3072px" height="1376px" loading="lazy"
+      src="./overleaf/interfaccia-modifica.png" srcset="./overleaf/interfaccia-modifica-3000.png 3000w" />
+  </picture>
+  <figcaption>
+    Interfaccia di un progetto vuoto in Overleaf. Viene aggiunto in automatico il titolo, l'autore, la data e
+    il primo capitolo.
+  </figcaption>
+</figure>
+<p>
+  La prima colonna può essere chiusa e riaperta cliccando sul pulsante in alto a sinistra oppure sulla
+  freccetta al centro, al fine di avere una visuale più ampia della parte modificabile. Anche la colonna di
+  destra può essere rimossa tramite l'apposita freccetta. Infine tutte le colonne possono essere
+  ridimensionate interagendo con il bordo separatore.
+</p>
+<p>
+  Per impostazione predefinita l'anteprima si aggiorna automaticamente man mano che vengono apportate
+  modifiche, ma può essere impostata su un'opzione manuale, perciò ogni aggiornamento viene applicato solo
+  dopo aver cliccato il tasto
+  <strong>
+    Ricompila
+  </strong>
+</p>
+<p>
+  Quando si modifica un progetto, è possibile scegliere tra due opzioni: "Code Editor" e "Visual Editor". La
+  modalità di scrittura è uguale ad ogni altro editor \(\LaTeX\), ma la modalità visuale offre degli strumenti
+  grafici in più,
+  permettendo all'utente di interagire senza modificare il codice manualmente. Ci si concentrerà
+  principalmente sulla modifica in Visual Editor, perché è una peculiarità di Overleaf; nelle
+  lezioni successive il focus sarà il codice, per una conoscenza completa del linguaggio di programmazione.
+</p>
+<h2>
+  Barra degli strumenti
+</h2>
+<p>
+  Overleaf offre la possibilità di automatizzare l'inserimento di elementi di base, come la creazione di
+  elenchi e l'applicazione di grassetto o corsivo al testo, figure, tabelle, presenti nel campo
+  <strong>
+    Inserisci
+  </strong>
+  e in
+  <strong>
+    Formato
+  </strong>
+  .
+</p>
+<p>
+  In alto a destra è presente un orologio con una freccia in senso antiorario come contorno: è la
+  <strong>
+    cronologia
+  </strong>
+  del file. Con la versione online gratuita di Overleaf, gli utenti possono visualizzare le revisioni delle
+  ultime 24 ore del progetto. È possibile accedere alla cronologia di un progetto anche
+  nella barra degli strumenti tramite
+  <code>
                 File > Mostra cronologia
               </code>
-              .
-            </p>
-            <p>
-              La funzione successiva che vedremo in questa guida è
-              <strong>
-                Modifica
-              </strong>
-              , la seconda da sinistra, che
-            comprende le classiche
-            funzioni di
-              <em>
-                Annulla/Ripeti
-              </em>
-              e
-              <em>
-                Trova
-              </em>
-              e
-              <em>
-                Seleziona tutto
-              </em>
-              . La funzione Trova consente
-            di cercare l'esistenza e le posizioni di una o più parole nel documento; si aprirà anche
-              <em>
-                Sostituisci
-              </em>
-              ,
-            che consente di scegliere una o più parole e sostituire una o tutte le occorrenze delle stesse con qualcosa
-            di nuovo.
-            </p>
-            <p>
-              Verranno trattate in capitoli dedicati le opzioni presenti in Inserisci, eccetto l'ultimo bottone, riservato
-            ai
-              <strong>
-                Commenti
-              </strong>
-              : questa opzione permette ai collaboratori di lasciarsi feedback a vicenda e di
-            rispondere ai commenti degli altri, senza il rischio che essi compaiano nel testo finale.
-            </p>
-            <p>
-              Sono presenti due frecce sul bordo tra colonna centrale e quella destra: quella verso destra
-            permette di selezionare qualcosa nell'editor e vedere a cosa corrisponde nel documento pdf; quella verso
-            sinistra ha il compito opposto: dopo un attimo, la schermata di modifica salterà alla sezione di codice
-            corrispondente.
-            </p>
-            <h2>
-              Inserimento delle figure
-            </h2>
-            <p>
-              Per inserire una figura è presente l'apposito comando in
-              <strong>
-                Inserisci
-              </strong>
-              , nella barra degli
-            strumenti.
-            È possibile scegliere l'immagine tra diverse fonti:
-            </p>
-            <ul>
-              <li>
-                Sul proprio dispositivo; l'immagine verrà caricata in automatico tra i file del progetto e sarà
-              possibile scegliere la grandezza rispetto all'intero foglio (width), se inserire o meno la
-                <strong>
-                  caption
-                </strong>
-                , cioè
-              il sottotitolo dell'immagine e una
-                <strong>
-                  label
-                </strong>
-                , un'etichetta per le
-              cross-reference
-                <sup class="sidenote">
-                  ?
-                  <span class="sidenote_text" style="display: none;">
-                    Una
-                  cross-reference è un riferimento interno al testo. Un esempio pratico è: "come si può
-                  vedere in Equazione 3.4", dove 3.4 è la label assegnata. In ambienti accademici viene
-                  usata spesso ed è possibile trovarle nei libri di testo di qualsiasi corso di analisi.
-                  </span>
-                  .
-                </sup>
-                <figure>
-                  <picture>
-                    <source type="image/webp" 
-                    srcset="./overleaf/inserimento-figure.webp,
+  .
+</p>
+<p>
+  La funzione successiva che vedremo in questa guida è
+  <strong>
+    Modifica
+  </strong>
+  , la seconda da sinistra, che
+  comprende le classiche
+  funzioni di
+  <em>
+    Annulla/Ripeti
+  </em>
+  e
+  <em>
+    Trova
+  </em>
+  e
+  <em>
+    Seleziona tutto
+  </em>
+  . La funzione Trova consente
+  di cercare l'esistenza e le posizioni di una o più parole nel documento; si aprirà anche
+  <em>
+    Sostituisci
+  </em>
+  ,
+  che consente di scegliere una o più parole e sostituire una o tutte le occorrenze delle stesse con qualcosa
+  di nuovo.
+</p>
+<p>
+  Verranno trattate in capitoli dedicati le opzioni presenti in Inserisci, eccetto l'ultimo bottone, riservato
+  ai
+  <strong>
+    Commenti
+  </strong>
+  : questa opzione permette ai collaboratori di lasciarsi feedback a vicenda e di
+  rispondere ai commenti degli altri, senza il rischio che essi compaiano nel testo finale.
+</p>
+<p>
+  Sono presenti due frecce sul bordo tra colonna centrale e quella destra: quella verso destra
+  permette di selezionare qualcosa nell'editor e vedere a cosa corrisponde nel documento pdf; quella verso
+  sinistra ha il compito opposto: dopo un attimo, la schermata di modifica salterà alla sezione di codice
+  corrispondente.
+</p>
+<h2>
+  Inserimento delle figure
+</h2>
+<p>
+  Per inserire una figura è presente l'apposito comando in
+  <strong>
+    Inserisci
+  </strong>
+  , nella barra degli
+  strumenti.
+  È possibile scegliere l'immagine tra diverse fonti:
+</p>
+<ul>
+  <li>
+    Sul proprio dispositivo; l'immagine verrà caricata in automatico tra i file del progetto e sarà
+    possibile scegliere la grandezza rispetto all'intero foglio (width), se inserire o meno la
+    <strong>
+      caption
+    </strong>
+    , cioè
+    il sottotitolo dell'immagine e una
+    <strong>
+      label
+    </strong>
+    , un'etichetta per le
+    cross-reference
+    <sup class="sidenote">
+      ?
+      <span class="sidenote_text" style="display: none;">
+        Una
+        cross-reference è un riferimento interno al testo. Un esempio pratico è: "come si può
+        vedere in Equazione 3.4", dove 3.4 è la label assegnata. In ambienti accademici viene
+        usata spesso ed è possibile trovarle nei libri di testo di qualsiasi corso di analisi.
+      </span>
+      .
+    </sup>
+    <figure>
+      <picture>
+        <source type="image/webp" srcset="./overleaf/inserimento-figure.webp,
                     ./overleaf/inserimento-figure-3000.webp 3000w">
-                    <img alt="Interfaccia per l'inserimento delle figure" width="1280px" height="1222px" loading="lazy"
-                    src="./overleaf/inserimento-figure.png"
-                    srcset="./overleaf/inserimento-figure-3000.png 3000w"/>
-                  </picture>
-                  <figcaption>
-                    Interfaccia per l'inserimento di una figura con caricamento dal PC.
-                  </figcaption>
-                </figure>
-              </li>
-              <li>
-                Dai file del progetto. Nel caso precedente si è visto che le figure vengono automaticamente aggiunte ai
-              file del progetto, ma qualora si volesse riutilizzare un'immagine, questo è lo strumento giusto.
-              </li>
-              <li>
-                Da un altro progetto: si può riutilizzare un'immagine caricata in un altro progetto tra quelli nel proprio
-              profilo.
-              </li>
-              <li>
-                Da un url, ottenuto tramite
-                <em>
-                  Copia link immagine
-                </em>
-                da una qualsiasi immagine sul web.
-              </li>
-            </ul>
-            <p>
-            </p>
-            <p>
-              Infine per inserire la figura proprio sotto al testo che si sta scrivendo si deve andare in
-              <em>
-                Code
-              Editor
-              </em>
-              e
-            aggiungere
-              <code style="margin-right: -20px">
+        <img alt="Interfaccia per l'inserimento delle figure" width="1280px" height="1222px" loading="lazy"
+          src="./overleaf/inserimento-figure.png" srcset="./overleaf/inserimento-figure-3000.png 3000w" />
+      </picture>
+      <figcaption>
+        Interfaccia per l'inserimento di una figura con caricamento dal PC.
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    Dai file del progetto. Nel caso precedente si è visto che le figure vengono automaticamente aggiunte ai
+    file del progetto, ma qualora si volesse riutilizzare un'immagine, questo è lo strumento giusto.
+  </li>
+  <li>
+    Da un altro progetto: si può riutilizzare un'immagine caricata in un altro progetto tra quelli nel proprio
+    profilo.
+  </li>
+  <li>
+    Da un url, ottenuto tramite
+    <em>
+      Copia link immagine
+    </em>
+    da una qualsiasi immagine sul web.
+  </li>
+</ul>
+<p>
+</p>
+<p>
+  Infine per inserire la figura proprio sotto al testo che si sta scrivendo si deve andare in
+  <em>
+    Code
+    Editor
+  </em>
+  e
+  aggiungere
+  <code style="margin-right: -20px">
                 [!h]
               </code>
-              <sup class="sidenote">
-                ?
-                <span class="sidenote_text" style="display: none;">
-                  !h sta per here!, il punto esclamativo è un imposizione più forte rispetto alla sola h.
-                </span>
-              </sup>
-              accanto a
-              <code>
+  <sup class="sidenote">
+    ?
+    <span class="sidenote_text" style="display: none;">
+      !h sta per here!, il punto esclamativo è un imposizione più forte rispetto alla sola h.
+    </span>
+  </sup>
+  accanto a
+  <code>
                 \begin{figure}
               </code>
-              Questo è necessario perché \(\LaTeX\) cerca di ottimizzare sempre automaticamente lo spazio disponibile
-            e alcune volte questo comportamento non rispetta la volontà dell'autore. Con questo semplice
-            comando si dice al compilatore:
-              <q>
-                Voglio qui l'immagine!
-              </q>
-            </p>
-            <h2>
-              Inserimento delle tabelle
-            </h2>
-            <p>
-              Anche per inserire una tabella è presente un comando in
-              <strong>
-                Inserisci
-              </strong>
-              . In questo caso viene
-            scritta in
-            automatico la sintassi per una tabella di tre righe e 3 colonne senza divisori nè interni nè esterni. Nella
-            visuale
-              <em>
-                Visual Editor
-              </em>
-              è possibile interagire con la tabella, modificando i bordi, aggiungendo o
-            rimuovendo
-            righe e colonne, centrando il testo e modificando la larghezza delle colonne.
-            </p>
-            <figure>
-              <picture>
-                <source type="image/webp" 
-                srcset="./overleaf/inserimento-tabelle.webp,
+  Questo è necessario perché \(\LaTeX\) cerca di ottimizzare sempre automaticamente lo spazio disponibile
+  e alcune volte questo comportamento non rispetta la volontà dell'autore. Con questo semplice
+  comando si dice al compilatore:
+  <q>
+    Voglio qui l'immagine!
+  </q>
+</p>
+<h2>
+  Inserimento delle tabelle
+</h2>
+<p>
+  Anche per inserire una tabella è presente un comando in
+  <strong>
+    Inserisci
+  </strong>
+  . In questo caso viene
+  scritta in
+  automatico la sintassi per una tabella di tre righe e 3 colonne senza divisori nè interni nè esterni. Nella
+  visuale
+  <em>
+    Visual Editor
+  </em>
+  è possibile interagire con la tabella, modificando i bordi, aggiungendo o
+  rimuovendo
+  righe e colonne, centrando il testo e modificando la larghezza delle colonne.
+</p>
+<figure>
+  <picture>
+    <source type="image/webp" srcset="./overleaf/inserimento-tabelle.webp,
                 ./overleaf/inserimento-tabelle-3000.webp 3000w">
-                <img alt="Esempio di tabella predefinita inserita" width="2384px" height="1230px" loading="lazy" 
-                src="/overleaf/inserimento-tabelle.png" 
-                srcset="./overleaf/inserimento-tabelle-3000.png 3000w" />
-              </picture>
-              <figcaption>
-                Un esempio di tabella standard con cui è possibile interagire cliccando sulle celle.
-              </figcaption>
-            </figure>
-            <p>
-              Per riempire la tabella basta interagire con essa come su un foglio di calcolo, cliccando sulla cella e
-            scrivendone il contenuto.
-            Anche in questo caso, per indicare la posizione della tabella bisogna aggiungere
-              <code>
+    <img alt="Esempio di tabella predefinita inserita" width="2384px" height="1230px" loading="lazy"
+      src="./overleaf/inserimento-tabelle.png" srcset="./overleaf/inserimento-tabelle-3000.png 3000w" />
+  </picture>
+  <figcaption>
+    Un esempio di tabella standard con cui è possibile interagire cliccando sulle celle.
+  </figcaption>
+</figure>
+<p>
+  Per riempire la tabella basta interagire con essa come su un foglio di calcolo, cliccando sulla cella e
+  scrivendone il contenuto.
+  Anche in questo caso, per indicare la posizione della tabella bisogna aggiungere
+  <code>
                 [!h]
               </code>
-              dopo
-              <code>
+  dopo
+  <code>
                 \begin{table}
               </code>
-            </p>
-            <h2>
-              Come collaborare
-            </h2>
-            <p>
-              In altro a destra è possibile trovare il tasto
-              <strong>
-                Condividi
-              </strong>
-              nella barra degli strumenti. Si
-            aprirà la seguente
-            finestra:
-            </p>
-            <figure>
-              <picture>
-                <source type="image/webp"
-                srcset="./overleaf/collaborare.webp,
+</p>
+<h2>
+  Come collaborare
+</h2>
+<p>
+  In altro a destra è possibile trovare il tasto
+  <strong>
+    Condividi
+  </strong>
+  nella barra degli strumenti. Si
+  aprirà la seguente
+  finestra:
+</p>
+<figure>
+  <picture>
+    <source type="image/webp" srcset="./overleaf/collaborare.webp,
                 ./overleaf/collaborare-3000.webp 3000w">
-                <img alt="Interfaccia per la collaborazione" width="1278px" height="1144px" loading="lazy" 
-                src="./overleaf/collaborare.png" 
-                srcset="./overleaf/collaborare-3000.png 3000w" />
-              </picture>
-              <figcaption>
-                Interfaccia per aggiungere dei collaboratori al progetto.
-              </figcaption>
-            </figure>
-            <p>
-              I progetti possono essere condivisi tramite indirizzo mail con un numero illimitato di collaboratori nella
-            versione premium e con al massimo un collaboratore in quella gratuita. La collaborazione tramite mail è di 3
-            tipi:
-            </p>
-            <ol>
-              <li>
-                lettura e modifica per i collaboratori;
-              </li>
-              <li>
-                revisione, che permette di modificare aggiungendo solo commenti al testo;
-              </li>
-              <li>
-                sola lettura per i non collaboratori.
-              </li>
-            </ol>
-            <p>
-            </p>
-            <p>
-              Questa restrizione non è presente attivando il
-              <strong>
-                link sharing
-              </strong>
-              , che di norma è disattivato.
-            È così possibile copiare il link e condividerlo con i propri collaboratori.
-            Si può vedere che ci sono due tipi di link:
-            </p>
-            <ol>
-              <li>
-                lettura e modifica;
-              </li>
-              <li>
-                sola lettura.
-              </li>
-            </ol>
-            Se i tuoi collaboratori saranno online contemporaneamente a te, potrai vedere la loro icona accanto al tasto
-            <em>
-              Condividi
-            </em>
-            e premendo su di essa verrai portato alla sezione di codice che il tuo collaboratore sta
-          modificando in quel momento.
-            <p>
-            </p>
-            <h2>
-              Conclusione
-            </h2>
-            <p>
-              In questa lezione non è stata affrontata la scrittura di codice \(\LaTeX\): questo perchè le funzioni di Overleaf
-            vengono incontro all'utente meno esperto permettendogli di non scrivere codice.
-            Nella prossima lezione vedremo come installare \(\LaTeX\) in locale e da qui in poi come programmare in questo
-            linguaggio. Tutte le informazioni contenute nelle prossime lezioni rimangono valide in Overleaf usando la
-            modalità
-              <em>
-                Code Editor
-              </em>
-              .
-            </p>
-          </article>
-               </div>
-
-               <div class="column right" include-html="/colonna_destra/colonna_destra.html">
-               </div>
-     </main>
-
-     <footer class="footer" include-html="/footer/footer.html">
-     </footer>
-
-     <link rel="stylesheet" href="/mobile/mobile.css">
-     <script type="module" src="/main.js" defer></script>
-     <script type="module" src="/prism.js" defer></script>
-</body>
-
-</html>
+    <img alt="Interfaccia per la collaborazione" width="1278px" height="1144px" loading="lazy"
+      src="./overleaf/collaborare.png" srcset="./overleaf/collaborare-3000.png 3000w" />
+  </picture>
+  <figcaption>
+    Interfaccia per aggiungere dei collaboratori al progetto.
+  </figcaption>
+</figure>
+<p>
+  I progetti possono essere condivisi tramite indirizzo mail con un numero illimitato di collaboratori nella
+  versione premium e con al massimo un collaboratore in quella gratuita. La collaborazione tramite mail è di 3
+  tipi:
+</p>
+<ol>
+  <li>
+    lettura e modifica per i collaboratori;
+  </li>
+  <li>
+    revisione, che permette di modificare aggiungendo solo commenti al testo;
+  </li>
+  <li>
+    sola lettura per i non collaboratori.
+  </li>
+</ol>
+<p>
+</p>
+<p>
+  Questa restrizione non è presente attivando il
+  <strong>
+    link sharing
+  </strong>
+  , che di norma è disattivato.
+  È così possibile copiare il link e condividerlo con i propri collaboratori.
+  Si può vedere che ci sono due tipi di link:
+</p>
+<ol>
+  <li>
+    lettura e modifica;
+  </li>
+  <li>
+    sola lettura.
+  </li>
+</ol>
+Se i tuoi collaboratori saranno online contemporaneamente a te, potrai vedere la loro icona accanto al tasto
+<em>
+  Condividi
+</em>
+e premendo su di essa verrai portato alla sezione di codice che il tuo collaboratore sta
+modificando in quel momento.
+<p>
+</p>
+<h2>
+  Conclusione
+</h2>
+<p>
+  In questa lezione non è stata affrontata la scrittura di codice \(\LaTeX\): questo perchè le funzioni di Overleaf
+  vengono incontro all'utente meno esperto permettendogli di non scrivere codice.
+  Nella prossima lezione vedremo come installare \(\LaTeX\) in locale e da qui in poi come programmare in questo
+  linguaggio. Tutte le informazioni contenute nelle prossime lezioni rimangono valide in Overleaf usando la
+  modalità
+  <em>
+    Code Editor
+  </em>
+  .
+</p>
