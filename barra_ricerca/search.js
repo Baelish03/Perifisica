@@ -75,10 +75,10 @@ export function init() {
 
     if (e.key === "ArrowDown") {
       e.preventDefault();
-      setActive(activeIndex + 1, results);
+      activeIndex = setActive(activeIndex + 1, results);
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
-      setActive(activeIndex - 1, results);
+      activeIndex = setActive(activeIndex - 1, results);
     } else if (e.key === "Enter") {
       if (activeIndex >= 0) {
         e.preventDefault();

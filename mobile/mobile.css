@@ -213,6 +213,9 @@
 }
 
 @media screen and (max-width: 350px) {
+  body{
+    text-align: left;
+  }
 
   /* ======================= COLONNA SINISTRA ===========*/
   .indice_aperto {

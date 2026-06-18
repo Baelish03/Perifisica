@@ -113,8 +113,6 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 finire il footer, con i bottoni per la navigazione avanti e indietro
 
-la navigazione da tastiera della ricerca non va
-
 inoltre c'é un 33.333333333333px forzato nel css della barra di ricerca
 
 dare le priorità per pagefind, inoltre mathjax non agisce sulla ricerca

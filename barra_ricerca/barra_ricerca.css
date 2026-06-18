@@ -42,7 +42,7 @@
 
   background: var(--search-background);
   max-height: 0;
-  overflow: hidden;
+  overflow-y: scroll;
   pointer-events: none;
 
   z-index: 1000;
@@ -115,6 +115,7 @@ mark {
   }
 
   #searchResults {
+    text-align: left;
     position: absolute;
     width: 75vw;
     top: 33.333333px;
