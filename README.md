@@ -113,4 +113,4 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 finire il footer, con i bottoni per la navigazione avanti e indietro
 
-dare le priorità per pagefind, inoltre mathjax non agisce sulla ricerca
+dare le priorità per pagefind
