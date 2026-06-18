@@ -57,6 +57,17 @@ function Search(input, results) {
       results.appendChild(div);
     });
 
+    // Renderizza la matematica nei risultati appena inseriti
+    renderMathInElement(results, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true },
+      ],
+      throwOnError: false,
+    });
+
     results.classList.add("open");
   });
 }
