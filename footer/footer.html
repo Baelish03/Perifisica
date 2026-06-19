@@ -1,6 +1,36 @@
 <link rel="stylesheet" href="/footer/footer.css">
 
 <div class="contenuto-footer">
+
+  <div class="post-nav">
+    <div>
+      {% if page.previous.url %}
+      <a href="{{page.previous.url}}">
+        <span class="unsighted">Previous post:</span>
+        <span aria-hidden="true">&laquo;</span>
+        {{page.previous.title}}
+      </a>
+      {% endif %}
+    </div>
+    <div class="post-nav-next">
+      {% if page.next.url %}
+      {% assign next_post_title_array = page.next.title | split: " " %}
+      {% assign next_post_cape_length = next_post_title_array | size | minus: 1 %}
+      {% assign next_post_cape = page.next.title | truncatewords: next_post_cape_length, "" %}
+      {% assign next_post_spit = next_post_title_array | last %}
+      <a href="{{page.next.url}}">
+        <span class="unsighted">Next post:</span>
+        {{next_post_cape}}
+        <span style="white-space: nowrap;">
+          {{next_post_spit}}
+          <span aria-hidden="true">&raquo;</span>
+        </span>
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+
   <div class="logo-area">
     <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" width="25.48439pt" height="38.953125pt"
       viewBox="0 0 25.48439 38.953124" version="1.1" id="svg128" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -74,9 +104,9 @@
   <p class="footer-desc">
     Un progetto di studenti di fisica dell'Università di Padova. Guide, appunti e risorse.
   </p>
-  </div>
+</div>
 
-  <!--
+<!--
   <div class="pf5-social">
     <a href="https://github.com/perifisica" target="_blank">
       <svg viewBox="0 0 16 16">
@@ -85,7 +115,7 @@
       </svg 
       -->
 
-    <!--  GitHub
+<!--  GitHub
     </a>
     <a href="https://instagram.com/" target="_blank">
       <svg viewBox="0 0 24 24">
@@ -97,7 +127,7 @@
   </div
   -->
 
-  <!--
+<!--
 
 <div class="pf5-bottom">
   <span class="pf5-copy">© 2025 Perifisica </span>

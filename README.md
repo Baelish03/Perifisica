@@ -112,5 +112,7 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 ### Errori da correggere
 
 finire il footer, con i bottoni per la navigazione avanti e indietro
+falle con testo in blu e sfondo con transizione quando ci passi sopra, con una frecca viola con gradiente di sfondo che si allunga
+per mobile niente transizione, colore fisso
 
 dare le priorità per pagefind
