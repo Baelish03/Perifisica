@@ -1,0 +1,45 @@
+- materia: Fisica sperimentale
+  capitoli:
+    - titolo: Metodo scientifico
+      lezioni:
+        - titolo: La fisica
+          url: 
+        - titolo: Cenni storici
+          url: 
+        - titolo: Il metodo
+          url: 
+        - titolo: Fondamenti e applicazioni
+          url:
+        - titolo: Esempi
+          url:
+        - titolo: Compendio
+          url:
+    - titolo: Metrologia
+      lezioni:
+      - titolo: Introduzione
+        url:
+      - titolo: Vocabolario
+        url:
+      - titolo: Unità di misura
+        url:
+- materia: Fisica 1
+- materia: LaTeX 
+  capitoli: 
+  - titolo: Introduzione
+    lezioni: 
+    - titolo: Cosa è \(\LaTeX\) e perché usarlo
+      url:
+    - titolo: Overleaf
+      url:
+    - titolo: installazione locale
+      url:
+  - titolo: Fondamenti
+    lezioni:
+    - titolo: Struttura di un documento
+      url: 
+    - titolo: Testo e formattazione
+      url:
+    - titolo: Figure e tabelle
+      url:
+    - titolo: Equazioni di base
+      url:
