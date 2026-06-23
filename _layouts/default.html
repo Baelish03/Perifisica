@@ -240,11 +240,51 @@
 
                     <article>
                          {{ content }}
+
+                         <div class="nav-avanti-indietro">
+                              {% assign lezioni = "" | split: "" %}
+                              {% for materia in site.data.indice %}
+                              {% for capitolo in materia.capitoli %}
+                              {% for lezione in capitolo.lezioni %}
+                              {% assign lezioni = lezioni | push: lezione %}
+                              {% endfor %}
+                              {% endfor %}
+                              {% endfor %}
+
+                              {% assign corrente = -1 %}
+                              {% for lezione in lezioni %}
+                              {% if lezione.url == page.url %}
+                              {% assign corrente = forloop.index0 %}
+                              {% endif %}
+                              {% endfor %}
+
+                              <div class="lezione-precedente">
+                                   {% if corrente > 0 %}
+                                   {% assign prec = corrente | minus: 1 %}
+                                   <div class="lez-prec-colore">
+                                        <a class="link-footer" href="{{ lezioni[prec].url }}">← {{ lezioni[prec].titolo
+                                             }}</a>
+                                   </div>
+                                   {% endif %}
+                              </div>
+
+                              <div class="lezione-successiva">
+                                   {% if corrente < lezioni.size | minus: 1 %} {% assign succ=corrente | plus: 1 %} <div
+                                        class="lez-succ-colore">
+                                        <a class="link-footer" href="{{ lezioni[succ].url }}">
+                                             {{
+                                             lezioni[succ].titolo }} →</a>
+                              </div>
+                              {% endif %}
+                         </div>
                     </article>
                </div>
 
+
                <div class="column right" include-html="/colonna_destra/colonna_destra.html">
                </div>
+
+
      </main>
 
      <footer class="footer" include-html="/footer/footer.html">
