@@ -223,13 +223,32 @@ pre {
 }
 
 .lezione-precedente {
-  justify-content: flex-end;
+  justify-content: end;
   padding-right: 15%;
 }
 
 .lezione-successiva {
   justify-content: flex-start;
   padding-left: 15%;
+}
+
+
+.lez-prec-colore {
+  width: 100%;
+  margin-left: auto;
+  border-right: 3px solid transparent;
+  background-color: transparent;
+  border-radius: 50px 0px 0px 50px;
+  padding-right: 5px;
+
+  transition: width .25s ease-out, border-right 0.125s ease-out, background-color 0.25s ease-out;
+}
+
+.lez-prec-colore:hover {
+  width: 200%;
+  border-right: 3px solid var(--primary);
+  border-left: 3px solid var(--primary);
+  background-color: color-mix(in srgb, var(--primary) 50%, transparent);
 }
 
 .lez-succ-colore {
@@ -249,22 +268,6 @@ pre {
   background-color: color-mix(in srgb, var(--primary) 50%, transparent);
 }
 
-.lez-prec-colore {
-  width: 100%;
-  border-right: 3px solid transparent;
-  background-color: transparent;
-  border-radius: 50px 0px 0px 50px;
-  padding-right: 5px;
-
-  transition: width .25s ease-out, border-left 0.125s ease-out, background-color 0.25s ease-out;
-}
-
-.lez-prec-colore:hover {
-  width: 200%;
-  border-right: 3px solid var(--primary);
-  border-left: 3px solid var(--primary);
-  background-color: color-mix(in srgb, var(--primary) 50%, transparent);
-}
 
 .link-footer:hover {
   color: var(--link);
