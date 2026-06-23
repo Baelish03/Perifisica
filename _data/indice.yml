@@ -1,13 +1,19 @@
+- materia: Home
+  capitoli:
+  - titolo: Home
+    lezioni:
+    - titolo: Pagina principale
+      url: /index.html
 - materia: Fisica sperimentale
   capitoli:
     - titolo: Metodo scientifico
       lezioni:
         - titolo: La fisica
-          url: 
+          url: /pages/fisica-sperimentale/metodo-scientifico/introduzione-alla-fisica.html
         - titolo: Cenni storici
-          url: 
+          url: /pages/fisica-sperimentale/metodo-scientifico/cenni-storici.html
         - titolo: Il metodo
-          url: 
+          url: /pages/fisica-sperimentale/metodo-scientifico/metodo.html
         - titolo: Fondamenti e applicazioni
           url:
         - titolo: Esempi
@@ -15,24 +21,24 @@
         - titolo: Compendio
           url:
     - titolo: Metrologia
-      lezioni:
+      lezioni: 
       - titolo: Introduzione
-        url:
+        url: /pages/fisica-sperimentale/metrologia/introduzione.html
       - titolo: Vocabolario
-        url:
+        url: /pages/fisica-sperimentale/metrologia/vocabolario.html
       - titolo: Unità di misura
-        url:
+        url: /pages/fisica-sperimentale/metrologia/unita-di-misura.html
 - materia: Fisica 1
 - materia: LaTeX 
   capitoli: 
   - titolo: Introduzione
     lezioni: 
     - titolo: Cosa è \(\LaTeX\) e perché usarlo
-      url:
+      url: /pages/latex/introduzione/cosa-e-latex.html
     - titolo: Overleaf
-      url:
+      url: /pages/latex/introduzione/overleaf.html
     - titolo: installazione locale
-      url:
+      url: /pages/latex/introduzione/installazione-locale.html
   - titolo: Fondamenti
     lezioni:
     - titolo: Struttura di un documento
