@@ -262,7 +262,7 @@
                                    {% if corrente > 0 %}
                                    {% assign prec = corrente | minus: 1 %}
                                    <div class="lez-prec-colore">
-                                        <a class="link-footer" href="{{ lezioni[prec].url }}">← {{ lezioni[prec].titolo
+                                        <a class="link-footer" id="prec-link-footer" href="{{ lezioni[prec].url }}">← {{ lezioni[prec].titolo
                                              }}</a>
                                    </div>
                                    {% endif %}
@@ -271,7 +271,7 @@
                               <div class="lezione-successiva">
                                    {% if corrente < lezioni.size | minus: 1 %} {% assign succ=corrente | plus: 1 %} <div
                                         class="lez-succ-colore">
-                                        <a class="link-footer" href="{{ lezioni[succ].url }}">
+                                        <a class="link-footer" id="succ-link-footer" href="{{ lezioni[succ].url }}">
                                              {{
                                              lezioni[succ].titolo }} →</a>
                               </div>

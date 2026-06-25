@@ -9,7 +9,7 @@
   --background: #EEF3F6;
   --button-background: #1f1f1f;
   --search-background: white;
-  --code-background: #dddddd; 
+  --code-background: #dddddd;
 }
 
 /* bisogna definire globalmente h1 per le compatibilità tra i diversi browser */
@@ -220,6 +220,8 @@ pre {
   display: grid;
   padding: 5px;
   margin: 5px;
+  position: relative;
+  height: 2.5rem;
 }
 
 .lezione-precedente {
@@ -232,43 +234,52 @@ pre {
   padding-left: 15%;
 }
 
-
-.lez-prec-colore {
-  width: 100%;
-  margin-left: auto;
-  border-right: 3px solid transparent;
+.lez-prec-colore,
+.lez-succ-colore {
+  position: relative;
+  left: 0;
+  display: grid;
+  align-items: center;
+  width: 13vw;
   background-color: transparent;
-  border-radius: 50px 0px 0px 50px;
-  padding-right: 5px;
-
-  transition: width .25s ease-out, border-right 0.125s ease-out, background-color 0.25s ease-out;
+  transition: width .25s ease-out, border-left 0.125s ease-out, border-left 0.125s ease-out, background-color 0.25s ease-out;
 }
 
-.lez-prec-colore:hover {
-  width: 200%;
-  border-right: 3px solid var(--primary);
-  border-left: 3px solid var(--primary);
-  background-color: color-mix(in srgb, var(--primary) 50%, transparent);
+.lez-prec-colore {
+  border-right: 3px solid transparent;
+  border-radius: 50px 0px 0px 50px;
 }
 
 .lez-succ-colore {
-  width: 100%;
   border-left: 3px solid transparent;
-  background-color: transparent;
   border-radius: 0px 50px 50px 0px;
-  padding-left: 5px;
-
-  transition: width .25s ease-out, border-left 0.125s ease-out, background-color 0.25s ease-out;
 }
 
+.lez-prec-colore:hover,
 .lez-succ-colore:hover {
-  width: 200%;
+  width: 18vw;
   border-left: 3px solid var(--primary);
   border-right: 3px solid var(--primary);
   background-color: color-mix(in srgb, var(--primary) 50%, transparent);
 }
 
+.link-footer{
+  display: grid;
+  align-items: center;
+}
 
 .link-footer:hover {
   color: var(--link);
+}
+
+#prec-link-footer {
+  position: absolute;
+  padding-right: 2px;
+  right: 0;
+}
+
+#succ-link-footer {
+  position: absolute;
+  padding-left: 2px;
+  left: 0;
 }
