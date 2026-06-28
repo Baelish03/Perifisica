@@ -10,8 +10,9 @@ Questo è il link:
 
 https://github.com/Baelish03/Perifisica
 
-Una volta scaricata la cartella usate visual studio code e installate l'estensione "Live server" che vi aprirà l'html completo.
-Questo perché se aprirete con il browser direttamente il file html, non viene caricato il javascript e la pagina esce senza indice, barra destra e barra di ricerca.
+Una volta scaricata la cartella usate visual studio code per modificare il codice, mentre per visualizzare il risultato delle proprie modifiche è necessario usare Jekyll.
+Inoltre, se volete usare la barra di ricerca, bisogna avviare anche Pagefind.
+Jekyll compone il sito eliminando la composizione precedente e Pagefind lo indicizza sulla base di quello che ha creato Jekyll.
 
 ## Struttura attuale della repository
 
@@ -21,30 +22,45 @@ Questo perché se aprirete con il browser direttamente il file html, non viene c
 
     - barra_ricerca.css contiene per lo più colori, dimensioni e sistemazioni grafiche
 
-    - search.js è la funzione di ricerca vera e propria che chiama highlight.js
-
-    - highlight.js evidenzia durante la ricerca la porzione di testo corrispondente alla ricerca
-
-    - search-index.json è un database, come se fosse un excel (per intenderci) e associa titolo, collegamento locale della pagina html e contenuto. search.js cerca nel contenuto ese clicchi sul risultato il collegamento locale ti spedisce sulla nuova pagina.
+    - search.js fa funzionare la barra con la navigazione da tastiera e chiama pagefind.js, che è la navigazione vera e propria.
 
 - colonna destra
 
-    - colonna_destra.css e .html sono le parti legate all'accessibilità. Intendevo mettere lì anche la pubblicità ma per ora non se ne parla altrimenti serve la partita iva
+    - colonna_destra.css e .html sono le parti legate all'aspetto.
 
-    - pulsanti.js semplicemente fa funzionare i pulsanti modificando il css
+    - pulsanti.js semplicemente fa funzionare i pulsanti modificando il css.
 
 
 - colonna sinistra indice 
 
-    - indice.html è l'indice dei capitoli, l'ho abbozzato alla buona. Zaccaria ha preparato la lista dei capitoli, va trascritta nell'html ma verrà fatto mano a mano che le pagine vengono create
+    - indice.html è l'indice dei capitoli, l'ho abbozzato alla buona. Zaccaria ha preparato la lista dei capitoli, va trascritta nell'html ma verrà fatto mano a mano che le pagine vengono create.
 
-    - stile_indice.css è lo stile dell'indice
+    Vorrei implementarlo con jekyll in modo da rendere più semplice la risistemazione delle pagine, qualora ce ne sia bisogno.
 
-    - indice.js contiene le animazioni di apertura e chiusura delle tendine dell'indice e la colorazione automatica nell'indice del titoletto della pagina che si sta visitando 
+    - stile_indice.css è lo stile dell'indice.
 
-- Inter è il font sans-serif per il testo, l'unico file indispensabile per il sito è il woff2 che contiene il font compresso
+    - indice.js contiene le animazioni di apertura e chiusura delle tendine dell'indice e la colorazione automatica nell'indice del titoletto della pagina che si sta visitando.
+    
+- _data è una cartela di jekyll
+    - indice.yml contiene l'ordine delle pagine, da qui attinge la navigazione nel footer e (non ancora fatto) attingerà indice.html.
 
-- Libre-Baskerville come prima, ma in questo caso è il serif per i titoli.
+- font
+    - Inter: la cartella contiene tutti gli spessori e gli stili dell'inter, mentre gli unici file indispensabili per il sito sono i woff2.
+
+    - Libre-Baskerville come prima, ma in questo caso è il serif per i titoli.
+
+    - opendyslexic come prima, è il font per i dislessici, usato per cambiare aspetto.
+
+- footer
+    - footer .css e .html, attualmente contengono ben poco solo come placeholder. È tra le cose da fare.
+
+- inline navigation
+    - inline navigation .html, .css, .js creano in alto nella pagina un table of content in stile latex, a meno che la pagina non abbia un unico capitolo come la pagina iniziale. L'algoritmo si basa sulla presenza di h1, h2, h3 e h4 negli html.
+
+- katex è una libreria per usare latex nei siti web, è molto leggera. attualmente sono importati nel sito katex.min.css e .js che sono la versione più leggera che copre solo le funzioni base  
+
+- _layout è una cartella di jekyll
+    - default.html
 
 - logo ha il logo in tutti i formati utili 
     
@@ -111,12 +127,18 @@ Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola color
 
 ### Errori da correggere
 
-finire il footer, con i bottoni per la navigazione avanti e indietro
+1) finire il footer, con i bottoni per la navigazione avanti e indietro
 falle con testo in blu e sfondo con transizione quando ci passi sopra, con una frecca viola con gradiente di sfondo che si allunga
 per mobile niente transizione, colore fisso
 
-l'animazione verso sinistra funziona, ma la width non si adatta a contenuto, fose con min-witdh si risolve, inoltre va fatta l'ui per mobile
+ui per mobile da fare
 
 sulla homepage la navigazione non va affatto
 
-dare le priorità per pagefind
+2) l'indice.html deve prendere le pagine dal .yml
+
+3) i fetch di includeHTML devono essere implementati con jekyll
+
+4) dare le priorità per pagefind
+
+5) aggiornare il readme in modo che tutti possano compilare
