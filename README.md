@@ -14,6 +14,26 @@ Una volta scaricata la cartella usate visual studio code per modificare il codic
 Inoltre, se volete usare la barra di ricerca, bisogna avviare anche Pagefind.
 Jekyll compone il sito eliminando la composizione precedente e Pagefind lo indicizza sulla base di quello che ha creato Jekyll.
 
+## Installare Jekyll
+
+### Windows 
+https://jekyllrb.com/docs/installation/windows/
+
+### Linux
+https://jekyllrb.com/docs/installation/other-linux/
+
+## Installare Pagefind
+https://pagefind.app/docs/installation/ e suggerisco di installarlo tramite python pip
+
+## Avviare il sito
+1. Apri un terminale nella cartella del sito
+2. Per avviarlo senza barra di ricerca: `bundle exec jekyll serve`
+
+Vi verrà resituito un link di questo tipo  `http://localhost:4000` da cui si può visitare il sito
+3. Per la barra di ricerca bisogna fermare jekyll su terminale (CTRL+D su windows) e avviare pagefind 
+`python3 -m pagefind --site _site --serve` che restituisce un nuovo link diverso dal precedente in cui la ricerca funzionerà.
+
+
 ## Struttura attuale della repository
 
 - barra_ricerca
@@ -60,10 +80,9 @@ Jekyll compone il sito eliminando la composizione precedente e Pagefind lo indic
 - katex è una libreria per usare latex nei siti web, è molto leggera. attualmente sono importati nel sito katex.min.css e .js che sono la versione più leggera che copre solo le funzioni base  
 
 - _layout è una cartella di jekyll
-    - default.html
+    - default.html fa da base a tutti gli html, in modo da tenere nelle varie pagine solo il testo e non il layout
 
 - logo ha il logo in tutti i formati utili 
-    
     - favicon.webp è l'icon piccolina prima del nome della scheda in alto
 
     - svg è il vettoriale in inkscape
@@ -73,37 +92,38 @@ Jekyll compone il sito eliminando la composizione precedente e Pagefind lo indic
     - il resto è del latex per scrivere il logo
 
 - mobile 
+    - mobile.html contiene solo i pulsanti della versione mobile che sono nascosti in quella deshtop
+
     - mobile.js fa funzionare i pulsanti che ci sono nella versione mobile: la barra destra e sinistra nella versione mobile sono apribili mediane dei pulsantini laterali
 
-    - gli altri file definiscono lo stile della pagina per diversi tipi di dispositivi
-
-
-- opendyslexic contiene il file del font (non è protetto da copyright)
-
+    - mobile.css descrive lo stile nelle altre versioni
 
 - pages
-    - sono le pagine vere e prorpie su cui scriveremo le informazioni
+    - sono le pagine vere e prorpie su cui scriveremo le informazioni. Grazie a Jekyll possono essere scritte in html o in markdown o in un misto dei due.
 
+- prism è una libreria per la syntax highlight del codice 
+
+- _site è la copia esatta del sito dopo che jekyll l'ha processata, è quello che va online e viene ricreata ogni volta che jekyll viene avviato.
 
 - readme.md è questo file. È scritto in markdown, è un altro linguaggio di markup come latex o html
 
+- run.sh sono i comandi che servono per jekyll e page find. volevo farci un file di avvio automatico, ma dato che sono due comandi in totale, è più un memo (da eliminare)
+
+- image_enlarge.js rende le immagini a schermo intero.
 
 - include_html.js è un file javascript e serve ad include un html in un altro, in maniera simile al comando \include di latex.
 Questo è stato fatto perché l'indice a sinistra va messo in tutte le pagine quindi lo creo una volta sola e poi lo includo.
 Stessa cosa è stata fatta per la colonna di destra e la barra di ricerca
 
-
 - main.js: javascript parallelizza i comandi per risparmiare tempo, questo comporta che, ad esempio, il programma che fa funzionare i pulsanti a destra venga caricato prima che i pulsanti stessi siano aggiunti con include_html.js. main.js previene questo con await(), le altre funzioni invece vengono solo inizializzate e possono tranquillamente andare in parallelo.
 
+- pop-over.js gestisce i pop over, cioè le note che ho creato al posto delle note a piè di pagina.
 
-- style.css è lo stile generale. Attualmente contiene font, le tre colonne, lo sfondo.
+- sticky-titles.js gestisce i titoletti che si appiccicano in alto nella pagina.
 
+- style.css è lo stile generale. Contiene lo stile della pagina non prioritario. Quello prioritario è inline nell'html per una maggiore velocità.
  
 - index.html è il file della pagina principale. Il nome index è obligatorio ed è la pagina iniziale del sito.
-
-- index_sync.py sincronizza tutte le pagine html rendendole uguali a index.html. Ovviamente questo non vale per article e title
-
-- search-index-creation.py aggiorna il file search-index.json
 
 ## Compiti attuali
 
@@ -118,11 +138,7 @@ Quindi non pensate: "non lo dico perché è troppo difficile", qualsiasi cosa pu
 
 ### Scrittura
 
-`QUESTO È IL COMPITO PIÙ SEMPLICE DAL PUNTO DI VISTA DELLA PROGRAMMAZIONE`
-
-Basta solo indentare bene, avere un bello stile, ogni tanto qualche parola colorata, ogni tanto qualche immagine carina (che posso fare io)
-
-`non prendete da internet che c'è il copyright`
+Potete scegliere qualsiasi capitolo. Attualmente ho iniziato la parte di Latex, ma stavo pensando di spostarmi su fisica 1.
 
 
 ### Errori da correggere
