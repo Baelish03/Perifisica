@@ -27,9 +27,8 @@ https://pagefind.app/docs/installation/ e suggerisco di installarlo tramite pyth
 
 ## Avviare il sito
 1. Apri un terminale nella cartella del sito
-2. Per avviarlo senza barra di ricerca: `bundle exec jekyll serve`
-
-Vi verrà resituito un link di questo tipo  `http://localhost:4000` da cui si può visitare il sito
+2. Per avviarlo senza barra di ricerca: `bundle exec jekyll serve` 
+    Vi verrà resituito un link di questo tipo  `http://localhost:4000` da cui si può visitare il sito
 3. Per la barra di ricerca bisogna fermare jekyll su terminale (CTRL+D su windows) e avviare pagefind 
 `python3 -m pagefind --site _site --serve` che restituisce un nuovo link diverso dal precedente in cui la ricerca funzionerà.
 
