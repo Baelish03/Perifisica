@@ -143,18 +143,10 @@ Potete scegliere qualsiasi capitolo. Attualmente ho iniziato la parte di Latex, 
 
 ### Errori da correggere
 
-1) finire il footer, con i bottoni per la navigazione avanti e indietro
-falle con testo in blu e sfondo con transizione quando ci passi sopra, con una frecca viola con gradiente di sfondo che si allunga
-per mobile niente transizione, colore fisso
-
-ui per mobile da fare
-
-sulla homepage la navigazione non va affatto
+1) navigazione footer finita, ma i tasti asimmetrici in altezza sono esteticamente strani, ma va risolto tramite js, quindi per ora no
 
 2) l'indice.html deve prendere le pagine dal .yml
 
 3) i fetch di includeHTML devono essere implementati con jekyll
 
 4) dare le priorità per pagefind
-
-5) aggiornare il readme in modo che tutti possano compilare

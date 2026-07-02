@@ -1,4 +1,4 @@
-@media screen and (max-width: 1400px) {
+/*@media screen and (max-width: 1400px) {
   .left {
     width: 25%;
   }
@@ -11,9 +11,22 @@
   .right {
     width: 25%;
   }
-}
+}*/
 
 @media screen and (max-width: 1200px) {
+  .left {
+    width: 20%;
+  }
+
+  .middle {
+    padding: 10px 15px;
+    width: 60%;
+  }
+
+  .right {
+    width: 20%;
+  }
+
   /* ==================== MARGIN INDICE =========================== */
   .h3_indice {
     margin-left: 1rem;
@@ -23,10 +36,21 @@
     margin-left: 1.5rem;
     margin-top: -0.5rem;
   }
+
+  /* ================= NAVIGAZIONE FOOTER =================== */
+  .lez-prec-colore,
+  .lez-succ-colore {
+    width: 16vw;
+  }
+
+  #prec-link-footer,
+  #succ-link-footer {
+    width: 15vw;
+  }
 }
 
 @media screen and (max-width: 992px) {
-  .row{
+  .row {
     padding-right: 0;
   }
 
@@ -146,12 +170,11 @@
     scrollbar-width: none;
   }
 
-
   .dropdown_aperto {
     width: calc(50vw - 5px);
   }
 
-  .dropbutton{
+  .dropbutton {
     padding-left: 0;
   }
 
@@ -188,6 +211,33 @@
 
     scrollbar-width: none;
   }
+
+  /* ================= NAVIGAZIONE FOOTER =================== */
+  .lez-prec-colore,
+  .lez-succ-colore {
+    width: 20vw;
+    background-color: color-mix(in srgb, var(--primary) 50%, transparent);
+    border-left: 3px solid var(--primary);
+    border-right: 3px solid var(--primary);
+  }
+
+  .lez-prec-colore {
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .lez-succ-colore {
+    border-radius: 0px 50px 50px 0px;
+  }
+
+  #prec-link-footer,
+  #succ-link-footer {
+    width: 19vw;
+  }
+
+  .lez-prec-colore:hover,
+  .lez-succ-colore:hover {
+    width: 20vw;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -207,13 +257,44 @@
   }
 
   /* ============= SPAZIATURE ============== */
-  ol, ul{
+  ol,
+  ul {
     padding-left: 15px;
+  }
+
+  /* ================= NAVIGAZIONE FOOTER =================== */
+  .lezione-precedente,
+  .lezione-successiva {
+    margin: 0;
+    padding: 0;
+  }
+
+  .lezione-precedente {
+    padding-right: 8vw;
+  }
+
+  .lezione-successiva {
+    padding-left: 8vw;
+  }
+
+  .lez-prec-colore,
+  .lez-succ-colore {
+    width: 35vw;
+  }
+
+  #prec-link-footer,
+  #succ-link-footer {
+    width: 30vw;
+  }
+
+  .lez-prec-colore:hover,
+  .lez-succ-colore:hover {
+    width: 35vw;
   }
 }
 
 @media screen and (max-width: 350px) {
-  body{
+  body {
     text-align: left;
   }
 
@@ -229,5 +310,29 @@
   /* ======================= COLONNA DESTRA ===========*/
   .right_aperta {
     width: 80vw;
+  }
+
+  /* ================= NAVIGAZIONE FOOTER =================== */
+  .lezione-precedente {
+    padding-right: 3vw;
+  }
+
+  .lezione-successiva {
+    padding-left: 3vw;
+  }
+
+  .lez-prec-colore,
+  .lez-succ-colore {
+    width: 40vw;
+  }
+
+  #prec-link-footer,
+  #succ-link-footer {
+    width: 35vw;
+  }
+
+  .lez-prec-colore:hover,
+  .lez-succ-colore:hover {
+    width: 40vw;
   }
 }
