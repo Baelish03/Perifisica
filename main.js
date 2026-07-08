@@ -8,9 +8,6 @@ function loadScript(src) {
   });
 }
 
-import { includeHTML } from "./include_html.js";
-await includeHTML();
-
 // KaTeX: caricamento sequenziale in parallelo col Promise.all
 const katexReady = loadScript('/katex/katex.min.js')
   .then(() => loadScript('/katex/contrib/auto-render.min.js'))
@@ -25,14 +22,14 @@ const katexReady = loadScript('/katex/katex.min.js')
 
 const [Search, Pulsanti, Indice, Mobile, Allarga, PopOver, InlineNav, StickyTitles] =
   await Promise.all([
-    import("./barra_ricerca/search.js"),
-    import("./colonna_destra/pulsanti.js"),
-    import("./colonna_sinistra_indice/indice.js"),
-    import("./mobile/mobile.js"),
-    import("./image_enlarge.js"),
-    import("./pop_over.js"),
-    import("./sticky_titles.js"),
-    import("./inline_navigation/inline_navigation.js"),
+    import("./assets/js/barra_ricerca.js"),
+    import("./assets/js/colonna_destra.js"),
+    import("./assets/js/indice.js"),
+    import("./assets/js/mobile.js"),
+    import("./assets/js/image_enlarge.js"),
+    import("./assets/js/pop_over.js"),
+    import("./assets/js/sticky_titles.js"),
+    import("./assets/js/inline_navigation.js"),
     katexReady]);
 
 Search.init();

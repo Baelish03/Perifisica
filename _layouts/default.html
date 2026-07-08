@@ -207,7 +207,7 @@
      <link rel="icon" sizes="32x32" href="/logo/favicon.webp">
      <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
 
-     <link rel="stylesheet" href="/style.css">
+     <link rel="stylesheet" href="/assets/style.css">
      <link rel="stylesheet" id="default-theme" href="/prism/prism.css">
      <link rel="stylesheet" id="okaidia-theme" href="/prism/prism-okaidia.css" disbled>
      <link rel="stylesheet" href="/katex/katex.min.css">
@@ -226,23 +226,23 @@
      </header>
 
      <div class="topbar input">
-          {% include barra_ricerca/barra_ricerca.html%}
+          {% include barra_ricerca.html%}
      </div>
 
      <div id="bottoni_mobile">
-          {% include mobile/mobile.html%}
+          {% include mobile.html%}
      </div>
 
      <main>
           <div class="row">
                <nav class="column left">
-                    {% include colonna_sinistra_indice/indice.html%}
+                    {% include indice.html%}
                </nav>
 
                <div class="column middle">
 
                     <div class="inline_navigation">
-                         {% include inline_navigation/inline_navigation.html%}
+                         {% include inline_navigation.html%}
                     </div>
 
                     <article>
@@ -291,17 +291,17 @@
 
 
                <div class="column right">
-                    {% include colonna_destra/colonna_destra.html %}
+                    {% include colonna_destra.html %}
                </div>
 
 
      </main>
 
      <footer class="footer">
-          {% include footer/footer.html %}
+          {% include footer.html %}
      </footer>
 
-     <!-- <link rel="stylesheet" href="/mobile/mobile.css"> -->
+     <link rel="stylesheet" href="/assets/main.css">
      <script type="module" src="/main.js" defer></script>
      <script type="module" src="/prism/prism.js" data-manual></script>
 </body>
