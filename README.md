@@ -144,8 +144,6 @@ Potete scegliere qualsiasi capitolo. Attualmente ho iniziato la parte di Latex, 
 
 1) navigazione footer finita, ma i tasti asimmetrici in altezza sono esteticamente strani, ma va risolto tramite js, quindi per ora no
 
-2) l'indice.html deve prendere le pagine dal .yml
+2) i fetch di includeHTML devono essere implementati con jekyll
 
-3) i fetch di includeHTML devono essere implementati con jekyll
-
-4) dare le priorità per pagefind
+3) dare le priorità per pagefind
