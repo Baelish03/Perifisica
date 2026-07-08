@@ -56,7 +56,7 @@
                color: var(--text);
                line-height: 1.65;
                text-align: justify;
-				overflow-x: hidden;
+               overflow-x: hidden;
           }
 
           .topbar {
@@ -208,6 +208,7 @@
      <link rel="icon" sizes="16x16" href="/logo/favicon.webp">
 
      <link rel="stylesheet" href="/assets/style.css">
+     <link rel="stylesheet" href="/assets/main.css">
      <link rel="stylesheet" id="default-theme" href="/prism/prism.css">
      <link rel="stylesheet" id="okaidia-theme" href="/prism/prism-okaidia.css" disbled>
      <link rel="stylesheet" href="/katex/katex.min.css">
@@ -248,7 +249,7 @@
                     <article>
                          {{ content }}
 
-                    {% unless page.nascondi_nav %}
+                         {% unless page.nascondi_nav %}
                          <div class="nav-avanti-indietro">
                               {% assign lezioni = "" | split: "" %}
                               {% for materia in site.data.indice %}
@@ -270,7 +271,8 @@
                                    {% if corrente > 0 %}
                                    {% assign prec = corrente | minus: 1 %}
                                    <div class="lez-prec-colore">
-                                        <a class="link-footer" id="prec-link-footer" href="{{ lezioni[prec].url }}">← {{ lezioni[prec].titolo
+                                        <a class="link-footer" id="prec-link-footer" href="{{ lezioni[prec].url }}">← {{
+                                             lezioni[prec].titolo
                                              }}</a>
                                    </div>
                                    {% endif %}
@@ -278,8 +280,7 @@
 
                               <div class="lezione-successiva">
                                    {% assign ultimo_indice = lezioni.size | minus: 1 %}
-                                   {% if corrente < ultimo_indice %} 
-                                   {% assign succ=corrente | plus: 1 %} <div
+                                   {% if corrente < ultimo_indice %} {% assign succ=corrente | plus: 1 %} <div
                                         class="lez-succ-colore">
                                         <a class="link-footer" id="succ-link-footer" href="{{ lezioni[succ].url }}">
                                              {{
@@ -287,7 +288,7 @@
                               </div>
                               {% endif %}
                          </div>
-                    {% endunless %}
+                         {% endunless %}
                     </article>
                </div>
 
@@ -303,7 +304,6 @@
           {% include footer.html %}
      </footer>
 
-     <link rel="stylesheet" href="/assets/main.css">
      <script type="module" src="/main.js" defer></script>
      <script type="module" src="/prism/prism.js" data-manual></script>
 </body>
