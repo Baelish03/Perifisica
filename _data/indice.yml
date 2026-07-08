@@ -42,10 +42,10 @@
   - titolo: Fondamenti
     lezioni:
     - titolo: Struttura di un documento
-      url: 
+      url: /pages/latex/fondamenti/struttura-documento.html
     - titolo: Testo e formattazione
-      url:
+      url: /pages/latex/fondamenti/testo-formattazione.html
     - titolo: Figure e tabelle
-      url:
+      url: /pages/latex/fondamenti/figure-tabelle.html
     - titolo: Equazioni di base
-      url:
+      url: /pages/latex/fondamenti/equazioni-base.html

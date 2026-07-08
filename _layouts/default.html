@@ -277,7 +277,9 @@
                               </div>
 
                               <div class="lezione-successiva">
-                                   {% if corrente < lezioni.size | minus: 1 %} {% assign succ=corrente | plus: 1 %} <div
+                                   {% assign ultimo_indice = lezioni.size | minus: 1 %}
+                                   {% if corrente < ultimo_indice %} 
+                                   {% assign succ=corrente | plus: 1 %} <div
                                         class="lez-succ-colore">
                                         <a class="link-footer" id="succ-link-footer" href="{{ lezioni[succ].url }}">
                                              {{
