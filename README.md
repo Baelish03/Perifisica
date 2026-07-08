@@ -144,6 +144,8 @@ Potete scegliere qualsiasi capitolo. Attualmente ho iniziato la parte di Latex, 
 
 1) navigazione footer finita, ma i tasti asimmetrici in altezza sono esteticamente strani, ma va risolto tramite js, quindi per ora no
 
-2) i fetch di includeHTML devono essere implementati con jekyll
+2) allegerire file dei font
 
-3) dare le priorità per pagefind
+3) aggiornare il readme
+
+4) dare le priorità per pagefind

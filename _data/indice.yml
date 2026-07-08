@@ -37,7 +37,7 @@
       url: /pages/latex/introduzione/cosa-e-latex.html
     - titolo: Overleaf
       url: /pages/latex/introduzione/overleaf.html
-    - titolo: installazione locale
+    - titolo: Installazione locale
       url: /pages/latex/introduzione/installazione-locale.html
   - titolo: Fondamenti
     lezioni:
