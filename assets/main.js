@@ -22,14 +22,14 @@ const katexReady = loadScript('/katex/katex.min.js')
 
 const [Search, Pulsanti, Indice, Mobile, Allarga, PopOver, InlineNav, StickyTitles] =
   await Promise.all([
-    import("./assets/js/barra_ricerca.js"),
-    import("./assets/js/colonna_destra.js"),
-    import("./assets/js/indice.js"),
-    import("./assets/js/mobile.js"),
-    import("./assets/js/image_enlarge.js"),
-    import("./assets/js/pop_over.js"),
-    import("./assets/js/sticky_titles.js"),
-    import("./assets/js/inline_navigation.js"),
+    import("./js/barra_ricerca.js"),
+    import("./js/colonna_destra.js"),
+    import("./js/indice.js"),
+    import("./js/mobile.js"),
+    import("./js/image_enlarge.js"),
+    import("./js/pop_over.js"),
+    import("./js/sticky_titles.js"),
+    import("./js/inline_navigation.js"),
     katexReady]);
 
 Search.init();
