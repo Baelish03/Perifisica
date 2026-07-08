@@ -35,33 +35,51 @@ https://pagefind.app/docs/installation/ e suggerisco di installarlo tramite pyth
 
 ## Struttura attuale della repository
 
-- barra_ricerca
- 
-    - barra_ricerca.html è molto semplice: ha solo un oggetto input su cui scrive ed uno su cui compariranno i risultati della ricerca
-
-    - barra_ricerca.css contiene per lo più colori, dimensioni e sistemazioni grafiche
-
-    - search.js fa funzionare la barra con la navigazione da tastiera e chiama pagefind.js, che è la navigazione vera e propria.
-
-- colonna destra
-
-    - colonna_destra.css e .html sono le parti legate all'aspetto.
-
-    - pulsanti.js semplicemente fa funzionare i pulsanti modificando il css.
-
-
-- colonna sinistra indice 
-
-    - indice.html è l'indice dei capitoli, l'ho abbozzato alla buona. Zaccaria ha preparato la lista dei capitoli, va trascritta nell'html ma verrà fatto mano a mano che le pagine vengono create.
-
-    Vorrei implementarlo con jekyll in modo da rendere più semplice la risistemazione delle pagine, qualora ce ne sia bisogno.
-
-    - stile_indice.css è lo stile dell'indice.
-
-    - indice.js contiene le animazioni di apertura e chiusura delle tendine dell'indice e la colorazione automatica nell'indice del titoletto della pagina che si sta visitando.
-    
 - _data è una cartela di jekyll
     - indice.yml contiene l'ordine delle pagine, da qui attinge la navigazione nel footer e (non ancora fatto) attingerà indice.html.
+
+- _includes contiene gli html che varranno caricati in maniera modulare per creare la pagina intera, essi vengono caricati in default e sono tutti componenti ripetuti in ogni pagina
+
+    - barra_ricerca.html è molto semplice: ha solo un oggetto input su cui scrive ed uno su cui compariranno i risultati della ricerca.
+
+    - colonna_destra.html sono le parti legate all'aspetto.
+
+    - footer.html, attualmente contiene ben poco, c'è solo come placeholder. È tra le cose da finire.
+
+    - indice.html è l'indice dei capitoli, l'ho abbozzato alla buona. Zaccaria ha preparato la lista dei capitoli, va trascritta nell'yml di _data ma verrà fatto mano a mano che le pagine vengono create.
+
+    - inline navigation.html crea in alto nella pagina un table of content in stile latex, a meno che la pagina non abbia un unico capitolo come la pagina iniziale. L'algoritmo si basa sulla presenza di h1, h2, h3 e h4 negli html.
+
+    - mobile.html contiene solo i pulsanti della versione mobile che sono nascosti in quella deshtop
+
+- _layout è una cartella di jekyll
+    - default.html fa da base a tutti gli html, in modo da tenere nelle varie pagine solo il testo e non il layout
+
+- _sass è una cartella jekyll che contiene i css in formato sass. In pratica jekyll li compila in un unico file insieme durante la run. La cascata di .css ha questo ordine:
+
+    - barra_ricerca.css
+    - indice.css.
+    - inline navigation.css
+    - colonna_destra.css
+    - footer.css
+    - mobile.css, che descrive tutto lo stile in tutte le altre versioni (tablet, tv, smartphone).
+
+- _site è la copia esatta del sito dopo che jekyll l'ha processata, è quello che va online e viene ricreata ogni volta che jekyll viene avviato.
+
+- assets è una cartella di jekyll. Tutte le cartelle con il trattino basso iniziale vengono processate e hanno file che non finiranno direttamente nel sito, ma utili per comporlo. In assets sono presenti quei file da passare così come sono.
+    - js è la cartella con tutti i javascript
+        - barra_ricerca.js fa funzionare la barra con la navigazione da tastiera e chiama pagefind.js, che è la navigazione vera e propria.
+        - colonna_destra.js semplicemente fa funzionare i pulsanti modificando il css.
+        - image_enlarge.js rende le immagini a schermo intero quando vengono cliccate.
+        - indice.js contiene le animazioni di apertura e chiusura delle tendine dell'indice e la colorazione automatica nell'indice del titoletto della pagina che si sta visitando.
+        - inline navigation.js
+        - mobile.js fa funzionare i pulsanti che ci sono nella versione mobile: la barra destra e sinistra nella versione mobile sono apribili mediane dei pulsantini laterali
+        - pop-over.js gestisce i pop over, cioè le note che ho creato al posto delle note a piè di pagina.
+        - sticky-titles.js gestisce i titoletti che si appiccicano in alto nella pagina.
+    - main.js: gestisce tutti gli altri javascript, in maniera che tutto sia modulare: l'html chiama solo main e main chiama le funzioni dei vari js.
+    - main.scss chiama i vari .scss in _sass
+    - style.css è lo stile con priorità: il caricamento della pagina è per quanto possibile parallelizzato, ma in questo modo dò priorità allo stile generale e a quello del testo. Quello con più priorità in assoluto è inline nell'html.
+
 
 - font
     - Inter: la cartella contiene tutti gli spessori e gli stili dell'inter, mentre gli unici file indispensabili per il sito sono i woff2.
@@ -70,16 +88,9 @@ https://pagefind.app/docs/installation/ e suggerisco di installarlo tramite pyth
 
     - opendyslexic come prima, è il font per i dislessici, usato per cambiare aspetto.
 
-- footer
-    - footer .css e .html, attualmente contengono ben poco solo come placeholder. È tra le cose da fare.
-
-- inline navigation
-    - inline navigation .html, .css, .js creano in alto nella pagina un table of content in stile latex, a meno che la pagina non abbia un unico capitolo come la pagina iniziale. L'algoritmo si basa sulla presenza di h1, h2, h3 e h4 negli html.
 
 - katex è una libreria per usare latex nei siti web, è molto leggera. attualmente sono importati nel sito katex.min.css e .js che sono la versione più leggera che copre solo le funzioni base  
 
-- _layout è una cartella di jekyll
-    - default.html fa da base a tutti gli html, in modo da tenere nelle varie pagine solo il testo e non il layout
 
 - logo ha il logo in tutti i formati utili 
     - favicon.webp è l'icon piccolina prima del nome della scheda in alto
@@ -90,37 +101,18 @@ https://pagefind.app/docs/installation/ e suggerisco di installarlo tramite pyth
 
     - il resto è del latex per scrivere il logo
 
-- mobile 
-    - mobile.html contiene solo i pulsanti della versione mobile che sono nascosti in quella deshtop
-
-    - mobile.js fa funzionare i pulsanti che ci sono nella versione mobile: la barra destra e sinistra nella versione mobile sono apribili mediane dei pulsantini laterali
-
-    - mobile.css descrive lo stile nelle altre versioni
 
 - pages
     - sono le pagine vere e prorpie su cui scriveremo le informazioni. Grazie a Jekyll possono essere scritte in html o in markdown o in un misto dei due.
 
+
 - prism è una libreria per la syntax highlight del codice 
 
-- _site è la copia esatta del sito dopo che jekyll l'ha processata, è quello che va online e viene ricreata ogni volta che jekyll viene avviato.
 
 - readme.md è questo file. È scritto in markdown, è un altro linguaggio di markup come latex o html
 
-- run.sh sono i comandi che servono per jekyll e page find. volevo farci un file di avvio automatico, ma dato che sono due comandi in totale, è più un memo (da eliminare)
 
-- image_enlarge.js rende le immagini a schermo intero.
-
-- include_html.js è un file javascript e serve ad include un html in un altro, in maniera simile al comando \include di latex.
-Questo è stato fatto perché l'indice a sinistra va messo in tutte le pagine quindi lo creo una volta sola e poi lo includo.
-Stessa cosa è stata fatta per la colonna di destra e la barra di ricerca
-
-- main.js: javascript parallelizza i comandi per risparmiare tempo, questo comporta che, ad esempio, il programma che fa funzionare i pulsanti a destra venga caricato prima che i pulsanti stessi siano aggiunti con include_html.js. main.js previene questo con await(), le altre funzioni invece vengono solo inizializzate e possono tranquillamente andare in parallelo.
-
-- pop-over.js gestisce i pop over, cioè le note che ho creato al posto delle note a piè di pagina.
-
-- sticky-titles.js gestisce i titoletti che si appiccicano in alto nella pagina.
-
-- style.css è lo stile generale. Contiene lo stile della pagina non prioritario. Quello prioritario è inline nell'html per una maggiore velocità.
+- run.sh sono i comandi che servono per jekyll e page find. volevo farci un file di avvio automatico, ma dato che sono due comandi in totale, è più un memo 
  
 - index.html è il file della pagina principale. Il nome index è obligatorio ed è la pagina iniziale del sito.
 
@@ -144,8 +136,4 @@ Potete scegliere qualsiasi capitolo. Attualmente ho iniziato la parte di Latex, 
 
 1) navigazione footer finita, ma i tasti asimmetrici in altezza sono esteticamente strani, ma va risolto tramite js, quindi per ora no
 
-2) allegerire file dei font
-
-3) aggiornare il readme
-
-4) dare le priorità per pagefind
+2) dare le priorità per pagefind
