@@ -1,0 +1,7 @@
+pyftsubset .otf \
+  --output-file=.woff2 \
+  --flavor=woff2 \
+  --unicodes="U+0000-00FF" \
+  --layout-features='' \
+  --no-hinting \
+  --name-IDs='' \
