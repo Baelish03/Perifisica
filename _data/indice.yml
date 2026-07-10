@@ -29,6 +29,11 @@
       - titolo: Unità di misura
         url: /pages/fisica-sperimentale/metrologia/unita-di-misura.html
 - materia: Fisica 1
+  capitoli:
+  - titolo: Cinematica
+    lezioni:
+    - titolo: Moto rettilineo
+      url: /pages/fisica1/cinematica/moto-rettilineo.html
 - materia: LaTeX 
   capitoli: 
   - titolo: Introduzione
