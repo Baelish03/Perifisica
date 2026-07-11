@@ -49,4 +49,76 @@ Allo stesso modo si ricava l'accelerazione come <em>derivata temporale</em> dell
 
 $$ a = \frac{dv}{dt} = \frac{d^2x}{dt^2}$$
 
+
+
 <h2> Moto rettilineo uniforme </h2>
+
+La peculiarità del moto rettilineo uniforme è che la velocità è <strong>costante</strong> e di conseguenza l'accelerazione è <strong>nulla</strong>.
+Abbiamo visto come si ricava la velocità istante per istante dalla posizione tramite la derivata, ora passiamo al viceversa noto che che $v(t) = v$ costante $\forall \ t$. 
+
+$$ \begin{equation} \Delta x = \int_{x_0}^{x(t)} d\tilde{x} = \int_{t_0}^{t} v (\tilde{t}) \cdot d\tilde{t} \end{equation} $$
+
+dove $\tilde{t}$ e $\tilde{x}$ rappresentano le variabili di integrazione, mentre $t$ un tempo generico e $x(t)$ la posizione corrispondente ad esso. Tenendo conto che $v$ costante esce dal segno di integrale si ottiene:
+
+$$
+\begin{equation} x(t) = x_0 + v \cdot (t -t_0) \end{equation}$$
+
+Si può notare che riarrangiando i termini si trova
+
+$$ v = \frac{x(t)-x_0}{t-t_0} = \frac{\Delta x}{\Delta t} = v_{media}$$
+
+Quindi la velocità instantanea <strong>coincide</strong> con la velocità media solo nel <em>moto uniforme</em>, perché la posizione è una funzione <strong>lineare</strong> del tempo.
+
+<h2> Moto rettilineo unifromemente accelerato</h2>
+
+Nel moto rettilineo uniformemente accelerato l'accelerazione è <strong>costante</strong> nel tempo e la velocità varia a causa dell'azione dell'accelerazione stessa:
+
+$$ \begin{equation} v(t) = v_0 + a \cdot (t -t_0) \end{equation}$$
+
+Ora si procede sostituendo questa formula in quella della posizione $(1)$ in modo da ricavare la posizione in funzione del tempo:
+
+$$ \begin{aligned}
+  \int_{x_0}^{x(t)} d \tilde{x} 
+  &= \int_{t_0}^{t} v (\tilde{t}) \cdot d \tilde{t} = \int_{t_0}^{t} v_0 + a \cdot (\tilde{t} -t_0) d\tilde{t} = v_0 \int_{t_0}^{t} d\tilde{t} + a \int_{t_0}^{t} (\tilde{t} -t_0) d\tilde{t} = \\
+  &= v_0 (t -t_0) + a \left(\frac{t^2}{2} - \frac{t_0^2}{2} - t_0 \cdot t + t_0^2 \right) = v_0 (t -t_0) + \frac{a}{2} \left(t^2 + t_0^2 - 2 t_0 \cdot t \right) = \\
+  &= v_0 (t -t_0) + \frac{a}{2} (t -t_0 )^2
+\end{aligned} $$
+
+Si ottiene in conclusione:
+
+$$ \begin{equation} x(t) = x_0 + v_0 (t -t_0) + \frac{a}{2} (t -t_0 )^2 \end{equation}$$
+
+Quindi la posizione è una funzione <strong>quadratica</strong> nel tempo.
+
+<div class="box-attenzione">
+ Ci si può chiedere perché non si possa sostituire semplicemente in risultato trovato nell'equazione $(3)$ nella formula $(2)$. Il motivo è che $(2)$ è un caso specifico dell'integrazione $(1)$, che si ha ponendo la velocità costante. Questo nel moto uniformemente accelerato non è vero, quindi bisogna integrare nuovamente partendo dal caso generale.
+</div>
+
+Si mostra ora un'altra importante uguaglianza del moto rettilineo uniformemente accelerato:
+
+$$ a = \frac{dv}{dt} = \frac{dv}{dx} \cdot \frac{dx}{dt} = \frac{dv}{dx} \cdot v \Longrightarrow a \cdot dx = v \cdot dv$$
+
+Integrando su un intervallo definito tra due estremi si ha:
+
+$$\begin{equation} \begin{gathered} \int_{x_0}^x a(\tilde{x}) \ d\tilde{x} = \int_{v_0}^v \tilde{v} \ d\tilde{v}\\
+a \cdot (x -x_0) = \frac{v^2}{2} - \frac{v_0^2}{2}
+\end{gathered} \end{equation} $$
+
+dove si ricorda al lettore che $a(\tilde{x}) = a$ è costante.
+
+<div class="box-attenzione">
+ Ci si potrebbe chiedere come mai la derivata sia stata trattata come una frazione. In questo corso si userà spesso questa proprietà della derivata, che vale <strong>solo</strong> per la <strong>derivata prima</strong>. La dimostrazione necessiterebbe di una trattazione a sè.
+</div>
+
+<h3> Caduta dei gravi</h3>
+
+<h2> Moto vario </h2>
+
+
+LO SCRIVO NEL CAPITOLO DEL MOTO SMORZTO IN CUI L'ACCELERAZIONE VARIA
+Nel caso in cui anche quest'ultima varia si ha un <em>moto vario</em>, che non verrà affronteto perhé in assenza di un'espressione analitica per l'accelerazione, non esistono regole generiche e ogni caso va analizzato singolarmente
+
+
+<h3> Moto armonico semplice </h3>
+
+<h3> Moto smorzato esponenzialmente </h3>
