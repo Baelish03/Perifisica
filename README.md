@@ -133,4 +133,5 @@ Potete scegliere qualsiasi capitolo. Attualmente ho iniziato la parte di Latex, 
 
 
 ### Errori da correggere
-1) dare le priorità per pagefind
+1) le pagine già scritte in html vanno portate in md oppure aggiunti gli id negli header per il toc 
+2) dare le priorità per pagefind

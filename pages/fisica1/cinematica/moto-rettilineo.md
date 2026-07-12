@@ -3,16 +3,16 @@ layout: default
 title: Moto rettilineo - Perifisica
 ---
 
-<h1> Moto rettilineo </h1>
- 
- Il moto rettilineo è il modello più <strong>basilare</strong>, ma comunque molto rilevante, perché le sue applicazioni coinvolgono tutti quei sistemi che, pur essendo nello spazio tridimensionale, possono essere <em>appiattiti</em> su una dimensione. L'esempio più banale potrebbe essere un auto in corsa su un'autostrada senza curve o un treno sui binari, ma possiamo spaziare anche a tutti quei sistemi che coinvolgono l'avvicinamento o l'allontamento di due corpi, che sono sempre collegati da una retta congiungente:
+# Moto rettilineo
+
+Il moto rettilineo è il modello più <strong>basilare</strong>, ma comunque molto rilevante, perché le sue applicazioni coinvolgono tutti quei sistemi che, pur essendo nello spazio tridimensionale, possono essere <em>appiattiti</em> su una dimensione. L'esempio più banale potrebbe essere un auto in corsa su un'autostrada senza curve o un treno sui binari, ma possiamo spaziare anche a tutti quei sistemi che coinvolgono l'avvicinamento o l'allontamento di due corpi, che sono sempre collegati da una retta congiungente:
  - due palle da biliardo che si urtano;
  - due elettroni che si respingono;
  - un corpo che cade a causa della gravità.
 
  Alla retta su cui giace il moto diamo un'origine ed un verso arbitrari, che chiamiamo <strong>sistema di riferimento</strong>. Nella fisica <em>classica</em> i risultati devono essere sempre invarianti a variazioni di sistema di riferimento. Infine per convenzione chiamiamo la coordinata spaziale $x$ e quella temporale $t$ e possiamo graficare le due coordinate in un piano cartesiano, detto <strong>diagramma orario</strong>.
 
-<h2> Velocità e accelerazione</h2>
+## Velocità e accelerazione
 
 Prima di andare avanti è necessario introdurre due nozioni: la <strong>velocità</strong> e l'<strong>accelerazione</strong>. La prima viene spesso vista come la distanza percorsa $\Delta x$ in un lasso di tempo $\Delta t$, ma questa definizione non ci dà l'informazione massima del sistema, poiché non è noto in ogni istante quale è la velocità del corpo, ma solo per intervalli temporali grandi. Quindi quello che vogliamo studiare è la variazione per $\Delta t \rightarrow 0$, chiamata velocità <strong>istantanea</strong>, che si esprime come:
 
@@ -50,7 +50,7 @@ $$ a = \frac{dv}{dt} = \frac{d^2x}{dt^2}$$
 
 
 
-<h2> Moto rettilineo uniforme </h2>
+## Moto rettilineo uniforme
 
 La peculiarità del moto rettilineo uniforme è che la velocità è <strong>costante</strong> e di conseguenza l'accelerazione è <strong>nulla</strong>.
 Abbiamo visto come si ricava la velocità istante per istante dalla posizione tramite la derivata, ora passiamo al viceversa noto che che $v(t) = v$ costante $\forall \ t$. 
@@ -68,7 +68,7 @@ $$ v = \frac{x(t)-x_0}{t-t_0} = \frac{\Delta x}{\Delta t} = v_{media}$$
 
 Quindi la velocità instantanea <strong>coincide</strong> con la velocità media solo nel <em>moto uniforme</em>, perché la posizione è una funzione <strong>lineare</strong> del tempo.
 
-<h2> Moto rettilineo unifromemente accelerato</h2>
+## Moto rettilineo unifromemente accelerato
 
 Nel moto rettilineo uniformemente accelerato l'accelerazione è <strong>costante</strong> nel tempo e la velocità varia a causa dell'azione dell'accelerazione stessa:
 
@@ -109,7 +109,7 @@ dove si ricorda al lettore che $a(\tilde{x}) = a$ è costante.
  Ci si potrebbe chiedere come mai la derivata sia stata trattata come una frazione. In questo corso si userà spesso questa proprietà della derivata, che vale <strong>solo</strong> per la <strong>derivata prima</strong>. La dimostrazione necessiterebbe di una trattazione a sè.
 </div>
 
-<h3> Caduta dei gravi</h3>
+### Caduta dei gravi
 
 La caduta libera dei punti materiali è un moto uniformemente accelerato con accelerazione $g = 9.806 \ ms^{-2}$ diretta verso il basso<sup class="sidenote" style="cursor: pointer; position: relative;">?
     <span class="sidenote_text" style="display: none;">
@@ -119,7 +119,7 @@ La caduta libera dei punti materiali è un moto uniformemente accelerato con acc
 
 Si possono analizzare singolarmente tutti i casi partendo dal più semplice fino al più completo.
 
-<h4> Il corpo parte da fermo da un'altezza $h$ </h4>
+#### Il corpo parte da fermo da un'altezza $h$
 
 $$ \begin{cases} 
 x(t) = h - \frac{1}{2} g t^2 \\
@@ -133,17 +133,17 @@ $$
 
 dove il segno della velocità indica che è diretta verso il basso e la quota quando arriva a terra è $x(t) = 0$, da cui si può ricavare la velocità finale e il tempo di volo.
 
-<h4> Il corpo parte viene lanciato da un'altezza $h$ con una velocità $v_0$ verso il basso</h4>
+#### Il corpo parte viene lanciato da un'altezza $h$ con una velocità $v_0$ verso il basso
 
 
 
-<h2> Moto vario </h2>
+## Moto vario
 
 
 LO SCRIVO NEL CAPITOLO DEL MOTO SMORZTO IN CUI L'ACCELERAZIONE VARIA
 Nel caso in cui anche quest'ultima varia si ha un <em>moto vario</em>, che non verrà affronteto perhé in assenza di un'espressione analitica per l'accelerazione, non esistono regole generiche e ogni caso va analizzato singolarmente
 
 
-<h3> Moto armonico semplice </h3>
+### Moto armonico semplice
 
-<h3> Moto smorzato esponenzialmente </h3>
+### Moto smorzato esponenzialmente
