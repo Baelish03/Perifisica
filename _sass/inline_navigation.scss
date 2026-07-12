@@ -6,6 +6,7 @@
 
 #toc-header {
   cursor: pointer;
+  margin-bottom: 0px;
 }
 
 #toc-title{
@@ -20,7 +21,7 @@
 
 #toc-list li a {
   display: block;
-  padding: 3px 10px 3px 0px;
+  padding: 3px 10px 3px 3px;
   text-decoration: none;
   border-left: 3px solid transparent;
 }
@@ -31,4 +32,5 @@
       color-mix(in srgb, var(--primary) 40%, transparent));
   border-left-color: var(--primary);
   color: var(--link);
+  border-radius: 5px;
 }
