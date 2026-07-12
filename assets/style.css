@@ -211,7 +211,7 @@ pre {
 
 .nav-avanti-indietro {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 }
 
 .lezione-precedente,
@@ -267,6 +267,8 @@ pre {
 .link-footer {
   display: grid;
   align-items: center;
+  font-size: smaller;
+  display: block;
 }
 
 .link-footer:hover {
