@@ -112,6 +112,32 @@ dove si ricorda al lettore che $a(\tilde{x}) = a$ è costante.
 
 <h3> Caduta dei gravi</h3>
 
+La caduta libera dei punti materiali è un moto uniformemente accelerato con accelerazione $g = 9.806 \ ms^{-2}$ diretta verso il basso<sup class="sidenote" style="cursor: pointer; position: relative;">?
+    <span class="sidenote_text" style="display: none;">
+    Questo valore è indicativo, in realtà esso è influenzato da altitudine e latitudine, secondo questa <a target="_blank" href="https://it.wikipedia.org/wiki/Accelerazione_di_gravit%C3%A0#Variazioni_locali_della_gravit%C3%A0_terrestre">formula</a>.
+    </span>
+</sup>.
+
+Si possono analizzare singolarmente tutti i casi partendo dal più semplice fino al più completo.
+
+<h4> Il corpo parte da fermo da un'altezza $h$ </h4>
+
+$$ \begin{cases} 
+x(t) = h - \frac{1}{2} g t^2 \\
+v(t) = -gt
+\end{cases} \Rightarrow
+\begin{cases}
+t = \sqrt{\frac{2 (h -x(t))}{g}} \\
+v(t) = -g \sqrt{\frac{2 (h -x(t))}{g}} = - \sqrt{2 g (h -x(t))}
+\end{cases}
+$$  
+
+dove il segno della velocità indica che è diretta verso il basso e la quota quando arriva a terra è $x(t) = 0$, da cui si può ricavare la velocità finale e il tempo di volo.
+
+<h4> Il corpo parte viene lanciato da un'altezza $h$ con una velocità $v_0$ verso il basso</h4>
+
+
+
 <h2> Moto vario </h2>
 
 
