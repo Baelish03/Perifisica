@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Moto rettilineo - Perifisica
-
 ---
 
 <h1> Moto rettilineo </h1>

@@ -1,10 +1,10 @@
-  function slugify(text) {
-    return text
-      .toLowerCase()
-      .trim()
-      .replace(/[^\w\s-]/g, '')   // rimuove caratteri speciali
-      .replace(/\s+/g, '-');       // spazi → trattini
-  }
+/*function slugify(text) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')   // rimuove caratteri speciali
+    .replace(/\s+/g, '-');       // spazi → trattini
+}
 
 function buildTOC() {
   const article = document.querySelector('article');
@@ -16,7 +16,9 @@ function buildTOC() {
   headings.forEach(el => {
     // assegna id automatico se non ce l'ha già
     if (!el.id) {
-      el.id = slugify(el.textContent);
+      //el.id = slugify(el.textContent);
+      el.id = el.textContent; // è proprio el.id sbagliato
+      console.log(el.id);
     }
 
     const tag = el.tagName.toLowerCase();
@@ -50,8 +52,8 @@ function buildTOC() {
     document.getElementById('toc-box').style.display = 'none';
   }
 }
-
+*/
 export function init() {
   // l'apertura del TOC è gestita da indice.js
-  buildTOC();
+  //buildTOC();
 }

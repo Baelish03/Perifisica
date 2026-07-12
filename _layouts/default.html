@@ -242,14 +242,16 @@
 
                <div class="column middle">
 
+                    {% unless page.nascondi_toc %}
                     <div class="inline_navigation">
                          {% include inline_navigation.html%}
                     </div>
+                    {% endunless %}
 
                     <article>
-                         {{ content }}
+                         {{ content | inject_anchors }}
 
-                         {% unless page.nascondi_nav %}
+                         {% unless page.nascondi_foot_nav %}
                          <div class="nav-avanti-indietro">
                               {% assign lezioni = "" | split: "" %}
                               {% for materia in site.data.indice %}
