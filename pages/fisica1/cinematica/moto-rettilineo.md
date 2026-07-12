@@ -153,12 +153,14 @@ dove nel calcolo di $t(x)$ è stata presa in considerazione solo la soluzione co
 
 #### Il corpo viene lanciato dal suolo con una velocità $v_0$ verso l'alto
 
-Il moto così definito si compone di due parti:
-
-1) salita con velocità iniziale dal suolo;
-2) discesa, partendo da fermo, da una quota $h$.
+Il moto così definito si compone di due parti: 
+<ol>
+  <li> salita con velocità iniziale dal suolo; </li>
+  <li> discesa, partendo da fermo, da una quota $h$. </li>
+</ol>
 
 La prima ha un sistema di equazioni del moto del tipo: 
+
 $$ \begin{equation}
 \begin{cases} 
 x(t) = v_0 t - \frac{1}{2} g t^2 \\
@@ -207,9 +209,7 @@ In conclusione il corpo impiega lo stesso tempo sia per salire sia per scendere 
 
 ## Moto vario
 
-
-LO SCRIVO NEL CAPITOLO DEL MOTO SMORZTO IN CUI L'ACCELERAZIONE VARIA
-Nel caso in cui anche quest'ultima varia si ha un <em>moto vario</em>, che non verrà affronteto perhé in assenza di un'espressione analitica per l'accelerazione, non esistono regole generiche e ogni caso va analizzato singolarmente
+Infine, nel caso in cui anche l'accelerazione varia si ha un <strong>moto vario</strong>, che non può affrontato in assenza di un'espressione analitica per l'accelerazione, poiché non esistono regole generiche e ogni caso va analizzato singolarmente. Qui verranno introdotti due tipologie di moti vari, partendo dalle informazioni che si hanno a disposizione sull'accelerazione.
 
 
 ### Moto armonico semplice
