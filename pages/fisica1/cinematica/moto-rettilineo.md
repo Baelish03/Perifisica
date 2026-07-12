@@ -117,25 +117,93 @@ La caduta libera dei punti materiali è un moto uniformemente accelerato con acc
     </span>
 </sup>.
 
-Si possono analizzare singolarmente tutti i casi partendo dal più semplice fino al più completo.
+Si possono analizzare singolarmente tutti i casi partendo dal più semplice fino al più completo. Per convenzione prenderemo l'asse $x$ diretto verso l'alto. tale convenzione non altera la fisica che si ottiene e si sfidail lettore a provarlo.
 
 #### Il corpo parte da fermo da un'altezza $h$
 
-$$ \begin{cases} 
+$$ \begin{equation}
+\begin{cases} 
 x(t) = h - \frac{1}{2} g t^2 \\
 v(t) = -gt
 \end{cases} \Rightarrow
 \begin{cases}
-t = \sqrt{\frac{2 (h -x(t))}{g}} \\
-v(t) = -g \sqrt{\frac{2 (h -x(t))}{g}} = - \sqrt{2 g (h -x(t))}
+t(x) = \sqrt{\frac{2 (h - x)}{g}} \\
+v(x) = -g \sqrt{\frac{2 (h -x)}{g}} = - \sqrt{2 g (h -x)}
 \end{cases}
+\end{equation}
 $$  
 
 dove il segno della velocità indica che è diretta verso il basso e la quota quando arriva a terra è $x(t) = 0$, da cui si può ricavare la velocità finale e il tempo di volo.
 
-#### Il corpo parte viene lanciato da un'altezza $h$ con una velocità $v_0$ verso il basso
+#### Il corpo viene lanciato da un'altezza $h$ con una velocità $v_0$ verso il basso
 
+$$\begin{equation}
+ \begin{cases} 
+x(t) = h - v_0 t - \frac{1}{2} g t^2 \\
+v(t) = -v_0 -gt
+\end{cases} \Rightarrow
+\begin{cases}
+t(x) = \frac{- v_0 + \sqrt{v_0^2 + 2 g (h -x)}}{g} \\
+v(x) = \cancel{-v_0} - (\cancel{- v_0} + \sqrt{v_0^2 + 2 g (h -x)}) = - \sqrt{v_0^2 + 2 g (h -x)}
+\end{cases}
+\end{equation}
+$$  
 
+dove nel calcolo di $t(x)$ è stata presa in considerazione solo la soluzione con segno positivo perché in tempo non può essere negativo.
+
+#### Il corpo viene lanciato dal suolo con una velocità $v_0$ verso l'alto
+
+Il moto così definito si compone di due parti:
+
+1) salita con velocità iniziale dal suolo;
+2) discesa, partendo da fermo, da una quota $h$.
+
+La prima ha un sistema di equazioni del moto del tipo: 
+$$ \begin{equation}
+\begin{cases} 
+x(t) = v_0 t - \frac{1}{2} g t^2 \\
+v(t) = v_0 -gt
+\end{cases} \Rightarrow
+\begin{cases}
+t(x) = \frac{v_0 + \sqrt{v_0^2 - 2 gx}}{g} \\
+v(x) = - \sqrt{v_0^2 - 2 g x}
+\end{cases}
+\end{equation}
+$$  
+
+in cui si arriva al punto di inversione del moto quando la velocità $v = 0$, da cui si può ricavare il tempo in cui avviene l'inversione $t_{inv}$ e la quota di inversione $x_{inv}$
+
+$$ \begin{equation}
+\begin{cases} 
+v(t_{inv}) = 0 \\
+v(x_{inv}) = 0
+\end{cases} \Rightarrow
+\begin{cases} 
+v_0 - gt_{inv} = 0 \\
+- \sqrt{v_0^2 - 2 g x_{inv}} = 0
+\end{cases} \Rightarrow
+\begin{cases} 
+t_{inv} = \frac{v_0}{g} \\
+x_{inv} = \frac{v_0^2}{2g}
+\end{cases}
+\end{equation}
+$$  
+
+La seconda parte è stata già affrontata nel paragrafo precedente e l'altezza da cui cade il corpo è proprio $h=x_{inv}$. Dalle equazioni in $(6)$ quando l'oggetto atterra $x=0$ si hanno le seguenti informazioni:
+
+$$ \begin{equation}
+\begin{cases}
+t(x = 0) = \sqrt{\frac{2 (x_{inv} - x)}{g}} \\
+v(x = 0) = - \sqrt{2 g (x_{inv} -x)}
+\end{cases} \Rightarrow 
+\begin{cases}
+t(0) = \sqrt{\frac{\cancel{2} \frac{v_0^2}{\cancel{2}g}}{g}} = \sqrt{\frac{v_0^2}{g^2}} = \frac{v_0}{g} =t_{inv} \\
+v(0) = - \sqrt{\cancel{2g} \frac{v_0^2}{\cancel{2g}} } = -v_0
+\end{cases}
+\end{equation}
+$$  
+
+In conclusione il corpo impiega lo stesso tempo sia per salire sia per scendere e la velocità di arrivo a terra è uguale a quella di partenza, ma con verso opposto.
 
 ## Moto vario
 
