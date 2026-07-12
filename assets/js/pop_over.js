@@ -7,7 +7,7 @@ function PopOver() {
       min-width : 15rem; 
       display: inline-block;
       position: absolute;
-      z-index: 7;
+      z-index: 20;
       cursor: initial;
       border: 2px solid var(--primary);
       border-radius: 10px;
