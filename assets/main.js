@@ -20,7 +20,7 @@ const katexReady = loadScript('/katex/katex.min.js')
     ]
   }));
 
-const [Search, Pulsanti, Indice, Mobile, Allarga, PopOver, InlineNav, StickyTitles] =
+const [Search, Pulsanti, Indice, Mobile, Allarga, PopOver, StickyTitles] =
   await Promise.all([
     import("./js/barra_ricerca.js"),
     import("./js/colonna_destra.js"),
@@ -29,16 +29,14 @@ const [Search, Pulsanti, Indice, Mobile, Allarga, PopOver, InlineNav, StickyTitl
     import("./js/image_enlarge.js"),
     import("./js/pop_over.js"),
     import("./js/sticky_titles.js"),
-    import("./js/inline_navigation.js"),
     katexReady]);
 
 Search.init();
 Pulsanti.init(document);
-Indice.init(document);
+Indice.init(document); // l'apertura del TOC è gestita da indice.js
 Mobile.init(document);
 Allarga.init();
 PopOver.init();
-InlineNav.init();
 StickyTitles.init();
 
 Prism.highlightAll();

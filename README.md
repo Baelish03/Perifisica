@@ -133,7 +133,4 @@ Potete scegliere qualsiasi capitolo. Attualmente ho iniziato la parte di Latex, 
 
 
 ### Errori da correggere
-
-1) navigazione footer finita, ma i tasti asimmetrici in altezza sono esteticamente strani, ma va risolto tramite js, quindi per ora no
-
-2) dare le priorità per pagefind
+1) dare le priorità per pagefind
