@@ -211,7 +211,61 @@ In conclusione il corpo impiega lo stesso tempo sia per salire sia per scendere 
 
 Infine, nel caso in cui anche l'accelerazione varia si ha un <strong>moto vario</strong>, che non può affrontato in assenza di un'espressione analitica per l'accelerazione, poiché non esistono regole generiche e ogni caso va analizzato singolarmente. Qui verranno introdotti due tipologie di moti vari, partendo dalle informazioni che si hanno a disposizione sull'accelerazione.
 
+### Moto armonico 
 
-### Moto armonico semplice
+Il moto armonico è un movimento che ha per definizione un andamento della posizione $x(t) = A \cos(\omega t)$, dove $A$ è l'ampiezza delle oscillazioni e $\omega$ si chiama pulsazione. Essa rappresenta la velocità radiale, ossia l'angolo spazzato in un lasso di tempo $\omega = \frac{d\theta}{dt}$. Inoltre si definiscono il <strong>periodo</strong>, cioè in quanto tempo il sistema compie un'oscillazione completa $T = \frac{2\pi}{\omega}$ e la <strong>frequanza</strong> di oscillazione $\nu = \frac{1}{T}$.
+
+È possibile provarlo a casa legando un piccolo pesetto ad una <em>spirale arcobaleno</em><sup class="sidenote" style="cursor: pointer; position: relative;">?
+    <span class="sidenote_text" style="display: none;">
+    Con la molla di una penna non è possibile vedere bene questo effetto, perché è troppo corta e rigida, quindi ha oscillazioni davvero piccole.
+    </span>
+</sup>. Essa si allungherà fino ad una lunghezza di equilibrio, ma se tale molla viene dilatata, essa compirà delle oscillazioni <strong>armoniche</strong> intorno alla posizione di equilibrio, che seguono la legge di cui sopra. Dopodiché per effetto dell'attrito tenderà a rallentare fino a fermarsi, ma ciò verrà visto nelle lezioni successive.
+
+
+
+<figure>
+  <picture>
+    <source type="image/webp" srcset="">
+    <img alt="Diagramma orario nei due casi" width="2160px" height="1367px" loading="lazy"
+      src="./moto-rettilineo/molla.png" srcset="" />
+  </picture>
+  <figcaption>
+    METTILO COME COSENO
+  </figcaption>
+</figure>
+
+Si può notare nel caso precedente che al tempo $t_0=0$ si ha che la posizione $x(0) =A$ coincide con l'ampiezza massima.
+
+Supponiamo ora di dilatare la spirale per far partire le oscillazioni, ma invece di mollare il corpo, viene fornita una <strong>velocità iniziale</strong>. Intuitivamente il sistema avrà oscillazioni di ampiezza maggiore rispetto al caso precedente, quindi all'istante $t_0=0$ il corpo non parte dall'ampiezza massima. Per tenere conto di ciò il generico moto armonico si descrive con la seguente equazione del moto:
+
+$$ x(t) = A \cdot \cos(\omega t + \varphi)$$
+
+dove $\varphi$ rappresenta lo <strong>sfasamento</strong>, cioè con che angolo parte il moto.
+
+<div class="box-attenzione">
+A volte è possibile trovare l'equazione oraria del moto armonico come $x(t) = A \cdot \sin(\omega t + \psi)$ oppure come $x(t) = C \cdot \cos(\omega t) + B \cdot \sin(\omega t)$, creando non poca confusione soprattutto per chi si avvicina alla materia.
+
+In realtà le scritture sono tutte equivalenti, infatti dimostriamo che è possibile ricondursi alla forma in coseno. 
+
+$$ x(t) = A \cdot \sin (\omega t + \psi) = A \cdot \sin\left(\omega t + \varphi - \frac{\pi}{2}\right) = A \cdot \cos(\omega t + \varphi ) $$
+
+dove si ha quindi seno e il coseno sfasati di 90 gradi.
+
+Nel secondo caso, invece, si ha una combinazione lineare di seno e coseno che si può risolvere mediante il metodo dell'angolo aggiunto
+
+$$ x(t) = C \cdot \cos(\omega t) + B \cdot \sin(\omega t) = A \sin (\omega t + \psi) $$ 
+
+ottenendo un'espressione analoga aquella precedente che ci permette di passare al coseno. Si ricorda al lettore che nel metodo dell'angolo aggiunto si ha $A =\sqrt{C^2+B^2}$ e $\tan{\psi} = \frac{C}{B}$.
+</div>
+
+Passiamo al calcolo della velocità e dell'accelerazione mediante derivate temporali:
+
+$$ \begin{cases}
+v = \frac{dx(t)}{dt} = - A \omega \cdot \sin (\omega t + \varphi) \\
+a = \frac{d^2 x(t)}{dt^2} = - A \omega^2 \cdot \cos (\omega t + \varphi) = - \omega^2 x
+\end{cases}
+$$
 
 ### Moto smorzato esponenzialmente
+
+hbhhbbh
