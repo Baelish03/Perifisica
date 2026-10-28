@@ -30,10 +30,24 @@
         url: /pages/fisica-sperimentale/metrologia/unita-di-misura.html
 - materia: Fisica 1
   capitoli:
-  - titolo: Cinematica
+  - titolo: Cinematica del punto materiale
     lezioni:
+    - titolo: Vettori e versori
+      url:
     - titolo: Moto rettilineo
       url: /pages/fisica1/cinematica/moto-rettilineo.html
+    - titolo: Moto circolare
+      url:
+    - titolo: Moto parabolico
+      url:
+    - titolo: Moti composti
+      url:
+  - titolo: Dinamica del punto materiale
+    lezioni:
+    - titolo: Le leggi di Newton
+      url:
+    - titolo: Sistemi non inerziali
+      url:
 - materia: LaTeX 
   capitoli: 
   - titolo: Introduzione
